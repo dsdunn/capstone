@@ -28,7 +28,7 @@ class SignUp extends Component {
         <input id='password'onChange={this.handleChange}/>
         <label htmlFor='passwordConf'>confirm password</label>
         <input id='passwordConf' onChange={this.handleChange}/>
-        <button type='submit'>Sign In</button>
+        <button type='submit'>Sign Up</button>
       </form>
     )
   }
