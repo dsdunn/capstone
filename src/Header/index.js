@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='header'>
       HEADER
-      <Link exact to={'/logIn'}>Login</Link>
+      <Link exact='true' to={'/logIn'}>Login</Link>
     </div>
   )
 }

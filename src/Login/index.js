@@ -5,7 +5,7 @@ import { signIn } from '../actions';
 import './styles.css'
 
 class Login extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       email: '',
@@ -48,8 +48,10 @@ export const mapStateToProps = (state) => ({
   userId: state.userId
 })
 
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => ({
   signIn: (userId) => dispatch(signIn(userId))
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
+
