@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './styles.css'
-const Login = () => {
-  return (
-    <div className='login'>
-      Login!!!
-      dont has account? <Link exact to={'/Signup'}>Sign up!</Link>
-    </div>
-  )
-=======
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 class Login extends Component {
@@ -42,7 +31,6 @@ class Login extends Component {
       </form>
     )
   }
->>>>>>> Write basic Login form
 }
 
 export default Login;
