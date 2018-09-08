@@ -33,7 +33,7 @@ class Login extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
         <input id='email' onChange={this.handleChange}/>
         <label htmlFor='password'>password</label>
