@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { signIn } from '../actions';
 import './styles.css'
 
 class Login extends Component {
@@ -33,4 +35,12 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export const mapStateToProps = (state) => ({
+  userId: state.userId
+})
+
+export const mapDispatchToProps = (dispatch) => {
+  signIn: (userId) => dispatch(signIn(userId))
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
