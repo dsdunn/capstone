@@ -1,25 +1,39 @@
-import React and { Component } from 'react';
+import React, { Component } from 'react';
 
-class SignIn extends Component () {
+class SignUp extends Component {
   constructor() {
-    super() {
-      this.state = {
-        email: '',
-        password: ''
-      };
-    }
+    super();
+    this.state = {
+      email: '',
+      password: '',
+      'passwordConf': ''
+    };
+  }
+
+  handleChange = (event) => {
+    event.preventDefault();
+    const { id, value } = event.target;
+
+    this.setState({
+      [id]: value
+    })
   }
 
   render() {
     return (
       <form>
         <label htmlFor='email'>email</label>
-        <input id='email'/>
-        <label htmlFor='password'/>
-        <input id='password'/>
-        <button type='submit' onClick={this.handleChange} >Sign In</button>
+        <input id='email' onChange={this.handleChange}/>
+        <label htmlFor='password'>password</label>
+        <input id='password'onChange={this.handleChange}/>
+        <label htmlFor='passwordConf'>confirm password</label>
+        <input id='passwordConf' onChange={this.handleChange}/>
+        <button type='submit'>Sign In</button>
       </form>
-      )
+    )
   }
 }
+
+
+export default SignUp;
 
