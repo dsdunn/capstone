@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { auth } from '../firebase';
 
 class SignUp extends Component {
   constructor() {
@@ -6,7 +7,8 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password1: '',
-      'password2': ''
+      password2: '',
+      error: null
     };
   }
 
@@ -23,6 +25,9 @@ class SignUp extends Component {
     event.preventDefault();
     if (this.validate(this.state)) {
       //send to firebase .then(save response (Id) to store)
+      auth.doCreateUserWithEmailAndPassword('tman@tman.com', '1234567')
+        .then(response => console.log(response.user.uid))
+        .catch(err => console.log(err))
     };
   }
 
