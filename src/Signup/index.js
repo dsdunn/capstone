@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
+import { connect } from 'react-redux';
+import { signIn } from '../actions';
 
 class SignUp extends Component {
   constructor() {
@@ -26,7 +28,7 @@ class SignUp extends Component {
     if (this.validate(this.state)) {
       //send to firebase .then(save response (Id) to store)
       auth.doCreateUserWithEmailAndPassword('tman@tman.com', '1234567')
-        .then(response => console.log(response.user.uid))
+        .then(response => this.props.signIn(response.user.uid))
         .catch(err => console.log(err))
     };
   }
@@ -50,6 +52,13 @@ class SignUp extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  userId: state.userId
+})
 
-export default SignUp;
+export const mapDispatchToProps = (dispatch) => ({
+  signIn: (userId) => dispatch(signIn(userId))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 
