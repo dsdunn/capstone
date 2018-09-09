@@ -3,4 +3,8 @@ export const signIn = (userId) => ({
   userId
 })
 
+export const signOut = () => ({
+  type: 'SIGN_OUT'
+})
+
 

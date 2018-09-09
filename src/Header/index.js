@@ -1,38 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
-import { firebase } from '../firebase';
+import { connect } from 'react-redux';
 import './styles.css';
+import { signOut } from '../actions';
 
-const HeaderAuth = () => {
-  return (
-    <div className='header'>
-      HEADER
-      <button className='sign-out-btn' onClick={() => auth.doSignOut()}>Sign Out</button>
-    </div>
-  )
-  
+class Header extends Component {
+  constructor(props){
+    super();
+  }
+
+  signOut = () => {
+    auth.doSignOut();
+    this.props.signOut();
+  }
+
+  render() { 
+    const headerAuth = (
+        <div className='header'>
+          HEADER Auth
+          <button className='sign-out-btn' onClick={this.signOut}>Sign Out</button>
+        </div>
+      )
+
+    const headerNoAuth = (
+        <div className='header'>
+          HEADER no auth
+          <Link exact='true' to={'/logIn'}>Login</Link>
+        </div>
+      )
+
+    return (
+      this.props.user ? headerAuth : headerNoAuth
+    )
+  }
 }
 
-const HeaderNoAuth = () => {
-  return (
-    <div className='header'>
-      HEADER
-      <Link exact='true' to={'/logIn'}>Login</Link>
-    </div>
-  )
-}
+export const mapStateToProps = (state) => ({
+  user: state.userId
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  signOut: () => dispatch(signOut())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
 
 
-const Header = () => {
 
-  // return firebase.auth.onAuthStateChanged((user) => {
-
-  return this.props.user ? HeaderAuth() : HeaderNoAuth() ;
-  // })
-}
-
-
-
-export default Header;
