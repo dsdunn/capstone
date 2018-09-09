@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signIn } from '../actions';
+import { auth } from '../firebase';
 import './styles.css'
 
 class Login extends Component {
@@ -24,8 +25,9 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.signIn(3);
-    
+    auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(response => console.log(response))
+    // this.props.signIn();
     this.setState({
       email: '',
       password: ''

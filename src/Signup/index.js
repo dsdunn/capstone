@@ -26,9 +26,14 @@ class SignUp extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.validate(this.state)) {
-      //send to firebase .then(save response (Id) to store)
       auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
         .then(response => this.props.signIn(response.user.uid))
+        .then(() => this.setState({
+                          email: '',
+                          password1: '',
+                          password2: '',
+                          error: null
+                        }))
         .catch(error => {
           this.setState({error: error.message})
         })
