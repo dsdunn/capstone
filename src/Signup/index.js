@@ -27,10 +27,12 @@ class SignUp extends Component {
     event.preventDefault();
     if (this.validate(this.state)) {
       //send to firebase .then(save response (Id) to store)
-      auth.doCreateUserWithEmailAndPassword('tman@tman.com', '1234567')
+      auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
         .then(response => this.props.signIn(response.user.uid))
-        .catch(err => console.log(err))
-    };
+        .catch(error => {
+          this.setState({error: error.message})
+        })
+    } 
   }
 
   validate(email, password1, password2) {
@@ -47,6 +49,7 @@ class SignUp extends Component {
         <label htmlFor='password2'>confirm password</label>
         <input id='password2' onChange={this.handleChange}/>
         <button type='submit'>Sign Up</button>
+        <p>{this.state.error}</p>
       </form>
     )
   }
