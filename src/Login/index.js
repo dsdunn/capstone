@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signIn } from '../actions';
 import { auth } from '../firebase';
+import { getUserInfo } from '../services/fetch';
 import './styles.css'
 
 class Login extends Component {
@@ -27,6 +28,7 @@ class Login extends Component {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
       .then(response => {
+        console.log(response)
         //fetch user info from BE
         this.props.signIn(response.user.uid);
         this.setState({
@@ -40,7 +42,7 @@ class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
-        <input id='email' value={this.state.email}onChange={this.handleChange}/>
+        <input id='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='password'>password</label>
         <input id='password' value={this.state.password} onChange={this.handleChange}/>
         <button type='submit'>Log In</button>
