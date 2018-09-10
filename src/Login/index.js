@@ -27,6 +27,7 @@ class Login extends Component {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
       .then(response => {
+        //fetch user info from BE
         this.props.signIn(response.user.uid);
         this.setState({
           email: '',
@@ -49,7 +50,7 @@ class Login extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  userId: state.userId
+  user: state.user
 })
 
 export const mapDispatchToProps = (dispatch) => ({

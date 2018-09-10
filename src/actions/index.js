@@ -1,6 +1,6 @@
-export const signIn = (userId) => ({
+export const signIn = (user) => ({
   type: 'SIGN_IN',
-  userId
+  user
 })
 
 export const signOut = () => ({
