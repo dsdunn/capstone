@@ -30,6 +30,16 @@ class SignUp extends Component {
       username: this.state.username
   })
 
+  resetForm = () => {
+    this.setState({
+      email: '',
+      username: '',
+      password1: '',
+      password2: '',
+      error: null
+    })
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.validate(this.state)) {
@@ -39,15 +49,10 @@ class SignUp extends Component {
           return postUserInfo(user)
         })
         .then(response => response.json())
-        .then(user => this.props.signIn(user))
-
-        .then(() => this.setState({
-                          email: '',
-                          username: '',
-                          password1: '',
-                          password2: '',
-                          error: null
-                        }))
+        .then(user => {
+          this.props.signIn(user)
+          this.resetForm()
+        })
         .catch(error => {
           this.setState({error: error.message})
         })
@@ -62,13 +67,13 @@ class SignUp extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
-        <input id='email' type='email' onChange={this.handleChange}/>
+        <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
-        <input id='username' onChange={this.handleChange}/>
+        <input id='username' value={this.state.username} onChange={this.handleChange}/>
         <label htmlFor='password1'>password</label>
-        <input id='password1' type='password' onChange={this.handleChange}/>
+        <input id='password1' type='password' value={this.state.password1} onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
-        <input id='password2' type='password' onChange={this.handleChange}/>
+        <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
         <button type='submit'>Sign Up</button>
         <p>{this.state.error}</p>
       </form>
