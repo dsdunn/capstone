@@ -57,6 +57,7 @@ class SignUp extends Component {
           this.setState({error: error.message})
         })
     } 
+    this.props.history.push('/user')
   }
 
   validate(email, password1, password2) {
