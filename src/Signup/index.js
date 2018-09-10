@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
-import { signIn } from '../actions';
+import { signIn, updateUser } from '../actions';
+import { postUserInfo } from '../services/fetch';
 
 class SignUp extends Component {
   constructor() {
     super();
     this.state = {
       email: '',
+      username: '',
       password1: '',
       password2: '',
       error: null
@@ -23,21 +25,39 @@ class SignUp extends Component {
     })
   }
 
+  createUser = (response) => ({
+      uid: response.user.uid,
+      username: this.state.username
+  })
+
+  resetForm = () => {
+    this.setState({
+      email: '',
+      username: '',
+      password1: '',
+      password2: '',
+      error: null
+    })
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.validate(this.state)) {
       auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
-        .then(response => this.props.signIn(response.user.uid))
-        .then(() => this.setState({
-                          email: '',
-                          password1: '',
-                          password2: '',
-                          error: null
-                        }))
+        .then(response => {
+          let user = this.createUser(response)
+          return postUserInfo(user)
+        })
+        .then(response => response.json())
+        .then(user => {
+          this.props.signIn(user)
+          this.resetForm()
+        })
         .catch(error => {
           this.setState({error: error.message})
         })
     } 
+    this.props.history.push('/user')
   }
 
   validate(email, password1, password2) {
@@ -48,11 +68,13 @@ class SignUp extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
-        <input id='email' onChange={this.handleChange}/>
+        <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
+        <label htmlFor='username'>username</label>
+        <input id='username' value={this.state.username} onChange={this.handleChange}/>
         <label htmlFor='password1'>password</label>
-        <input id='password1'onChange={this.handleChange}/>
+        <input id='password1' type='password' value={this.state.password1} onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
-        <input id='password2' onChange={this.handleChange}/>
+        <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
         <button type='submit'>Sign Up</button>
         <p>{this.state.error}</p>
       </form>
@@ -60,14 +82,11 @@ class SignUp extends Component {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  userId: state.userId
-})
-
 export const mapDispatchToProps = (dispatch) => ({
-  signIn: (userId) => dispatch(signIn(userId))
+  signIn: (userId) => dispatch(signIn(userId)),
+  updateUser: (username) => dispatch(updateUser(username))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(null, mapDispatchToProps)(SignUp);
 
 
