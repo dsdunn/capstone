@@ -36,9 +36,11 @@ class SignUp extends Component {
       auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
         .then(response => {
           let user = this.createUser(response)
-          this.props.signIn(user)
-          postUserInfo(user)
+          return postUserInfo(user)
         })
+        .then(response => response.json())
+        .then(user => this.props.signIn(user))
+
         .then(() => this.setState({
                           email: '',
                           username: '',
