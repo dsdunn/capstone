@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import { signIn, updateUser } from '../actions';
+import { postUserInfo } from '../services/fetch';
 
 class SignUp extends Component {
   constructor() {
@@ -36,6 +37,7 @@ class SignUp extends Component {
         .then(response => {
           let user = this.createUser(response)
           this.props.signIn(user)
+          postUserInfo(user)
         })
         .then(() => this.setState({
                           email: '',
