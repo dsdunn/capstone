@@ -8,6 +8,7 @@ class SignUp extends Component {
     super();
     this.state = {
       email: '',
+      username: '',
       password1: '',
       password2: '',
       error: null
@@ -30,6 +31,7 @@ class SignUp extends Component {
         .then(response => this.props.signIn(response.user.uid))
         .then(() => this.setState({
                           email: '',
+                          username: '',
                           password1: '',
                           password2: '',
                           error: null
@@ -48,11 +50,13 @@ class SignUp extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
-        <input id='email' onChange={this.handleChange}/>
+        <input id='email' type='email' onChange={this.handleChange}/>
+        <label htmlFor='username'>username</label>
+        <input id='username' onChange={this.handleChange}/>
         <label htmlFor='password1'>password</label>
-        <input id='password1'onChange={this.handleChange}/>
+        <input id='password1' type='password' onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
-        <input id='password2' onChange={this.handleChange}/>
+        <input id='password2' type='password' onChange={this.handleChange}/>
         <button type='submit'>Sign Up</button>
         <p>{this.state.error}</p>
       </form>
