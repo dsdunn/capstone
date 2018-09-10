@@ -7,8 +7,9 @@ export const signOut = () => ({
   type: 'SIGN_OUT'
 })
 
-export const updateUsername = (username) => ({
-  type: 'UPDATE_USERNAME',
-  username
+export const updateUser = (username, uid) => ({
+  type: 'UPDATE_USER',
+  username,
+  uid
 })
  
