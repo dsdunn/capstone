@@ -19,6 +19,7 @@ class Header extends Component {
     const headerAuth = (
         <div className='header'>
           HEADER Auth
+          <p>{this.props.user.username}</p>
           <button className='sign-out-btn' onClick={this.signOut}>Sign Out</button>
         </div>
       )
@@ -31,13 +32,13 @@ class Header extends Component {
       )
 
     return (
-      this.props.user ? headerAuth : headerNoAuth
+      this.props.user.uid ? headerAuth : headerNoAuth
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
-  user: state.userId
+  user: state.user
 })
 
 export const mapDispatchToProps = (dispatch) => ({
