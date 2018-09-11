@@ -46,6 +46,20 @@ class UserProfile extends Component {
           </form>
         </section>
         <section className='profile-collection'>
+          <button className='add-collection-button'>Add a collection</button>
+          <form className='add-collection-form'>
+            <input id='collection-form-name' placeholder='name your collection'/>
+            <label for='collection-form-category'>Select a Category</label>
+            <select id='collection-form-category' required='true'>
+              <option value=''>choose a category</option>
+              <option value='coins'>Coins</option>
+              <option value='comics'>Comics</option>
+              <option value='cards'>Cards</option>
+              <option value='vinyl'>Vinyl</option>
+              <option value='other'>Other</option>
+            </select>
+          </form>
+          your collections will go here
         </section>
       </div>
     )
