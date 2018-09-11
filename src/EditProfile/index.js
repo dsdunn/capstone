@@ -31,8 +31,6 @@ class EditProfile extends Component {
     )
   }
 
-
-
 }
 
 
