@@ -27,15 +27,16 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(response => {
-        console.log(response)
-        //fetch user info from BE
-        this.props.signIn(response.user.uid);
+      .then(response => getUserInfo('c8vsiI87UKM9EMPnzCw1jk2Vrjw1'))
+      .then(user => {
+        console.log('user:', user)
+        this.props.signIn(user);
         this.setState({
           email: '',
           password: ''
         })
-      }).catch(err => err)
+      })
+      .catch(err => console.log(err))
   }
 
   render() {

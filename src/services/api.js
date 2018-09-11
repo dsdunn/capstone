@@ -8,6 +8,6 @@ export const apiFetch = (path, method = 'GET', payload = null) => {
      'Accept': 'application/json'
      // 'Authorization': `Token token=${config.apiKey}`
     },
-    body: JSON.stringify(payload)
+    // body: JSON.stringify(payload)
   })
 }
