@@ -11,7 +11,7 @@ class EditProfile extends Component {
       uid: null,
       displayName: '',
       bio: '',
-      pic: null
+      pic: ''
     }
   }
 
@@ -19,13 +19,20 @@ class EditProfile extends Component {
     //set state with user info from store
   }
 
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
   render() {
     return (
       <form id='photo-form'className='modal hidden' onSubmit={this.updatePhoto}>
         <img src=''/>
-        <input type='file' value={this.state.pic}/>
-        <input placeholder='new display name' value={this.state.displayName}/>
-        <textarea placeholder='tell us a little about yourself and what you like to collect' value={this.state.pic}/>
+        <input type='file' name='pic' onChange={this.handleChange} value={this.state.pic}/>
+        <input placeholder='new display name' name='displayName' onChange={this.handleChange} value={this.state.displayName}/>
+        <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
       </form>
     )
@@ -33,5 +40,6 @@ class EditProfile extends Component {
 
 }
 
+export default EditProfile;
 
 
