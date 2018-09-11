@@ -21,6 +21,7 @@ class Header extends Component {
           HEADER Auth
           <p>{this.props.user.username}</p>
           <button className='sign-out-btn' onClick={this.signOut}>Sign Out</button>
+          <Link exact='true' to={'/user'}>View Profile</Link>
         </div>
       )
 

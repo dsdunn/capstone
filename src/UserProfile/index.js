@@ -33,15 +33,15 @@ class UserProfile extends Component {
             <button>submit</button>
           </form>
           <h3 className='profile-display-name'></h3>
-          <button className='update-profile-name'</button>
+          <button className='update-profile-name'>update display name</button>
           <form id='name-form' className='module hidden' onSubmit={this.updateDisplayName}>
-            <input type='file'/>
+            <input placeholder='new display name'/>
             <button>submit</button>
           </form>
           <p className='profile-bio'></p>
           <button className='update-bio'>update bio</button>
           <form id='bio-form' className='module hidden' onSubmit={this.updateBio}>
-            <input type='file'/>
+            <textarea placeholder='tell us a little about yourself and what you like to collect'/>
             <button>submit</button>
           </form>
         </section>
