@@ -38,6 +38,9 @@ class EditProfile extends Component {
     // fd.append('image', this.state.avatar, this.state.avatar.name)
     console.log(this.state.avatar)
     putUserInfo(this.state)
+    .then(a => console.log(a))
+
+    this.props.history.push('/user')
   }
 
   render() {
