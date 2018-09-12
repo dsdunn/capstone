@@ -12,4 +12,8 @@ export const updateUser = (username, uid) => ({
   username,
   uid
 })
- 
+
+export const fetchProfile = uid => ({
+  type: 'FETCH_PROFILE',
+  uid
+})
