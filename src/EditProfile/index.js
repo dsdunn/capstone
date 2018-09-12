@@ -18,6 +18,10 @@ class EditProfile extends Component {
 
   componentDidMount() {
     //set state with user info from store
+    this.setState({
+      uid: this.props.user.uid
+    })
+
   }
 
   handleChange = (event) => {
@@ -30,8 +34,8 @@ class EditProfile extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const fd = new FormData();
-    fd.append('image', this.state.avatar, this.state.avatar.name)
+    // const fd = new FormData();
+    // fd.append('image', this.state.avatar, this.state.avatar.name)
     console.log(this.state.avatar)
     //send fd to backend
     putUserInfo(this.state);
@@ -41,7 +45,7 @@ class EditProfile extends Component {
     return (
       <form id='photo-form'className='modal hidden' onSubmit={this.handleSubmit}>
         <img src=''/>
-        <input type='file' ref={this.fileInput} name='pic' onChange={this.handleChange}/>
+        <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='displayName' onChange={this.handleChange} value={this.state.displayName}/>
         <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
@@ -51,6 +55,16 @@ class EditProfile extends Component {
 
 }
 
-export default EditProfile;
+export const mapStateToProps = (state) => ({
+  user: state.user
+})
+
+
+
+export default connect(mapStateToProps)(EditProfile);
+
+
+
+
 
 

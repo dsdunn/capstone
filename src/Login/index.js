@@ -27,7 +27,7 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(response => getUserInfo('c8vsiI87UKM9EMPnzCw1jk2Vrjw1'))
+      .then(response => getUserInfo(response.user.uid))
       .then(user => {
         console.log('user:', user)
         this.props.signIn(user);
