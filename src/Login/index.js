@@ -29,7 +29,6 @@ class Login extends Component {
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
       .then(response => getUserInfo(response.user.uid))
       .then(user => {
-        console.log('user:', user)
         this.props.signIn(user);
         this.setState({
           email: '',
@@ -41,7 +40,7 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='login' onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
         <input id='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='password'>password</label>
