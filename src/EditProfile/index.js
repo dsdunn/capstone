@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
-// import './styles.css'
+import './styles.css'
 
 class EditProfile extends Component {
   constructor(props) {
@@ -45,7 +45,8 @@ class EditProfile extends Component {
 
   render() {
     return (
-      <form id='photo-form'className='modal hidden' onSubmit={this.handleSubmit}>
+      <form className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
+        <Link className='edit-profile-close-link' exact='true' to={'/user'}>Close</Link>
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
