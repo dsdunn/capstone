@@ -7,6 +7,7 @@ import Login from '../Login';
 import SignUp from '../SignUp';
 import EditProfile from '../EditProfile';
 import LandingPage from '../LandingPage';
+import CollectionBig from '../CollectionBig';
 // import Dashboard from '../Dashboard';
 import AddCollection from '../AddCollection';
 
@@ -23,6 +24,7 @@ class App extends Component {
         <Route exact path={'/signup'} component={SignUp} />
         <Route exact path={'/user'} component={UserProfile} />
         <Route exact path={'/user/editprofile'} component={EditProfile} />
+        <Route path={'/collection'} component={CollectionBig}/>
       </div>
     );
   }
