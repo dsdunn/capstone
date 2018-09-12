@@ -1,10 +1,13 @@
 import React from 'react';
+import fetchProfile from '../actions';
+import { connect } from 'react-redux';
 
-export const CollectionBig = (props) => {
+const CollectionBig = (props) => {
+
   return (
     <div className='collection-big'>
       <header className='collection-header-big'>
-        <img className='collection-img-big'/>
+        <img className='collection-img-big' onClick={() => props.fetchProfile()}/>
         <h4 className='collection-title-big'>this.props.displayedUser.username</h4>
         <p className='collection-location-big'>this.props.displayedUser.location</p>
       </header>
@@ -22,3 +25,12 @@ export const CollectionBig = (props) => {
     </div>
   )
 }
+
+export const mapDispatchToProps = (dispatch) => ({
+  fetchProfile: (uid) => dispatch(fetchProfile(uid))
+})
+
+export default connect(null, mapDispatchToProps)(CollectionBig))
+
+
+
