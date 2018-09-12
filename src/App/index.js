@@ -9,8 +9,6 @@ import EditProfile from '../EditProfile';
 import LandingPage from '../LandingPage';
 
 
-
-
 class App extends Component {
   render() {
     return (
@@ -26,4 +24,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

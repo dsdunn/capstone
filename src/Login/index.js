@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signIn } from '../actions';
 import { auth } from '../firebase';
@@ -27,7 +27,7 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(response => getUserInfo('c8vsiI87UKM9EMPnzCw1jk2Vrjw1'))
+      .then(response => getUserInfo(response.user.uid))
       .then(user => {
         console.log('user:', user)
         this.props.signIn(user);
@@ -60,6 +60,6 @@ export const mapDispatchToProps = (dispatch) => ({
   signIn: (userId) => dispatch(signIn(userId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
 
