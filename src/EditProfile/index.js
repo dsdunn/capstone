@@ -8,19 +8,18 @@ class EditProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      uid: null,
-      displayName: '',
+      uid: 'MfCeEte31iYl4wVZzvdXIN32dwB2',
+      username: '',
       bio: '',
       avatar: null
     }
-    this.fileInput = React.createRef();
   }
 
   componentDidMount() {
     //set state with user info from store
-    this.setState({
-      uid: this.props.user.uid
-    })
+    // this.setState({
+    //   uid: this.props.user.uid
+    // })
 
   }
 
@@ -37,8 +36,7 @@ class EditProfile extends Component {
     // const fd = new FormData();
     // fd.append('image', this.state.avatar, this.state.avatar.name)
     console.log(this.state.avatar)
-    //send fd to backend
-    putUserInfo(this.state);
+    putUserInfo(this.state)
   }
 
   render() {
@@ -46,7 +44,7 @@ class EditProfile extends Component {
       <form id='photo-form'className='modal hidden' onSubmit={this.handleSubmit}>
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
-        <input placeholder='new display name' name='displayName' onChange={this.handleChange} value={this.state.displayName}/>
+        <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
         <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
       </form>
