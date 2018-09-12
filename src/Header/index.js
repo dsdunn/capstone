@@ -18,7 +18,7 @@ class Header extends Component {
   render() { 
     const headerAuth = (
         <div className='header'>
-          <h1>Welcome to Collecshare!</h1>
+          <h1 className='welcome'>Welcome, {this.props.user.username}</h1>
           <p>{this.props.user.username}</p>
           <button className='sign-out-btn' onClick={this.signOut}>Sign Out</button>
             <div className='user-link'><Link exact='true' to={'/user'}>View Profile</Link></div>
@@ -28,7 +28,7 @@ class Header extends Component {
 
     const headerNoAuth = (
         <div className='header'>
-          <h1>Welcome to Collecshare!</h1>
+          <h1 className='welcome'>Welcome to Collecshare!</h1>
           <Link exact='true' to={'/login'}>Login</Link>
           <Link exact='true' to={'/signup'}>Sign Up</Link>
         </div>
