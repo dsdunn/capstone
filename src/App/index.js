@@ -6,6 +6,7 @@ import UserProfile from '../UserProfile'
 import Login from '../Login';
 import SignUp from '../SignUp';
 import EditProfile from '../EditProfile';
+import LandingPage from '../LandingPage';
 
 
 
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Route exact path={'/'} component={LandingPage} />
         <Route exact path={'/login'} component={Login} />
         <Route exact path={'/signup'} component={SignUp} />
         <Route exact path={'/user'} component={UserProfile} />
