@@ -11,7 +11,8 @@ class Login extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      error: ''
     };
   }
 
@@ -24,28 +25,36 @@ class Login extends Component {
     })
   }
 
+  resetForm = () => {
+    this.setState({
+      email: '',
+      username: ''
+    })
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
       .then(response => getUserInfo(response.user.uid))
       .then(user => {
         this.props.signIn(user);
+        this.resetForm()
+      })
+      .then(() => this.props.history.push('/user'))
+      .catch(err => {
         this.setState({
-          email: '',
-          password: ''
+          error: err.message
         })
       })
-      .catch(err => console.log(err))
   }
 
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <label htmlFor='email'>email</label>
-        <input id='email' value={this.state.email} onChange={this.handleChange}/>
-        <label htmlFor='password'>password</label>
-        <input id='password' value={this.state.password} onChange={this.handleChange}/>
-        <button type='submit'>Log In</button>
+        <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
+        <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
+        <input type='submit'/>
+        <p className='login-err-message'>{this.state.errorMessage}</p>
       </form>
     )
   }
