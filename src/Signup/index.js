@@ -63,7 +63,17 @@ class SignUp extends Component {
   }
 
   validate(email, password1, password2) {
-    return true;
+      if (this.state.passwordOne !== this.state.passwordTwo ||
+      this.state.passwordOne === '' ||
+      this.state.email === '' ||
+      this.state.username === '' ) {
+        this.setState({
+          error: 'Uh oh! make sure you fill out the required fields ...thats all of them'
+        })
+        return false
+      } else {
+        return true
+      }
   }
 
   render() {
