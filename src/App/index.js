@@ -17,12 +17,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <img src='https://images.pexels.com/photos/157519/pexels-photo-157519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'/>
         <Route exact path={'/user/addcollection'} component={AddCollection} />
         {/*<Route exact path={'/dashboard'} component={Dashboard} />*/}
         <Route exact path={'/landing'} component={LandingPage} />
         <Route exact path={'/login'} component={Login} />
         <Route exact path={'/signup'} component={SignUp} />
-        <Route exact path={'/user'} component={UserProfile} />
+        <Route path={'/user'} component={UserProfile} />
         <Route exact path={'/user/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
       </div>
