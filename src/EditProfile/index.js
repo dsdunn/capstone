@@ -11,6 +11,7 @@ class EditProfile extends Component {
       uid: 'MfCeEte31iYl4wVZzvdXIN32dwB2',
       username: '',
       bio: '',
+      location: '',
       avatar: null
     }
   }
@@ -45,6 +46,7 @@ class EditProfile extends Component {
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
+        <input placeholder='location' onChange={this.handleChange} value={this.state.location}/>
         <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
       </form>
