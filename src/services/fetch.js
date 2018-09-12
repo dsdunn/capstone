@@ -13,3 +13,8 @@ export const putUserInfo = userInfo => {
   return apiFetch(`/users/${userInfo.uid}`, 'PUT', userInfo)
   .then(response => response.json())
 }
+
+export const postCollection = collection => {
+  return apiFetch(`/collections`, `POST`, collection)
+  .then(response => response.json())
+}

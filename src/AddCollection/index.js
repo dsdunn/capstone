@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getUserInfo } from '../services/fetch';
+import { getUserInfo, postCollection } from '../services/fetch';
 // import './styles.css'
 
 class AddCollection extends Component {
@@ -9,23 +9,40 @@ class AddCollection extends Component {
     super(props);
     this.state = {
       uid: null,
-      collectionName: '',
+      title: '',
       description: '',
-      category: '',
-      pic: null
+      category: ''
+      // ,
+      // collectionPic: null
     }
   }
 
   componentDidMount() {
-    //set state with user info from store
+    this.setState({
+      uid: this.props.user.uid,
+    })
+  }
+
+  handleChange = event => {
+    let { id, value } = event.target;
+    this.setState({
+      [id]: value
+    })
+  }
+
+  submitCollection = event => {
+    event.preventDefault();
+    postCollection(this.state)
+      .then(this.props.history.push('/user'))
   }
 
   render() {
     return (
-      <form className='add-collection-form' onSubmit={() => {console.log('hooked up')}}>
-        <input id='collection-form-name' placeholder='name your collection'/>
+      <form className='add-collection-form' onSubmit={this.submitCollection}>
+        <input id='title' placeholder='name your collection' value={this.state.title} onChange={this.handleChange}/>
+        <textarea id='description' value={this.state.description} onChange={this.handleChange}/>
         <label htmlFor='collection-form-category'>Select a Category</label>
-        <select id='collection-form-category' required={true}>
+        <select id='category' required={true} onChange={this.handleChange}>
           <option value=''>choose a category</option>
           <option value='coins'>Coins</option>
           <option value='comics'>Comics</option>
@@ -33,10 +50,15 @@ class AddCollection extends Component {
           <option value='vinyl'>Vinyl</option>
           <option value='other'>Other</option>
         </select>
+        <button>Submit</button>
       </form>
     )
   }
 }
 
-export default AddCollection;
+export const mapStateToProps = state => ({
+  user: state.user
+})
+
+export default withRouter(connect(mapStateToProps)(AddCollection));
 
