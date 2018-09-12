@@ -8,3 +8,8 @@ export const getUserInfo = uid => {
   return apiFetch(`/users/${uid}`, 'GET')
   .then(response => response.json())
 }
+
+export const putUserInfo = userInfo => {
+  return apiFetch(`/users/${userInfo.uid}`, 'PUT', userInfo)
+  .then(response => response.json())
+}

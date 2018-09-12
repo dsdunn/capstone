@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getUserInfo } from '../services/fetch';
-import { saveAs } from 'file-saver/FileSaver';
+import { getUserInfo, putUserInfo } from '../services/fetch';
 // import './styles.css'
 
 class EditProfile extends Component {
@@ -12,7 +11,7 @@ class EditProfile extends Component {
       uid: null,
       displayName: '',
       bio: '',
-      pic: null
+      avatar: null
     }
     this.fileInput = React.createRef();
   }
@@ -32,8 +31,10 @@ class EditProfile extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     const fd = new FormData();
-    fd.append('image', this.state.pic, this.state.pic.name)
+    fd.append('image', this.state.avatar, this.state.avatar.name)
+    console.log(this.state.avatar)
     //send fd to backend
+    putUserInfo(this.state);
   }
 
   render() {
