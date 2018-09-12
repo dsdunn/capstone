@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { signIn, updateUser } from '../actions';
 import { postUserInfo } from '../services/fetch';
+import { Link, withRouter } from 'react-router-dom';
 import './styles.css'
 
 class SignUp extends Component {
@@ -69,6 +69,7 @@ class SignUp extends Component {
   render() {
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
+        <Link className='signup-close-link' exact='true' to={'/'}>Close</Link>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
