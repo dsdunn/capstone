@@ -55,11 +55,11 @@ class SignUp extends Component {
           await this.props.signIn(user)
           this.resetForm()
         })
+        .then(() => this.props.history.push('/user'))
         .catch(error => {
           this.setState({error: error.message})
         })
     } 
-    this.props.history.push('/user')
   }
 
   validate(email, password1, password2) {
@@ -68,7 +68,7 @@ class SignUp extends Component {
 
   render() {
     return (
-      <form className='sign-up'onSubmit={this.handleSubmit}>
+      <form className='signup'onSubmit={this.handleSubmit}>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
@@ -77,8 +77,8 @@ class SignUp extends Component {
         <input id='password1' type='password' value={this.state.password1} onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
         <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
-        <button type='submit'>Sign Up</button>
-        <p>{this.state.error}</p>
+        <input type='submit'/>
+        <p className='signup-err-message' >{this.state.error}</p>
       </form>
     )
   }
