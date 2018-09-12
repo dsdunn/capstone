@@ -1,11 +1,14 @@
 .header {
   padding: 3%;
-  height: 15vh; }
+  height: 15vh; 
+}
 
 h1 {
-  text-align: center; }
+  text-align: center; 
+}
 
 .user-link {
   float: right;
   text-decoration: none;
-  color: green; }
+  color: green; 
+}
