@@ -22,7 +22,7 @@ class AddCollection extends Component {
 
   render() {
     return (
-      <form className='add-collection-form' onSubmit={addCollection}>
+      <form className='add-collection-form' onSubmit={() => {console.log('hooked up')}}>
         <input id='collection-form-name' placeholder='name your collection'/>
         <label htmlFor='collection-form-category'>Select a Category</label>
         <select id='collection-form-category' required={true}>
@@ -37,4 +37,6 @@ class AddCollection extends Component {
     )
   }
 }
+
+export default AddCollection;
 
