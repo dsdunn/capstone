@@ -8,6 +8,7 @@ class CollectionBig extends Component {
     super(props);
     this.state = {
       // id: this.props.currentCollection.id,
+      uid: '',
       title: '',
       description: '',
       category: ''
@@ -24,8 +25,9 @@ class CollectionBig extends Component {
       <div className='collection-big'>
         <header className='collection-header-big'>
           <img className='collection-img-big'/>
+          <img className='collection-avatar-big'/>
           <button onClick={this.goToProfile}>view profile</button>
-          <h4 className='collection-title-big'>this.props.displayedUser.username</h4>
+          <h4 className='collection-title-big'>this.props.currentCollection.title</h4>
           <p className='collection-location-big'>this.props.displayedUser.location</p>
         </header>
         <main className='collection-body-big'>
