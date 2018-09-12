@@ -21,7 +21,9 @@ class Header extends Component {
     const headerAuth = (
         <div className='header'>
           <h1 className='welcome'>
-            <img className='header-logo' src={logo} alt='logo' />
+            <Link to={'/user'}>
+              <img className='header-logo' src={logo} alt='logo' />
+            </Link>
             Collec<span>share</span>
           </h1>
             <img className='header-avatar' src={avatar} alt='avatar' />
