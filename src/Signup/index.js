@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { signIn, updateUser } from '../actions';
 import { postUserInfo } from '../services/fetch';
+import { Link, withRouter } from 'react-router-dom';
+import './styles.css'
 
 class SignUp extends Component {
   constructor() {
@@ -54,20 +55,31 @@ class SignUp extends Component {
           await this.props.signIn(user)
           this.resetForm()
         })
+        .then(() => this.props.history.push('/user'))
         .catch(error => {
           this.setState({error: error.message})
         })
     } 
-    this.props.history.push('/user')
   }
 
   validate(email, password1, password2) {
-    return true;
+      if (this.state.passwordOne !== this.state.passwordTwo ||
+      this.state.passwordOne === '' ||
+      this.state.email === '' ||
+      this.state.username === '' ) {
+        this.setState({
+          error: 'Uh oh! make sure you fill out the required fields ...thats all of them'
+        })
+        return false
+      } else {
+        return true
+      }
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='signup'onSubmit={this.handleSubmit}>
+        <Link className='signup-close-link' exact='true' to={'/'}>Close</Link>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
@@ -76,8 +88,8 @@ class SignUp extends Component {
         <input id='password1' type='password' value={this.state.password1} onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
         <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
-        <button type='submit'>Sign Up</button>
-        <p>{this.state.error}</p>
+        <input type='submit'/>
+        <p className='signup-err-message' >{this.state.error}</p>
       </form>
     )
   }

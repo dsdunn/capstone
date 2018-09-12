@@ -4,6 +4,8 @@ import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
 import { signOut } from '../actions';
+import logo from './images/coins.svg';
+import avatar from './images/avatar.png'
 
 class Header extends Component {
   constructor(props){
@@ -18,19 +20,29 @@ class Header extends Component {
   render() { 
     const headerAuth = (
         <div className='header'>
-          <h1 className='welcome'>Welcome, {this.props.user.username}</h1>
-          <p>{this.props.user.username}</p>
-          <button className='sign-out-btn' onClick={this.signOut}>Sign Out</button>
-            <div className='user-link'><Link exact='true' to={'/user'}>View Profile</Link></div>
-            <div className='user-link'><Link to={'/dashboard'}>Dashboard</Link></div>
+          <h1 className='welcome'>
+            <Link to={'/user'}>
+              <img className='header-logo' src={logo} alt='logo' />
+            </Link>
+            Collec<span>share</span>
+          </h1>
+            <img className='header-avatar' src={avatar} alt='avatar' />
+            <div className='header-links'>
+              <Link className='header-link' to={'/dashboard'}>Dashboard</Link>
+            </div>
         </div>
       )
 
     const headerNoAuth = (
         <div className='header'>
-          <h1 className='welcome'>Welcome to Collecshare!</h1>
-          <Link exact='true' to={'/login'}>Login</Link>
-          <Link exact='true' to={'/signup'}>Sign Up</Link>
+          <h1 className='welcome'>
+            <img className='header-logo' src={logo} alt='logo' />
+            Collec<span>share</span>
+          </h1>
+          <div className='header-links'>
+            <Link className='header-link' exact='true' to={'/login'}>Login</Link>
+            <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
+          </div>
         </div>
       )
 
