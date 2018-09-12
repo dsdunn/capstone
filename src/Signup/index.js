@@ -83,7 +83,7 @@ class SignUp extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  signIn: (userId) => dispatch(signIn(userId)),
+  signIn: (user) => dispatch(signIn(user)),
   updateUser: (username) => dispatch(updateUser(username))
 })
 

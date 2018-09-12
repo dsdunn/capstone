@@ -5,6 +5,7 @@ import Header from '../Header'
 import UserProfile from '../UserProfile'
 import Login from '../Login';
 import SignUp from '../SignUp';
+import EditProfile from '../EditProfile';
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
         <Route exact path={'/login'} component={Login} />
         <Route exact path={'/signup'} component={SignUp} />
         <Route exact path={'/user'} component={UserProfile} />
+        <Route exact path={'/user/editprofile'} component={EditProfile} />
       </div>
     );
   }
