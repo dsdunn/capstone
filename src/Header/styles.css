@@ -2,8 +2,10 @@
   padding: 3%;
   height: 15vh; }
 
-h1 {
-  text-align: center; }
+.welcome {
+  text-align: center;
+  font-size: 7vw;
+  margin: 0; }
 
 .user-link {
   float: right;
