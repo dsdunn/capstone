@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { signIn, updateUser } from '../actions';
 import { postUserInfo } from '../services/fetch';
 
@@ -49,8 +50,8 @@ class SignUp extends Component {
           return postUserInfo(user)
         })
         .then(response => response.json())
-        .then(user => {
-          this.props.signIn(user)
+        .then(async user => {
+          await this.props.signIn(user)
           this.resetForm()
         })
         .catch(error => {
@@ -87,6 +88,6 @@ export const mapDispatchToProps = (dispatch) => ({
   updateUser: (username) => dispatch(updateUser(username))
 })
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default withRouter(connect(null, mapDispatchToProps)(SignUp));
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signIn } from '../actions';
 import { auth } from '../firebase';
@@ -60,6 +60,6 @@ export const mapDispatchToProps = (dispatch) => ({
   signIn: (userId) => dispatch(signIn(userId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
 
