@@ -13,9 +13,10 @@ class UserProfile extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      // this.props.profile
-    })
+    console.log(this.props.profile);
+    // this.setState({
+    //   this.props.profile
+    // })
     // getUserInfo(this.props.user.uid);
   }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getUserInfo } from '../services/fetch'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setProfile } form '../actions'
+import { setProfile } from '../actions'
 
 class CollectionSmall extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class CollectionSmall extends Component {
   }
 
   viewProfile = () => {
-    this.setProfile(this.state.user);
+    this.props.setProfile(this.state.user);
     this.props.history.push('/user');
   }
 
