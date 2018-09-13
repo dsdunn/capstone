@@ -5,7 +5,7 @@ export const userReducer = (state = {}, action) => {
     case 'SIGN_OUT':
       return {};
     case 'UPDATE_USER':
-      return { uid: action.uid , username: action.username}
+      return action.user
     default: return state;
   }
 }
