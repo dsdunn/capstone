@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getAllCollections } from '../services/fetch';
-import { CollectionSmall } from '../CollectionSmall';
+import CollectionSmall from '../CollectionSmall';
 
 class CollectionsContainer extends Component {
   constructor(props) {
