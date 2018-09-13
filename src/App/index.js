@@ -10,6 +10,7 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 // import Dashboard from '../Dashboard';
 import AddCollection from '../AddCollection';
+import CollectionsContainer from '../CollectionsContainer';
 
 
 class App extends Component {

@@ -3,7 +3,7 @@ import { getUserInfo } from '../services/fetch'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class CollectionSmall extends Component {
+export class CollectionSmall extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,7 +13,7 @@ class CollectionSmall extends Component {
   }
 
   componentDidMount() {
-    getUserInfo()
+    // getUserInfo()
   }
 
   render() {
@@ -23,9 +23,11 @@ class CollectionSmall extends Component {
         <p className='collection-location-small'>this.state.location</p>
         <h3 className='collection-title-small'>this.props.collection.title</h3>
         <p className='collection-description-small'>this.props.collection.description</p>
-        <div className='collection-category-small'>
+        <div className='collection-category-small'></div>
       </div>
     )
   }
 }
+
+
 
