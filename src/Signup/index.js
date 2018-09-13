@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { signIn, updateUser } from '../actions';
 import { postUserInfo } from '../services/fetch';
 import { Link, withRouter } from 'react-router-dom';
+import close from '../images/close.svg'
 import './styles.css'
 
 class SignUp extends Component {
@@ -62,7 +63,7 @@ class SignUp extends Component {
     } 
   }
 
-  validate(email, password1, password2) {
+  validate() {
       if (this.state.passwordOne !== this.state.passwordTwo ||
       this.state.passwordOne === '' ||
       this.state.email === '' ||
@@ -79,7 +80,9 @@ class SignUp extends Component {
   render() {
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
-        <Link className='signup-close-link' exact='true' to={'/'}>Close</Link>
+        <Link className='signup-close-link' exact='true' to={'/'}>
+          <img className='img' src={close} />
+        </Link>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
