@@ -5,32 +5,14 @@ import { getUserInfo } from '../services/fetch';
 // import './styles.css'
 
 class UserProfile extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  componentDidMount() {
-    // getUserInfo(this.props.user.uid);
-  }
-
   render() {
     return (
       <div>
         <section className='profile-top'>
           <img className='profile-img'/>
-          <h3 className='profile-display-name'></h3>
-          <p className='profile-bio'></p>
-          
-          <Link exact='true' to={'/user/editprofile'}>
-            <button className='update-bio'>edit profile</button>
-          </Link>
-          <Link exact='true' to={'/user/addcollection'}>
-            <button className='add-collection-button'>Add a collection</button>
-          </Link>
-
+          <h3 className='profile-display-name'>{this.props.profile.username}</h3>
+          <h5 className='profile-location'>{this.props.profile.location}</h5>
+          <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
           your collections will go here!!!!
@@ -41,7 +23,7 @@ class UserProfile extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  user: state.user
+  profile: state.profile
 })
 
 export const mapDispatchToProps = (dispatch) => ({

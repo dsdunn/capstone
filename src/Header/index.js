@@ -42,6 +42,7 @@ class Header extends Component {
           <div className='header-links'>
             <Link className='header-link' exact='true' to={'/login'}>Login</Link>
             <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
+            <Link className='header-link' exact='true' to={'/collectionsContainer'}>Get All</Link>
           </div>
         </div>
       )

@@ -16,14 +16,6 @@ class EditProfile extends Component {
     }
   }
 
-  componentDidMount() {
-    //set state with user info from store
-    // this.setState({
-    //   uid: this.props.user.uid
-    // })
-
-  }
-
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({
@@ -40,7 +32,7 @@ class EditProfile extends Component {
     putUserInfo(this.state)
     .then(a => console.log(a))
 
-    this.props.history.push('/user')
+    this.props.history.push('/')
   }
 
   render() {
@@ -50,7 +42,7 @@ class EditProfile extends Component {
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
-        <input placeholder='location' onChange={this.handleChange} value={this.state.location}/>
+        <input placeholder='location' name='location' onChange={this.handleChange} value={this.state.location}/>
         <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
       </form>
