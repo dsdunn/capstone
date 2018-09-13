@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
+import { updateUser } from '../actions';
 import './styles.css'
 
 class EditProfile extends Component {
@@ -28,9 +29,8 @@ class EditProfile extends Component {
     event.preventDefault()
     // const fd = new FormData();
     // fd.append('image', this.state.avatar, this.state.avatar.name)
-    console.log(this.state.avatar)
     putUserInfo(this.state)
-    .then(a => console.log(a))
+    .then(response => this.props.updateUser(response))
 
     this.props.history.push('/')
   }
@@ -55,9 +55,12 @@ export const mapStateToProps = (state) => ({
   user: state.user
 })
 
+export const mapDispatchToProps = (dispatch) => ({
+  updateUser: (user) => dispatch(updateUser(user))
+})
 
 
-export default connect(mapStateToProps)(EditProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(EditProfile);
 
 
 
