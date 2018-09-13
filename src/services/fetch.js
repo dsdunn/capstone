@@ -18,3 +18,8 @@ export const postCollection = collection => {
   return apiFetch(`/collections`, `POST`, collection)
   .then(response => response.json())
 }
+
+export const getAllCollections = () => {
+  return apiFetch('/collections')
+  .then(response => response.json())
+}
