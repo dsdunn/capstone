@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
-import { signIn, updateUser } from '../actions';
+import { signIn } from '../actions';
 import { postUserInfo } from '../services/fetch';
 import { Link, withRouter } from 'react-router-dom';
 import close from '../images/close.svg'
@@ -52,8 +52,8 @@ class Signup extends Component {
           return postUserInfo(user)
         })
         .then(response => response.json())
-        .then(async user => {
-          await this.props.signIn(user)
+        .then(user => {
+          this.props.signIn(user)
           this.resetForm()
         })
         .then(() => this.props.history.push('/user/editprofile'))
@@ -99,8 +99,7 @@ class Signup extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  signIn: (user) => dispatch(signIn(user)),
-  updateUser: (username) => dispatch(updateUser(username))
+  signIn: (user) => dispatch(signIn(user))
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(Signup));
