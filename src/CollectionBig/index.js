@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { fetchProfile } from '../actions';
+import { setProfile } from '../actions';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { getUserInfo } from '../services/fetch'
+
 
 class CollectionBig extends Component {
   constructor(props){
@@ -15,8 +17,11 @@ class CollectionBig extends Component {
     }
   }
 
-  gotToProfile = () => {
-    this.props.fetchProfile(this.state.uid);
+  goToProfile = () => {
+    console.log('goToProf')
+    getUserInfo(this.state.uid || 'kUq7VixehNQ3znsMEcPpijzWGBV2')
+      // .then(response => response.json())
+      .then(result => this.props.setProfile(result));
     this.props.history.push('./user');
   }
 
@@ -28,7 +33,7 @@ class CollectionBig extends Component {
           <img className='collection-avatar-big'/>
           <button onClick={this.goToProfile}>view profile</button>
           <h4 className='collection-title-big'>this.props.currentCollection.title</h4>
-          <p className='collection-location-big'>this.props.displayedUser.location</p>
+          <p className='collection-location-big'>this.state.location</p>
         </header>
         <main className='collection-body-big'>
           <section className='collection-description-big>'>
@@ -47,7 +52,7 @@ class CollectionBig extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchProfile: (uid) => dispatch(fetchProfile(uid))
+  setProfile: (profile) => dispatch(setProfile(profile))
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(CollectionBig))

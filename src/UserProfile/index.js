@@ -13,6 +13,9 @@ class UserProfile extends Component {
   }
 
   componentDidMount() {
+    this.setState({
+      // this.props.profile
+    })
     // getUserInfo(this.props.user.uid);
   }
 
@@ -41,7 +44,8 @@ class UserProfile extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  user: state.user
+  user: state.user,
+  profile: state.profile
 })
 
 export const mapDispatchToProps = (dispatch) => ({
