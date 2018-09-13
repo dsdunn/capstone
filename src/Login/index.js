@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { signIn } from '../actions';
 import { auth } from '../firebase';
 import { getUserInfo } from '../services/fetch';
+import close from '../images/close.svg'
 import './styles.css'
 
 class Login extends Component {
@@ -51,7 +52,9 @@ class Login extends Component {
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <Link className='login-close-link' exact='true' to={'/'}>Close</Link>
+        <Link className='login-close-link' exact='true' to={'/'}>
+          <img className='img' src={close} />
+        </Link>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
         <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
         <input type='submit'/>
