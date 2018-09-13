@@ -4,7 +4,7 @@ import './styles.css';
 import Header from '../Header'
 import UserProfile from '../UserProfile'
 import Login from '../Login';
-import SignUp from '../SignUp';
+import Signup from '../Signup';
 import EditProfile from '../EditProfile';
 import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';

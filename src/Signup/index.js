@@ -7,7 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 import close from '../images/close.svg'
 import './styles.css'
 
-class SignUp extends Component {
+class Signup extends Component {
   constructor() {
     super();
     this.state = {
@@ -103,6 +103,6 @@ export const mapDispatchToProps = (dispatch) => ({
   updateUser: (username) => dispatch(updateUser(username))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(SignUp));
+export default withRouter(connect(null, mapDispatchToProps)(Signup));
 
 
