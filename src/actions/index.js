@@ -7,10 +7,9 @@ export const signOut = () => ({
   type: 'SIGN_OUT'
 })
 
-export const updateUser = (username, uid) => ({
+export const updateUser = (user) => ({
   type: 'UPDATE_USER',
-  username,
-  uid
+  user
 })
 
 export const setProfile = profile => ({
