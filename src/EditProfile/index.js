@@ -9,12 +9,18 @@ class EditProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      uid: 'MfCeEte31iYl4wVZzvdXIN32dwB2',
+      uid: '',
       username: '',
       bio: '',
       location: '',
       avatar: null
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      ...this.props.user
+    })
   }
 
   handleChange = (event) => {
@@ -32,7 +38,7 @@ class EditProfile extends Component {
     putUserInfo(this.state)
     .then(response => this.props.updateUser(response))
 
-    this.props.history.push('/')
+    this.props.history.goBack()
   }
 
   render() {

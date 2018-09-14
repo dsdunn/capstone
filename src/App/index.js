@@ -18,13 +18,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Route exact path={'/addcollection'} component={AddCollection} />
-        {<Route exact path={'/dashboard'} component={Dashboard} />}
-        <Route exact path={'/landing'} component={LandingPage} />
+        <Route path={'/addcollection'} component={AddCollection} />
+        <Route path={'/dashboard'} component={Dashboard} />
+        <Route exact path={'/'} component={LandingPage} />
         <Route exact path={'/login'} component={Login} />
         <Route exact path={'/signup'} component={Signup} />
         <Route path={'/user'} component={UserProfile} />
-        <Route exact path={'/user/editprofile'} component={EditProfile} />
+        <Route exact path={'/dashboard/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/collectionsContainer'} component={CollectionsContainer}/>
       </div>
