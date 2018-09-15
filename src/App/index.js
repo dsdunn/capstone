@@ -19,7 +19,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <Route path={'/addcollection'} component={AddCollection} />
-        <Route path={'/dashboard'} component={Dashboard} />
         <Route exact path={'/'} component={LandingPage} />
         <Route exact path={'/login'} component={Login} />
         <Route exact path={'/signup'} component={Signup} />
