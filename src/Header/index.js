@@ -5,11 +5,14 @@ import { connect } from 'react-redux';
 import './styles.css';
 import { signOut } from '../actions';
 import logo from './images/coins.svg';
-import avatar from './images/avatar.png'
+import avatar from './images/avatar.png';
+import Dashboard from '../Dashboard';
 
 class Header extends Component {
   constructor(props){
     super();
+
+    this.state = { dashboardActive: false }
   }
 
   signOut = () => {
@@ -17,8 +20,15 @@ class Header extends Component {
     this.props.signOut();
   }
 
+  handleDashboard = () => {
+    const currentState = this.state.dashboardActive;
+    this.setState({ dashboardActive: !currentState });
+  }
+
+
   render() { 
     const headerAuth = (
+      <div>
         <div className='header'>
           <h1 className='welcome'>
             <Link to={'/user'}>
@@ -28,9 +38,12 @@ class Header extends Component {
           </h1>
             <img className='header-avatar' src={avatar} alt='avatar' />
             <div className='header-links'>
-              <Link className='header-link' to={'/dashboard'}>Dashboard</Link>
+            <button onClick={this.handleDashboard}>Dashboard</button>
+              {/*<Link className='header-link' to={'/dashboard'}>Dashboard</Link>*/}
             </div>
         </div>
+            <Dashboard active={this.state.dashboardActive}/>
+      </div>
       )
 
     const headerNoAuth = (

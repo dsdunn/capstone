@@ -16,7 +16,7 @@ const Dashboard = (props) => {
   }
 
   return (
-    <div>
+    <div className={props.active ? 'dashboardActive dashboard' : 'dashboardHide dashboard'}>
       <h5>Hello, {props.user.username}.</h5>
       <Link className='dashboard-link' to={'/dashboard/editprofile'}>Edit Profile</Link>
       <Link className='dashboard-link' to={'/dashboard/addcollection'}>Add/Edit Collection</Link>

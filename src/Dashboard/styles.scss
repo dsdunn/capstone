@@ -2,3 +2,34 @@
   text-decoration: none;
   margin: 0 1rem;
 }
+
+@keyframes active {
+    from {top: 0}
+    to {top: 8vh;}
+}
+@keyframes hidden {
+    from {top: 8vh}
+    to {top: 0;}
+}
+
+.dashboard {
+  position: fixed;
+  background-color: #fff;
+}
+
+.dashboardActive {
+  top: 8vh;
+  animation-name: active; 
+  animation-duration: 0.5s;
+  z-index: 1;
+}
+
+
+
+.dashboardHide {
+  top: 0;
+  animation-name: hidden; 
+  animation-duration: 0.5s;
+  z-index: 1;
+}
+
