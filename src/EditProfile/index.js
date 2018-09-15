@@ -33,17 +33,19 @@ class EditProfile extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    // const fd = new FormData();
-    // fd.append('image', this.state.avatar, this.state.avatar.name)
-    putUserInfo(this.state)
-    .then(response => this.props.updateUser(response))
+    const body = new FormData(this.form);
 
-    this.props.history.goBack()
+    putUserInfo(body, this.state.uid)
+    .then(response => {
+      console.log('handle submit', response)
+      // this.props.updateUser(response))
+      this.props.history.goBack()
+    })
   }
 
   render() {
     return (
-      <form className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
+      <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
         <Link className='edit-profile-close-link' exact='true' to={'/user'}>Close</Link>
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>

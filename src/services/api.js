@@ -12,3 +12,11 @@ export const apiFetch = (path, method = 'GET', payload = null) => {
     body
   })
 }
+
+export const apiFormDataFetch = (path, method = 'PUT', payload = null) => {
+  let body = payload; 
+  return fetch(`${config.url}${path}`, {
+    method,
+    body
+  })
+}
