@@ -2,7 +2,7 @@
   position: relative;
   background-color: #883955;
   padding: 1.5% 2%;
-  height: 8vh;
+  height: 6vh;
   z-index: 2; }
 
 .header-logo {
@@ -13,7 +13,7 @@
   border: 1.5px solid #fff;
   border-radius: 50%;
   position: absolute;
-  right: 1rem;
+  /*right: 3.25rem;*/
   top: 1rem;
   width: 3vw; }
   .header-avatar:hover {
@@ -22,6 +22,18 @@
 
 .header-links {
   float: right; }
+
+.avatar-dash {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.header-dashboardBtn {
+  background-color: transparent;
+  border: none;
+  color: #fff; }
+  .header-dashboardBtn:hover {
+    color: #FECBDD; }
 
 a {
   text-decoration: none; }

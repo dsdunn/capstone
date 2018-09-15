@@ -36,13 +36,14 @@ class Header extends Component {
             </Link>
             Collec<span>share</span>
           </h1>
-            <img className='header-avatar' src={avatar} alt='avatar' />
             <div className='header-links'>
-            <button onClick={this.handleDashboard}>Dashboard</button>
-              {/*<Link className='header-link' to={'/dashboard'}>Dashboard</Link>*/}
+            <div className='avatar-dash'>
+              <img className='header-avatar' src={avatar} alt='avatar' />
+              <button className='header-dashboardBtn' onClick={this.handleDashboard}>Dashboard</button>
+            </div>
             </div>
         </div>
-            <Dashboard active={this.state.dashboardActive}/>
+          <Dashboard active={this.state.dashboardActive}/>
       </div>
       )
 
