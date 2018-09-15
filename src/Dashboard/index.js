@@ -17,7 +17,6 @@ const Dashboard = (props) => {
 
   const handleViewProfile = () => {
     props.setProfile(props.user);
-    // props.history.push('/user');
   }
 
   return (
