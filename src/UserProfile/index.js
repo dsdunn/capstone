@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo } from '../services/fetch';
-// import './styles.css'
+import './styles.css'
 
 class UserProfile extends Component {
   render() {
     return (
       <div>
         <section className='profile-top'>
-          <img className='profile-img'/>
+          <img className='profile-img' src={`http://localhost:3000/${this.props.profile.avatar}`}/>
           <h3 className='profile-display-name'>{this.props.profile.username}</h3>
           <h5 className='profile-location'>{this.props.profile.location}</h5>
           <p className='profile-bio'>{this.props.profile.bio}</p>

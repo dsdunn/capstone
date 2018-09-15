@@ -15,7 +15,8 @@
   position: absolute;
   /*right: 3.25rem;*/
   top: 1rem;
-  width: 3vw; }
+  width: 3vw;
+  height: 3vw; }
   .header-avatar:hover {
     opacity: 0.8;
     border: 1.5px solid #FECBDD; }

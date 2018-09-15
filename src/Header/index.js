@@ -27,6 +27,7 @@ class Header extends Component {
 
 
   render() { 
+    const headerPic = `http://localhost:3000/${this.props.user.avatar}` || avatar;
     const headerAuth = (
       <div>
         <div className='header'>
@@ -38,7 +39,7 @@ class Header extends Component {
           </h1>
             <div className='header-links'>
             <div className='avatar-dash'>
-              <img className='header-avatar' src={avatar} alt='avatar' />
+              <img className='header-avatar' src={headerPic} alt='avatar' />
               <button className='header-dashboardBtn' onClick={this.handleDashboard}>Dashboard</button>
             </div>
             </div>
