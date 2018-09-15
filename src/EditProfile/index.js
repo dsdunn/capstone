@@ -36,11 +36,12 @@ class EditProfile extends Component {
     const body = new FormData(this.form);
 
     putUserInfo(body, this.state.uid)
-    .then(response => {
-      console.log('handle submit', response)
-      // this.props.updateUser(response))
+    .then(result => {
+      // console.log(result)
+      this.props.updateUser(result)
       this.props.history.goBack()
     })
+
   }
 
   render() {

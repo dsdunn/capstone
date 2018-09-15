@@ -9,7 +9,7 @@ class UserProfile extends Component {
     return (
       <div>
         <section className='profile-top'>
-          <img className='profile-img'/>
+          <img className='profile-img' src={`http://localhost:3000/${this.props.profile.avatar}`}/>
           <h3 className='profile-display-name'>{this.props.profile.username}</h3>
           <h5 className='profile-location'>{this.props.profile.location}</h5>
           <p className='profile-bio'>{this.props.profile.bio}</p>
