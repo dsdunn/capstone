@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   background-color: #262425;
   padding: 1.5% 2%;
@@ -26,7 +29,7 @@
 .header-avatar {
   border: 1.5px solid #fff;
   border-radius: 50%;
-  position: absolute;
+  // position: absolute;
   top: 1rem;
   width: 3vw;
   height: 3vw;
