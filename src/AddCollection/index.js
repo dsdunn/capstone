@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, postCollection } from '../services/fetch';
-// import './styles.css'
+import './styles.css'
 
 class AddCollection extends Component {
   constructor(props) {
@@ -12,8 +12,6 @@ class AddCollection extends Component {
       title: '',
       description: '',
       category: ''
-      // ,
-      // collectionPic: null
     }
   }
 
