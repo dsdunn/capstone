@@ -16,7 +16,7 @@ class CollectionsContainer extends Component {
   }
 
   render() {
-    const list = this.state.collections.map(collection => <CollectionSmall {...collection}/>)
+    const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
     return (
       <div className='collections-container'>
         <p>collections container</p>
