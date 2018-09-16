@@ -5,9 +5,6 @@ import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { signOut, setProfile } from '../actions';
 
-// add/edit collections, account settings, 
-
-
 const Dashboard = (props) => {
 
   const handleSignOut = () => {
@@ -20,10 +17,9 @@ const Dashboard = (props) => {
   }
 
   return (
-    <div className={props.active ? 'dashboardActive dashboard' : 'dashboardHide dashboard'}>
+    <div className={props.active ? 'dashboardShow dashboard' : 'dashboardHide dashboard'}>
       <h5>Hello, {props.user.username}.</h5>
       <Link className='dashboard-link dashboard-view-profile' onClick={() =>handleViewProfile()} to={'/user'} >View Profile</Link>
-      {/*<button onClick={() => handleViewProfile()}></button>*/}
       <Link className='dashboard-link' to={'/editprofile'}>Edit Profile</Link>
       <Link className='dashboard-link' to={'/addcollection'}>Add/Edit Collection</Link>
       <Link className='dashboard-link' to={'/settings'}>Account Settings</Link>

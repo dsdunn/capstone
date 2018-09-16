@@ -4,7 +4,7 @@ import './styles.css'
 
 const LandingPage = () => {
   return (
-    <div class="wrapper">
+    <div className="wrapper">
       <section className="section parallax bg1">
         <h1 className='project-name'>Collecshare</h1>
       </section>
