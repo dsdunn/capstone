@@ -52,7 +52,7 @@ class Login extends Component {
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <Link className='login-close-link' exact='true' to={'/'}>
+        <Link className='login-close-link' exact='true' to={'/home'}>
           <img className='img' src={close} />
         </Link>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>

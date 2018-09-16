@@ -56,7 +56,7 @@ class Signup extends Component {
           this.props.signIn(user)
           this.resetForm()
         })
-        .then(() => this.props.history.push('/editprofile'))
+        .then(() => this.props.history.push('home/editprofile'))
         .catch(error => {
           this.setState({error: error.message})
         })
@@ -80,7 +80,7 @@ class Signup extends Component {
   render() {
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
-        <Link className='signup-close-link' exact='true' to={'/'}>
+        <Link className='signup-close-link' exact='true' to={'/home'}>
           <img className='img' src={close} />
         </Link>
         <label htmlFor='email'>email</label>
