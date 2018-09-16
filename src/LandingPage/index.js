@@ -23,7 +23,7 @@ const LandingPage = () => {
       <section className="section static s4">
         <h1>Explore.</h1>
       </section>
-      <section className="section parallax bg5"></section>
+      {/*<section className="section parallax bg5"></section>*/}
     </div>
   )
 }

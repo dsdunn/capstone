@@ -2,6 +2,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
+
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
@@ -19,7 +21,7 @@
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
+  height: 50%;
 
   /* For text formatting. */
   display: flex;
@@ -27,6 +29,7 @@
   justify-content: center;
   color: white;
 }
+
 
 h1 {
   font-size: 80px
@@ -40,7 +43,7 @@ h1 {
   /* Display and position the pseudo-element */
   content: " ";
   position: absolute;
-  top: 0;
+  top: -15vh;
   right: 0;
   bottom: 0;
   left: 0;
@@ -59,16 +62,22 @@ h1 {
 .static {
   height: 450px;
   box-shadow: 0px 0px 10px black;
-  background: black ;
+  background: #262425 ;
+}
+
+.bg1 {
+  height:55vh;
 }
 
 
 .bg1::after {
-  background-image: url('https://images.pexels.com/photos/157519/pexels-photo-157519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('../images/1280-jp-record-shelf-1.jpg');
 }
 
+// https://images.pexels.com/photos/157519/pexels-photo-157519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+
 .bg2::after {
-  background-image: url('https://images.pexels.com/photos/264544/pexels-photo-264544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('http://mediad.publicbroadcasting.net/p/wglt/files/styles/x_large/public/201603/160318ComicBooks_0.jpg');
 }
 
 .bg3::after {
@@ -76,17 +85,21 @@ h1 {
 }
 
 .bg4::after {
-  background-image: url('http://mediad.publicbroadcasting.net/p/wglt/files/styles/x_large/public/201603/160318ComicBooks_0.jpg');
+  background-image: url('../images/highrescoincol.jpg');
 }
 
-.bg5::after {
-  background-image: url('http://www.notwedordead.com/wp-content/uploads/2015/05/My-postcard-collection-4d5f267c2d94c_hires.jpg');
-}
+// .bg5::after {
+//   background-image: url('../images/highrescoincol.jpg');
+// }
 
 .s1 {
-  background-color: black;
+  background-color: #aa2c1b;
+}
+
+.s2 {
+  background-color: #349164;
 }
 
 .s3 {
-  background-color: black;
+  background-color: #2e74aa;
 }
