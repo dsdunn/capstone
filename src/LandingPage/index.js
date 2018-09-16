@@ -5,6 +5,11 @@ import './styles.css'
 const LandingPage = () => {
   return (
     <div className="wrapper">
+      <header className="landing-header">
+        <Link className='header-link' exact='true' to={'/login'}>Login</Link>
+        <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
+        <Link className='header-link' exact='true' to={'/collectionsContainer'}>Get All</Link>
+      </header>
       <section className="section parallax bg1">
         <h1 className='project-name'>Collecshare</h1>
       </section>
