@@ -1,31 +1,37 @@
 .dashboard-link {
   text-decoration: none;
+  color: #C0C0C0;
   margin: 0 1rem; }
+  .dashboard-link:hover {
+    color: #A9A9A9; }
 
 @keyframes active {
   from {
-    top: 0; }
-  to {
-    top: 8vh; } }
-
-@keyframes hidden {
-  from {
-    top: 8vh; }
+    top: -20rem; }
   to {
     top: 0; } }
 
-.dashboard {
-  position: fixed;
-  background-color: #fff; }
+@keyframes hidden {
+  from {
+    top: 0; }
+  to {
+    top: -20rem; } }
 
-.dashboardActive {
-  top: 8vh;
-  animation-name: active;
-  animation-duration: 0.5s;
+h5 {
+  margin: 0; }
+
+.dashboard {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 3rem;
+  position: relative;
+  top: 0;
   z-index: 1; }
+
+.dashboardShow {
+  animation-duration: 0.5s;
+  animation-name: active; }
 
 .dashboardHide {
-  top: 0;
-  animation-name: hidden;
   animation-duration: 0.5s;
-  z-index: 1; }
+  animation-name: hidden;
+  top: -20rem; }
