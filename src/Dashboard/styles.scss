@@ -2,8 +2,11 @@
   text-decoration: none;
   color: #C0C0C0;
   margin: 0 1rem;
+    transition: border-bottom 0.4s, color .25s;
+
 
   &:hover {
+    border-bottom: 1px solid red;
     color: #A9A9A9;
   }
 }
@@ -46,11 +49,34 @@ h5 {
   animation-name: active; 
 }
 
-
-
 .dashboardHide {
   animation-duration: 0.5s;
   animation-name: hidden; 
   top: -20rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
