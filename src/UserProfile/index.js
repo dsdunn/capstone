@@ -7,7 +7,7 @@ import './styles.css'
 class UserProfile extends Component {
   render() {
     return (
-      <div>
+      <div className={'user-profile'}>
         <section className='profile-top'>
           <img className='profile-img' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
           <h3 className='profile-display-name'>{this.props.profile.username}</h3>
