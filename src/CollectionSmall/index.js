@@ -17,7 +17,6 @@ class CollectionSmall extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.uid)
     getUserInfo(this.props.collection.uid)
       .then(user => this.setState({user}))
   }
@@ -37,8 +36,8 @@ class CollectionSmall extends Component {
         <p className='collection-small-username'>{this.state.user.username}</p>
         <p className='collection-location-small'>{this.state.user.location || 'earth'}</p>
         <h3 className='collection-title-small'>{title}</h3>
-        <p className='collection-description-small'>{description}</p>
-        <div className='collection-category-small'>{category}</div>
+        <p className='collection-description-small'><div class="collection-small-label">description: </div>{description}</p>
+        <div className='collection-category-small'><div class="collection-small-label">category: </div>{category}</div>
       </div>
     )
   }
