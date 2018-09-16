@@ -47,7 +47,7 @@ class EditProfile extends Component {
   render() {
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
-        <Link className='edit-profile-close-link' exact='true' to={'/home/user'}>Close</Link>
+        <Link className='edit-profile-close-link' exact='true' to={'/user'}>Close</Link>
         <img src=''/>
         <input type='file' ref={this.fileInput} name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>

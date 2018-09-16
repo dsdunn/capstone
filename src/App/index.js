@@ -17,7 +17,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route path={'/home'} component={Header} />
+        <Header />
+        <Route path={'/'} component={Header} />
         <Route path={'/addcollection'} component={AddCollection} />
         <Route exact path={'/'} component={LandingPage} />
         <Route path={'/login'} component={Login} />

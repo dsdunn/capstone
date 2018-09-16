@@ -23,7 +23,7 @@ class CollectionSmall extends Component {
 
   viewProfile = () => {
     this.props.setProfile(this.state.user);
-    this.props.history.push('/home/user');
+    this.props.history.push('/user');
   }
 
   render() {

@@ -22,7 +22,7 @@ class CollectionBig extends Component {
     getUserInfo(this.state.uid || 'kUq7VixehNQ3znsMEcPpijzWGBV2')
       // .then(response => response.json())
       .then(result => this.props.setProfile(result));
-    this.props.history.push('/home/user');
+    this.props.history.push('/user');
   }
 
   render() {    
