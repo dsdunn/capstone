@@ -16,7 +16,7 @@ export const putUserInfo = (userInfo, uid) => {
 
 export const postCollection = collection => {
   return apiFetch(`/collections`, `POST`, collection)
-  .then(response => console.log(response))
+  .then(response => response.json())
 }
 
 export const getAllCollections = () => {

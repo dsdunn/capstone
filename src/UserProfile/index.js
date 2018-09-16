@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getUserInfo } from '../services/fetch';
+import { getUserCollections } from '../services/fetch';
 import './styles.css'
+import CollectionSmall from '../CollectionSmall';
 
 class UserProfile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collections: []
+    }
+  }
+
+  componentDidMount() {
+    getUserCollections(this.props.profile.uid)
+      .then(results => {
+        const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} />);
+      this.setState({
+        collections
+      })
+    })
+  }
+
+
   render() {
     return (
       <div className={'user-profile'}>
@@ -15,7 +34,7 @@ class UserProfile extends Component {
           <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
-          your collections will go here!!!!
+          {this.state.collections || 'your collections will go here!!!!'}
         </section>
       </div>
     )
