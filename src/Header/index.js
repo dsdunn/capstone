@@ -4,8 +4,7 @@ import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
 import { signOut } from '../actions';
-import logo from './images/coins.svg';
-import avatar from './images/avatar.png';
+import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
 
 class Header extends Component {
@@ -27,43 +26,29 @@ class Header extends Component {
 
 
   render() { 
-    const headerPic = `http://localhost:3000/${this.props.user.avatar}` || avatar;
-    const headerAuth = (
-      <div>
+    const headerAvatar = `https://collecshare.herokuapp.com/${this.props.user.avatar}` || avatar;
+
+    return (
+      <div className='header-container'>
         <div className='header'>
-          <h1 className='welcome'>
-            <Link to={'/user'}>
-              <img className='header-logo' src={logo} alt='logo' />
-            </Link>
-            Collec<span>share</span>
-          </h1>
-            <div className='header-links'>
-            <div className='avatar-dash'>
-              <img className='header-avatar' src={headerPic} alt='avatar' />
-              <button className='header-dashboardBtn' onClick={this.handleDashboard}>Dashboard</button>
-            </div>
-            </div>
+          <h1 className='header-app-name'>Collec<span>share</span></h1>
+          <div className='header-nav'>
+          {
+            this.props.user.uid ? 
+              <div className='avatar-dash'>
+                <img className='header-avatar' src={headerAvatar} alt='avatar' />
+                <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
+              </div> :
+              <div>
+                <Link className='header-link' exact='true' to={'/login'}>Login</Link>
+                <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
+                <Link className='header-link' exact='true' to={'/collectionsContainer'}>Get All</Link>
+              </div>
+          } 
+          </div>
         </div>
           <Dashboard active={this.state.dashboardActive}/>
       </div>
-      )
-
-    const headerNoAuth = (
-        <div className='header'>
-          <h1 className='welcome'>
-            <img className='header-logo' src={logo} alt='logo' />
-            Collec<span>share</span>
-          </h1>
-          <div className='header-links'>
-            <Link className='header-link' exact='true' to={'/login'}>Login</Link>
-            <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
-            <Link className='header-link' exact='true' to={'/collectionsContainer'}>Get All</Link>
-          </div>
-        </div>
-      )
-
-    return (
-      this.props.user.uid ? headerAuth : headerNoAuth
     )
   }
 }

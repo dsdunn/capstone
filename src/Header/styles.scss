@@ -1,8 +1,8 @@
 .header {
   position: relative;
-  background-color: #883955;
+  background-color: black;
   padding: 1.5% 2%;
-  height: 6vh;
+  height: 8vh;
   z-index: 2;
 }
 
@@ -11,22 +11,25 @@
   margin-right: 0.5%;
 }
 
+.header-container {
+  height: 0px
+}
+
 .header-avatar {
   border: 1.5px solid #fff;
   border-radius: 50%;
   position: absolute;
-  /*right: 3.25rem;*/
   top: 1rem;
   width: 3vw;
   height: 3vw;
 
   &:hover {
     opacity: 0.8;
-    border: 1.5px solid #FECBDD;
+    border: 1.5px solid #C0C0C0;
   }
 }
 
-.header-links {
+.header-nav {
   float: right;
 }
 
@@ -36,13 +39,13 @@
   align-items: center;
 }
 
-.header-dashboardBtn {
+.header-dashboard-btn {
   background-color: transparent;
   border: none;
   color: #fff;
 
   &:hover {
-    color: #FECBDD;
+    color: #C0C0C0;
   }
 }
 
@@ -55,17 +58,17 @@ a {
   margin-right: 1vw;
 
   &:hover {
-    color: #FECBDD;
+    color: #C0C0C0;
   }
 }
 
-.welcome {
-  color: #FECBDD;
+.header-app-name {
+  color:  #C0C0C0;
   font-size: 3vw;
   margin: 0;
 }
 
-.welcome span {
+.header-app-name span {
   color: white
 }
 
