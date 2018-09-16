@@ -16,10 +16,15 @@ export const putUserInfo = (userInfo, uid) => {
 
 export const postCollection = collection => {
   return apiFetch(`/collections`, `POST`, collection)
-  .then(response => response.json())
+  .then(response => console.log(response))
 }
 
 export const getAllCollections = () => {
   return apiFetch('/collections')
+  .then(response => response.json())
+}
+
+export const getUserCollections = uid => {
+  return apiFetch(`/collections?uid=${uid}`)
   .then(response => response.json())
 }
