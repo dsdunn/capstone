@@ -1,4 +1,46 @@
-.add-collection-form {
-  margin: 5%;
-  background-color: rgba(0, 0, 0, 0.5);
+
+
+.add-collection-form{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #883955;
+  border-radius: 0.25rem;
+  background-color: white;
+  height: 50vh;
+  margin: auto;
+  width: 70%;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  padding: 1%;
+
+  textarea {
+    height: 50%;
+  }
+
+  button {
+    // margin: 3% 30% auto 30%;
+    height: 10%;
+    width: 40%;
+  }
+
+  select {
+    margin: 3%;
+  }
 }
+
+.collection-form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input {
+  height: 3vh;
+  margin: 2% 0;
+}
+
+
+
+
