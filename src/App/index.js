@@ -20,13 +20,15 @@ class App extends Component {
       <div className="App">
         <Header />
         <Route path={'/addcollection'} component={AddCollection} />
-        <Route path={'/landing'} component={LandingPage} />
-        <Route path={'/login'} component={Login} />
+        <Route exact path={'/'} component={LandingPage} />
+        <Route exact path={'/login'} render={() => (<div><LandingPage/><Login/></div>)} />
+        <Route exact path={'/user/login'} render={() => (<div><UserProfile/><Login/></div>)} />
+        <Route exact path={'/home/login'} render={() => (<div><CollectionsContainer/><Login/></div>)} />
         <Route path={'/signup'} component={Signup} />
         <Route path={'/user'} component={UserProfile} />
-        <Route exact path={'/editprofile'} component={EditProfile} />
+        <Route path={'user/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
-        <Route path={'/collectionsContainer'} component={CollectionsContainer}/>
+        <Route path={'/home'} component={CollectionsContainer}/>
       </div>
     );
   }

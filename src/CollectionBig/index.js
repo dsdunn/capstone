@@ -30,7 +30,6 @@ class CollectionBig extends Component {
       <div className='collection-big'>
         <header className='collection-header-big'>
           <img className='collection-img-big'/>
-          <img className='collection-avatar-big'/>
           <button onClick={this.goToProfile}>view profile</button>
           <h4 className='collection-title-big'>this.props.currentCollection.title</h4>
           <p className='collection-location-big'>this.state.location</p>

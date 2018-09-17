@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
@@ -11,7 +11,9 @@ class Header extends Component {
   constructor(props){
     super();
 
-    this.state = { dashboardActive: false }
+    this.state = { 
+      dashboardActive: false,
+      location: '' }
   }
 
   signOut = () => {
@@ -22,6 +24,12 @@ class Header extends Component {
   handleDashboard = () => {
     const currentState = this.state.dashboardActive;
     this.setState({ dashboardActive: !currentState });
+  }
+
+  loginLocation = () => {
+    let path = this.props.history.location.pathname;
+
+    this.props.history.push( path === '/' ? path + 'login': path + '/login');
   }
 
 
@@ -40,9 +48,9 @@ class Header extends Component {
                 <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
               </div> :
               <div>
-                <Link className='header-link' exact='true' to={'/login'}>Login</Link>
-                <Link className='header-link' exact='true' to={'/signup'}>Create Account</Link>
-                <Link className='header-link' exact='true' to={'/collectionsContainer'}>Get All</Link>
+                <a className='header-link' onClick={()  => this.loginLocation()}>Login</a>
+                <Link className='header-link' to={'/signup'}>Create Account</Link>
+                <Link className='header-link' to={'/home'}>Get All</Link>
               </div>
           } 
           </div>
@@ -61,7 +69,7 @@ export const mapDispatchToProps = (dispatch) => ({
   signOut: () => dispatch(signOut())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
 
 
 
