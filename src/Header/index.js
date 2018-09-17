@@ -57,8 +57,8 @@ class Header extends Component {
                 <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
-                <a className='header-link' onClick={()  => this.loginLocation()}>Login</a>
-                <Link className='header-link' to={'/signup'}>Create Account</Link>
+                <a className='header-link' onClick={() => this.loginLocation()}>Login</a>
+                <a className='header-link' onClick={() => this.signupLocation()}>Create Account</a>
                 <Link className='header-link' to={'/home'}>Get All</Link>
               </div>
           } 
