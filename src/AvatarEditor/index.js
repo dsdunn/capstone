@@ -17,7 +17,8 @@ class MyEditor extends Component {
     this.setState({ [name]: value })
   }
 
-  handleRotate = () => {
+  handleRotate = (event) => {
+    event.preventDefault()
     this.setState({ rotate: this.state.rotate += 90 })
   }
 
