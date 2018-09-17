@@ -12,8 +12,7 @@ class Header extends Component {
     super();
 
     this.state = { 
-      dashboardActive: false,
-      location: '' }
+      dashboardActive: false
   }
 
   signOut = () => {
@@ -42,12 +41,13 @@ class Header extends Component {
           <Link to={'./'}>
             <h1 className='header-app-name'>Collec<span>share</span></h1>
           </Link>
+          <input className='header-search-bar' type='text' placeholder='Search'/>
           <div className='header-nav'>
           {
             this.props.user.uid ? 
               <div className='avatar-dash'>
-                <img className='header-avatar' src={headerAvatar} alt='avatar' />
                 <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
+                <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
                 <a className='header-link' onClick={()  => this.loginLocation()}>Login</a>
