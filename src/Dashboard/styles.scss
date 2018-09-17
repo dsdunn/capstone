@@ -7,6 +7,9 @@
     color: #A9A9A9;
   }
 }
+.active {
+  color: #fff;
+}
 
 @keyframes active {
     from {top: -20rem}
@@ -23,15 +26,16 @@ h5 {
 }
 
 .dashboard-username {
+  padding-left: 1rem;
   color: #fff
 }
 
 .dashboard {
   display: flex;
   align-items: center;
-  /*justify-content: space-around;*/
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 3rem;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 2rem;
   position: relative;
   top: 0;
   z-index: 1;
