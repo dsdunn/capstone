@@ -12,7 +12,9 @@ class Header extends Component {
     super();
 
     this.state = { 
-      dashboardActive: false
+      dashboardActive: false,
+      searchInput: ''
+    }
   }
 
   handleSignOut = () => {
@@ -26,10 +28,14 @@ class Header extends Component {
     this.setState({ dashboardActive: !currentState });
   }
 
+
   loginLocation = () => {
     let path = this.props.history.location.pathname;
-
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
+  }
+
+  handleSearchChange = (event) => {
+    this.setState({ searchInput: event.target.value })
   }
 
 
@@ -42,7 +48,7 @@ class Header extends Component {
           <Link to={'./'}>
             <h1 className='header-app-name'>Collec<span>share</span></h1>
           </Link>
-          <input className='header-search-bar' type='text' placeholder='Search'/>
+          <input className='header-search-bar' type='text' placeholder='Search' onChange={this.handleSearchChange} value={this.state.searchInput}/>
           <div className='header-nav'>
           {
             this.props.user.uid ? 
