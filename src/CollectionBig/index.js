@@ -18,7 +18,6 @@ class CollectionBig extends Component {
   }
 
   goToProfile = () => {
-    console.log('goToProf')
     getUserInfo(this.state.uid || 'kUq7VixehNQ3znsMEcPpijzWGBV2')
       // .then(response => response.json())
       .then(result => this.props.setProfile(result));

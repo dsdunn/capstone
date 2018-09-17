@@ -27,6 +27,8 @@ class CollectionSmall extends Component {
     this.props.history.push('/user');
   }
 
+  
+
   render() {
 
     const { title, description, category } = this.props.collection;
