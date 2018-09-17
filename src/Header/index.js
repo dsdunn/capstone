@@ -59,7 +59,7 @@ class Header extends Component {
           </div>
         </div>
           <Dashboard active={this.state.dashboardActive}
-                     handleSignOut={this.handleSignout}/>
+                     handleSignOut={this.handleSignOut}/>
       </div>
     )
   }
