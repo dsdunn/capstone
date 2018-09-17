@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getUserInfo } from '../services/fetch'
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setProfile } from '../actions'
 
@@ -17,7 +17,7 @@ class CollectionSmall extends Component {
   }
 
   componentDidMount() {
-    getUserInfo(this.props.uid)
+    getUserInfo(this.props.collection.uid)
       .then(user => this.setState({user}))
   }
 
@@ -27,15 +27,17 @@ class CollectionSmall extends Component {
   }
 
   render() {
+
+    const { title, description, category } = this.props.collection;
     return(
       <div className='collection-small'>
         <img className='collection-avatar-small'/>
         <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile</button>
         <p className='collection-small-username'>{this.state.user.username}</p>
         <p className='collection-location-small'>{this.state.user.location || 'earth'}</p>
-        <h3 className='collection-title-small'>{this.props.title}</h3>
-        <p className='collection-description-small'>{this.props.description}</p>
-        <div className='collection-category-small'>{this.props.category}</div>
+        <Link exact='true' to={'./collection'}><h3 className='collection-title-small'>{title}</h3></Link>
+        <p className='collection-description-small'><div class="collection-small-label">description: </div>{description}</p>
+        <div className='collection-category-small'><div class="collection-small-label">category: </div>{category}</div>
       </div>
     )
   }

@@ -23,3 +23,8 @@ export const getAllCollections = () => {
   return apiFetch('/collections')
   .then(response => response.json())
 }
+
+export const getUserCollections = uid => {
+  return apiFetch(`/collections?uid=${uid}`)
+  .then(response => response.json())
+}

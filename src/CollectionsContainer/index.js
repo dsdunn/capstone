@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getAllCollections } from '../services/fetch';
 import CollectionSmall from '../CollectionSmall';
+import './styles.css';
 
 class CollectionsContainer extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class CollectionsContainer extends Component {
   }
 
   render() {
-    const list = this.state.collections.map(collection => <CollectionSmall {...collection}/>)
+    const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
     return (
       <div className='collections-container'>
         <p>collections container</p>

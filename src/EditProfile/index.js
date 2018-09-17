@@ -28,7 +28,6 @@ class EditProfile extends Component {
     this.setState({
       [name]: event.target.files ? event.target.files[0] : value
     })
-
   }
 
   handleSubmit = (event) => {
@@ -37,7 +36,6 @@ class EditProfile extends Component {
 
     putUserInfo(body, this.state.uid)
     .then(result => {
-      // console.log(result)
       this.props.updateUser(result)
       this.props.history.goBack()
     })
