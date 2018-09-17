@@ -41,7 +41,7 @@ class CollectionSmall extends Component {
               <div className='collection-small-category'>category: {category}
               </div>
             </div>
-            <div className='collection-small-user-display'>
+            <div className={`collection-small-user-display ${this.props.hideuser ? 'hidden' : ''}`}>
               <p className='collection-small-username'>{this.state.user.username}</p>
               <p className='collection-small-location'>{this.state.user.location || 'earth'}</p>
               <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile
