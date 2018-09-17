@@ -16,6 +16,7 @@ class Header extends Component {
   }
 
   signOut = () => {
+    this.setState({ dashboardActive: false })
     auth.doSignOut();
     this.props.signOut();
   }
