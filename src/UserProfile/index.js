@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserCollections } from '../services/fetch';
 import './styles.css'
@@ -28,7 +27,7 @@ class UserProfile extends Component {
     return (
       <div className={'user-profile'}>
         <section className='profile-top'>
-          <img className='profile-img' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
+          <img className='profile-img' alt='profile' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
           <h3 className='profile-display-name'>{this.props.profile.username}</h3>
           <h5 className='profile-location'>{this.props.profile.location}</h5>
           <p className='profile-bio'>{this.props.profile.bio}</p>

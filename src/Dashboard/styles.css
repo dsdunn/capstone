@@ -1,8 +1,10 @@
 .dashboard-link {
   text-decoration: none;
   color: #C0C0C0;
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  transition: border-bottom 0.4s, color .25s; }
   .dashboard-link:hover {
+    border-bottom: 1px solid red;
     color: #A9A9A9; }
 
 .active {

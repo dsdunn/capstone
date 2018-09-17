@@ -11,8 +11,6 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
-import Dashboard from '../Dashboard';
-
 
 class App extends Component {
   render() {
@@ -28,7 +26,7 @@ class App extends Component {
         <Route exact path={'/user/signup'} render={() => (<div><UserProfile/><Signup/></div>)} />
         <Route exact path={'/home/signup'} render={() => (<div><CollectionsContainer/><Signup/></div>)} />
         <Route path={'/user'} component={UserProfile} />
-        <Route path={'user/editprofile'} component={EditProfile} />
+        <Route path={'/user/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/home'} component={CollectionsContainer}/>
       </div>
