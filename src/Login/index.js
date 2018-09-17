@@ -41,7 +41,7 @@ class Login extends Component {
         this.props.signIn(user);
         this.resetForm()
       })
-      .then(() => this.props.history.push('/'))
+      .then(() => this.props.history.goBack())
       .catch(err => {
         this.setState({
           error: err.message
