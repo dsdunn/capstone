@@ -28,9 +28,9 @@ class Header extends Component {
     this.setState({ dashboardActive: !currentState });
   }
 
-
   loginLocation = () => {
     let path = this.props.history.location.pathname;
+    console.log(this.props.match.path, this.props.history.location.pathname)
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
   }
 
@@ -58,7 +58,7 @@ class Header extends Component {
           {
             this.props.user.uid ? 
               <div className='avatar-dash'>
-                <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
+                <button className='header-dash board-btn' onClick={this.handleDashboard}>Dashboard</button>
                 <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
