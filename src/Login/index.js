@@ -50,13 +50,16 @@ class Login extends Component {
       })
   }
 
+  goBack = () => {
+    this.props.history.goBack();
+  }
 
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <Link className='login-close-link' exact='true' to={'/'}>
+        <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
           <img className='img' src={close} />
-        </Link>
+        </a>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
         <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
         <input type='submit'/>

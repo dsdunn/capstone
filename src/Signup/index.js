@@ -77,12 +77,18 @@ class Signup extends Component {
       }
   }
 
+  goBack = () => {
+    this.props.history.goBack();
+  }
+
   render() {
+    const location = this.props.history.location.pathname;
+
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
-        <Link className='signup-close-link' exact='true' to={'/'}>
+        <a className='signup-close-link' exact='true' onClick={() => this.goBack()}>
           <img className='img' src={close} />
-        </Link>
+        </a>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>

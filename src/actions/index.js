@@ -16,3 +16,8 @@ export const setProfile = profile => ({
   type: 'SET_PROFILE',
   profile
 })
+
+export const setCollection = collection => ({
+  type: 'SET_COLLECTION',
+  collection
+})
