@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { setProfile } from '../actions';
 
@@ -13,12 +13,14 @@ const Dashboard = (props) => {
 
   return (
     <div className={props.active ? 'dashboardShow dashboard' : 'dashboardHide dashboard'}>
-      <h5>Hello, {props.user.username}.</h5>
-      <Link className='dashboard-link dashboard-view-profile' onClick={() =>handleViewProfile()} to={'/user'} >View Profile</Link>
-      <Link className='dashboard-link' to={'/user/editprofile'}>Edit Profile</Link>
-      <Link className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</Link>
-      <Link className='dashboard-link' to={'/settings'}>Account Settings</Link>
+      <p className='dashboard-username'>Hello, {props.user.username}.</p>
+      <div>
+      <NavLink className='dashboard-link dashboard-view-profile' onClick={() => {handleViewProfile()}} exact to={'/user'} >View Profile</NavLink>
+      <NavLink className='dashboard-link' to={'/user/editprofile'}>Edit Profile</NavLink>
+      <NavLink className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</NavLink>
+      <NavLink className='dashboard-link' to={'/user/settings'}>Account Settings</NavLink>
       <Link className='dashboard-link' to={'/'} onClick={() => props.handleSignOut()}>Sign Out</Link>
+      </div>
     </div>
   )
 }
