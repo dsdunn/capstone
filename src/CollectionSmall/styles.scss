@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.collection-small {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 1%;
+  margin: 2%;
+}
+
+.collection-small-top {
+  width: 85%;
+  padding: 1%;
+}
+
+.collection-small-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+.collection-small-title {
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.collection-small-user-display {
+  text-align: right;
+}
+
+.collection-small-image {
+  height: 17vh;
+  width: 17vh;
+  background-image: url('../images/baseballcards.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.collection-small-username {
+  margin: 0;
+  font-size: 2em;
+}
+
+.collection-small-title {
+  margin: 0;
+  text-decoration: none;
+}

@@ -3,6 +3,7 @@ import { getUserInfo } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setProfile } from '../actions'
+import './styles.css';
 
 class CollectionSmall extends Component {
   constructor(props) {
@@ -31,13 +32,24 @@ class CollectionSmall extends Component {
     const { title, description, category } = this.props.collection;
     return(
       <div className='collection-small'>
-        <img className='collection-avatar-small'/>
-        <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile</button>
-        <p className='collection-small-username'>{this.state.user.username}</p>
-        <p className='collection-location-small'>{this.state.user.location || 'earth'}</p>
-        <Link exact='true' to={'./collection'}><h3 className='collection-title-small'>{title}</h3></Link>
-        <p className='collection-description-small'><div class="collection-small-label">description: </div>{description}</p>
-        <div className='collection-category-small'><div class="collection-small-label">category: </div>{category}</div>
+          <img className='collection-small-image'/>
+        <div className='collection-small-top'>
+          <div className='collection-small-header'>
+            <div>
+              <Link exact='true' to={'./collection'}><h3 className='collection-small-title'>{title}</h3>
+              </Link>
+              <div className='collection-small-category'>category: {category}
+              </div>
+            </div>
+            <div className='collection-small-user-display'>
+              <p className='collection-small-username'>{this.state.user.username}</p>
+              <p className='collection-small-location'>{this.state.user.location || 'earth'}</p>
+              <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile
+              </button>
+            </div>
+          </div>
+          <p className='collection-small-description'>{description}</p>
+        </div>
       </div>
     )
   }

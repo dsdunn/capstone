@@ -2,6 +2,10 @@
   opacity: 0.5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   height: 100vh;
   position: relative;

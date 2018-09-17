@@ -7,7 +7,8 @@ class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collections: []
+      collections: [],
+      category: 'all'
     }
   }
 
@@ -20,7 +21,6 @@ class CollectionsContainer extends Component {
     const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
     return (
       <div className='collections-container'>
-        <p>collections container</p>
         {list}
       </div>
     )
