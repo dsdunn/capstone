@@ -9,29 +9,27 @@ class CollectionBig extends Component {
   constructor(props){
     super(props);
     this.state = {
-      // id: this.props.currentCollection.id,
-      uid: '',
-      title: '',
-      description: '',
-      category: ''
+      collection: {}
     }
   }
 
+
   goToProfile = () => {
     getUserInfo(this.state.uid || 'kUq7VixehNQ3znsMEcPpijzWGBV2')
-      // .then(response => response.json())
       .then(result => this.props.setProfile(result));
     this.props.history.push('/user');
   }
 
   render() {    
+    const { location, id, uid, username, title, description, avatar } = this.props.collection;
+
     return (
       <div className='collection-big'>
         <header className='collection-header-big'>
           <img className='collection-img-big'/>
           <button onClick={this.goToProfile}>view profile</button>
-          <h4 className='collection-title-big'>this.props.currentCollection.title</h4>
-          <p className='collection-location-big'>this.state.location</p>
+          <h4 className='collection-title-big'>{title}</h4>
+          <p className='collection-location-big'>{location}</p>
         </header>
         <main className='collection-body-big'>
           <section className='collection-description-big>'>
@@ -40,7 +38,7 @@ class CollectionBig extends Component {
               <li>item 2</li>
               <li>item 3</li>
               <li>item 4</li>
-              <li>item 5</li>
+              <li>{username}</li>
             </ul>
           </section>
         </main>
@@ -53,7 +51,11 @@ export const mapDispatchToProps = (dispatch) => ({
   setProfile: (profile) => dispatch(setProfile(profile))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(CollectionBig))
+export const mapStateToProps = (state) => ({
+  collection: state.collection
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CollectionBig))
 
 
 

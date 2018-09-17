@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getUserInfo } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setProfile } from '../actions'
+import { setProfile, setCollection } from '../actions'
 import './styles.css';
 
 class CollectionSmall extends Component {
@@ -11,8 +11,8 @@ class CollectionSmall extends Component {
     this.state = {
       user: {
         username: '',
-        uid: '',
-        location: ''
+        location: '',
+        avatar: ''
       }
     }
   }
@@ -27,7 +27,11 @@ class CollectionSmall extends Component {
     this.props.history.push('/user');
   }
 
-  
+  viewCollectionBig = () => {
+    this.props.setCollection({...this.props.collection, ...this.state.user});
+    this.props.history.push('/collection');
+
+  }
 
   render() {
 
@@ -38,8 +42,8 @@ class CollectionSmall extends Component {
         <div className='collection-small-top'>
           <div className='collection-small-header'>
             <div>
-              <Link exact='true' to={'./collection'}><h3 className='collection-small-title'>{title}</h3>
-              </Link>
+              <a exact='true' onClick={this.viewCollectionBig}><h3 className='collection-small-title'>{title}</h3>
+              </a>
               <div className='collection-small-category'>category: {category}
               </div>
             </div>
@@ -58,7 +62,8 @@ class CollectionSmall extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  setProfile: (profile) => dispatch(setProfile(profile))
+  setProfile: (profile) => dispatch(setProfile(profile)),
+  setCollection: (collection) => dispatch(setCollection(collection))
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(CollectionSmall))
