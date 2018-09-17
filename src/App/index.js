@@ -11,8 +11,6 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
-import Dashboard from '../Dashboard';
-
 
 class App extends Component {
   render() {

@@ -11,6 +11,7 @@ export const getUserInfo = uid => {
 
 export const putUserInfo = (userInfo, uid) => {
   return apiFormDataFetch(`/users/${uid}`, 'PUT', userInfo)
+  .then(response => console.log(response))
   .then(response => response.json())
 }
 
