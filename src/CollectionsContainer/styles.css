@@ -1,4 +1,23 @@
 .collections-container {
-  margin-top: 15vh;
   overflow: scroll;
-  padding: 4%; }
+  padding: 5%; }
+
+.collections-cat-btn-container {
+  display: flex;
+  justify-content: space-around; }
+
+.collections-container-cat-btn {
+  color: #262425;
+  outline: none;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  margin-top: 0;
+  transition: margin-top 0.25s; }
+  .collections-container-cat-btn:hover {
+    margin-top: -0.5rem; }
+  .collections-container-cat-btn:focus {
+    margin-top: -1.5rem; }
+
+.collections-category-name {
+  color: #262425; }

@@ -8,7 +8,7 @@ class CollectionsContainer extends Component {
     super(props);
     this.state = {
       collections: [],
-      // category: 'all'
+      category: 'all'
     }
   }
 
@@ -20,7 +20,9 @@ class CollectionsContainer extends Component {
   handleClick = (event) => {
     event.preventDefault()
     let category = event.target.name;
+    this.setState({ category })
     this.fetchByCategory(category)
+
   }
 
   fetchByCategory = (category) => {
@@ -32,11 +34,14 @@ class CollectionsContainer extends Component {
     const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
     return (
       <div className='collections-container'>
-      <button className='collections-container-cat-btn' name='comics' onClick={this.handleClick}>Comics</button>
-      <button className='collections-container-cat-btn' name='cards' onClick={this.handleClick}>Cards</button>
-      <button className='collections-container-cat-btn' name='coins' onClick={this.handleClick}>Coins</button>
-      <button className='collections-container-cat-btn' name='vinyl' onClick={this.handleClick}>Vinyl</button>
-      <button className='collections-container-cat-btn' name='other' onClick={this.handleClick}>Other</button>
+      <h1 className='collections-category-name'>{this.state.category}.</h1>
+      <div className='collections-cat-btn-container'>
+        <button className='collections-container-cat-btn' name='comics' onClick={this.handleClick}>Comics</button>
+        <button className='collections-container-cat-btn' name='cards' onClick={this.handleClick}>Cards</button>
+        <button className='collections-container-cat-btn' name='coins' onClick={this.handleClick}>Coins</button>
+        <button className='collections-container-cat-btn' name='vinyl' onClick={this.handleClick}>Vinyl</button>
+        <button className='collections-container-cat-btn' name='other' onClick={this.handleClick}>Other</button>
+      </div>
         {list}
       </div>
     )
