@@ -7,11 +7,6 @@ import { setProfile } from '../actions';
 
 const Dashboard = (props) => {
 
-  const handleSignOut = () => {
-    auth.doSignOut();
-    props.signOut();
-  }
-
   const handleViewProfile = () => {
     props.setProfile(props.user);
   }
