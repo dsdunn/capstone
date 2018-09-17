@@ -43,7 +43,6 @@ class EditProfile extends Component {
     body.append('bio', this.state.bio)
     body.append('location', this.state.location)
 
-
     putUserInfo(body, this.state.uid)
     .then(result => {
       this.props.updateUser(result)
