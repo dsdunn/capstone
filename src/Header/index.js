@@ -13,10 +13,12 @@ class Header extends Component {
 
     this.state = { 
       dashboardActive: false,
-      location: '' }
+      searchInput: ''
+    }
   }
 
-  signOut = () => {
+  handleSignOut = () => {
+    this.setState({ dashboardActive: false })
     auth.doSignOut();
     this.props.signOut();
   }
@@ -26,10 +28,14 @@ class Header extends Component {
     this.setState({ dashboardActive: !currentState });
   }
 
+
   loginLocation = () => {
     let path = this.props.history.location.pathname;
-
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
+  }
+
+  handleSearchChange = (event) => {
+    this.setState({ searchInput: event.target.value })
   }
 
 
@@ -39,13 +45,16 @@ class Header extends Component {
     return (
       <div className='header-container'>
         <div className='header'>
-          <h1 className='header-app-name'>Collec<span>share</span></h1>
+          <Link to={'./'}>
+            <h1 className='header-app-name'>Collec<span>share</span></h1>
+          </Link>
+          <input className='header-search-bar' type='text' placeholder='Search' onChange={this.handleSearchChange} value={this.state.searchInput}/>
           <div className='header-nav'>
           {
             this.props.user.uid ? 
               <div className='avatar-dash'>
-                <img className='header-avatar' src={headerAvatar} alt='avatar' />
                 <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
+                <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
                 <a className='header-link' onClick={()  => this.loginLocation()}>Login</a>
@@ -55,7 +64,8 @@ class Header extends Component {
           } 
           </div>
         </div>
-          <Dashboard active={this.state.dashboardActive}/>
+          <Dashboard active={this.state.dashboardActive}
+                     handleSignOut={this.handleSignOut}/>
       </div>
     )
   }
