@@ -39,7 +39,9 @@ class Header extends Component {
     return (
       <div className='header-container'>
         <div className='header'>
-          <h1 className='header-app-name'>Collec<span>share</span></h1>
+          <Link to={'./'}>
+            <h1 className='header-app-name'>Collec<span>share</span></h1>
+          </Link>
           <div className='header-nav'>
           {
             this.props.user.uid ? 
