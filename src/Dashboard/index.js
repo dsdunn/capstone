@@ -11,12 +11,17 @@ const Dashboard = (props) => {
     props.setProfile(props.user);
   }
 
+  const editLocation = () => {
+    return props.history.location.pathname;
+    // this.props.history.push(path + '/login');
+  }
+
   return (
     <div className={props.active ? 'dashboardShow dashboard' : 'dashboardHide dashboard'}>
       <p className='dashboard-username'>Hello, {props.user.username}.</p>
       <div>
       <NavLink className='dashboard-link dashboard-view-profile' onClick={() => {handleViewProfile()}} exact to={'/user'} >View Profile</NavLink>
-      <NavLink className='dashboard-link' to={'/user/editprofile'}>Edit Profile</NavLink>
+      <NavLink className='dashboard-link' to={editLocation() + '/editprofile'}>Edit Profile</NavLink>
       <NavLink className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</NavLink>
       <NavLink className='dashboard-link' to={'/user/settings'}>Account Settings</NavLink>
       <Link className='dashboard-link' to={'/'} onClick={() => props.handleSignOut()}>Sign Out</Link>
