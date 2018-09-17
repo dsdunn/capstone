@@ -3,14 +3,9 @@ import './styles.css';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
-import { signOut, setProfile } from '../actions';
+import { setProfile } from '../actions';
 
 const Dashboard = (props) => {
-
-  const handleSignOut = () => {
-    auth.doSignOut();
-    props.signOut();
-  }
 
   const handleViewProfile = () => {
     props.setProfile(props.user);
@@ -23,7 +18,7 @@ const Dashboard = (props) => {
       <Link className='dashboard-link' to={'/user/editprofile'}>Edit Profile</Link>
       <Link className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</Link>
       <Link className='dashboard-link' to={'/settings'}>Account Settings</Link>
-      <Link className='dashboard-link' to={'/'} onClick={() => handleSignOut()}>Sign Out</Link>
+      <Link className='dashboard-link' to={'/'} onClick={() => props.handleSignOut()}>Sign Out</Link>
     </div>
   )
 }
@@ -33,7 +28,6 @@ export const MapStateToProps = (state) => ({
 })
 
 export const MapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(signOut()),
   setProfile: (user) => dispatch(setProfile(user))
 })
 
