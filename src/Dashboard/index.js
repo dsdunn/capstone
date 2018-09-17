@@ -13,7 +13,7 @@ const Dashboard = (props) => {
 
   return (
     <div className={props.active ? 'dashboardShow dashboard' : 'dashboardHide dashboard'}>
-      <h5>Hello, {props.user.username}.</h5>
+      <p className='dashboard-username'>Hello, {props.user.username}.</p>
       <Link className='dashboard-link dashboard-view-profile' onClick={() =>handleViewProfile()} to={'/user'} >View Profile</Link>
       <Link className='dashboard-link' to={'/user/editprofile'}>Edit Profile</Link>
       <Link className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</Link>

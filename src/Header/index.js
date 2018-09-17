@@ -45,10 +45,9 @@ class Header extends Component {
     return (
       <div className='header-container'>
         <div className='header'>
-          <Link to={'./'}>
+          <Link to={'/home'}>
             <h1 className='header-app-name'>Collec<span>share</span></h1>
           </Link>
-          <input className='header-search-bar' type='text' placeholder='Search' onChange={this.handleSearchChange} value={this.state.searchInput}/>
           <div className='header-nav'>
           {
             this.props.user.uid ? 

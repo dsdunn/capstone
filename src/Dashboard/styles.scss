@@ -22,7 +22,14 @@ h5 {
   margin: 0;
 }
 
+.dashboard-username {
+  color: #fff
+}
+
 .dashboard {
+  display: flex;
+  align-items: center;
+  /*justify-content: space-around;*/
   background-color: rgba(0, 0, 0, 0.5);
   height: 3rem;
   position: relative;
