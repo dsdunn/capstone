@@ -25,9 +25,6 @@
     opacity: 0.8;
     border: 1.5px solid #C0C0C0; }
 
-.header-nav {
-  float: right; }
-
 .avatar-dash {
   display: flex;
   flex-direction: column;

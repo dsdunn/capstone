@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getUserInfo } from '../services/fetch'
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setProfile } from '../actions'
 
@@ -35,7 +35,7 @@ class CollectionSmall extends Component {
         <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile</button>
         <p className='collection-small-username'>{this.state.user.username}</p>
         <p className='collection-location-small'>{this.state.user.location || 'earth'}</p>
-        <h3 className='collection-title-small'>{title}</h3>
+        <Link exact='true' to={'./collection'}><h3 className='collection-title-small'>{title}</h3></Link>
         <p className='collection-description-small'><div class="collection-small-label">description: </div>{description}</p>
         <div className='collection-category-small'><div class="collection-small-label">category: </div>{category}</div>
       </div>

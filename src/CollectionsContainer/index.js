@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getAllCollections } from '../services/fetch';
 import CollectionSmall from '../CollectionSmall';
+import './styles.css';
 
 class CollectionsContainer extends Component {
   constructor(props) {
