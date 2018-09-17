@@ -15,7 +15,7 @@ class Header extends Component {
       dashboardActive: false
   }
 
-  signOut = () => {
+  handleSignOut = () => {
     this.setState({ dashboardActive: false })
     auth.doSignOut();
     this.props.signOut();
@@ -58,7 +58,8 @@ class Header extends Component {
           } 
           </div>
         </div>
-          <Dashboard active={this.state.dashboardActive}/>
+          <Dashboard active={this.state.dashboardActive}
+                     signOut={this.handleSignout}/>
       </div>
     )
   }
