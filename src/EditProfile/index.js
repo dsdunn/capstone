@@ -18,6 +18,7 @@ class EditProfile extends Component {
       bio: '',
       location: '',
       avatar: '',
+      showEditor: true
     }
   }
 
@@ -29,6 +30,7 @@ class EditProfile extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
+    // event.target.name === 'avatar' ? this.setState({ showEditor: true }) : this.setState({ showEditor: false }) 
     this.setState({
       [name]: event.target.files ? event.target.files[0] : value,
     })
@@ -65,19 +67,18 @@ class EditProfile extends Component {
   setEditorRef = (editor) => this.editor = editor
 
   render() {
-    let editor = this.state.avatar === '' ? '' : <MyEditor avatar={this.state.avatar} 
+    let editor = this.state.showEditor ?  <MyEditor avatar={this.state.avatar} 
                                                            save={this.handleSaveAvatar}
                                                            test={this.setEditorRef}
-                                                           />
+                                                           /> : ''
     
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
         { editor }
         <Link className='edit-profile-close-link' exact='true' to={'/user'}>Close</Link>
-        <input type='file'                    name='avatar'   onChange={this.handleChange}/>
+        <input type='file' name='avatar' onChange={this.handleChange}/>
         <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
-        {<input placeholder='fuck this' name='avatar' onChange={this.handleChange} value={this.state.avatar}/>}
-        <input placeholder='location'         name='location' onChange={this.handleChange} value={this.state.location}/>
+        <input placeholder='location' name='location' onChange={this.handleChange} value={this.state.location}/>
         <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         <button>submit</button>
       </form>

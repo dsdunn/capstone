@@ -24,7 +24,7 @@ class App extends Component {
         <Route exact path={'/home/login'} render={() => (<div><CollectionsContainer/><Login/></div>)} />
         <Route path={'/signup'} component={Signup} />
         <Route path={'/user'} component={UserProfile} />
-        <Route path={'user/editprofile'} component={EditProfile} />
+        <Route path={'/user/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/home'} component={CollectionsContainer}/>
       </div>
