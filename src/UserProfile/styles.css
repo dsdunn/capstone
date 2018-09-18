@@ -3,5 +3,7 @@
   padding: 4%; }
 
 .profile-img {
+  border: 2px solid #262425;
+  border-radius: 50%;
   height: 15vh;
   width: 15vh; }

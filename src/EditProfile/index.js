@@ -92,8 +92,8 @@ class EditProfile extends Component {
 
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
-        <a className='edit-profile-close-link' exact='true' onClick={() => this.goBack()} >Close
-          <img src={close}/>
+        <a className='edit-profile-close-link' exact='true' onClick={() => this.goBack()} >
+          <img className='close-btn' src={close}/>
         </a>
         { editor }
         { fileUpload }

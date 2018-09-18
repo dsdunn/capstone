@@ -59,7 +59,7 @@ class Login extends Component {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
         <a className='login-close-link' exact='true' onClick={() => this.history.goBack()}>
-          <img className='img' src={close} />
+          <img className='close-btn' src={close} />
         </a>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
         <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
