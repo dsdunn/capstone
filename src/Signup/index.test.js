@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { signIn } from '../actions'
+import { signIn } from '../actions';
 import { Signup, mapDispatchToProps } from './';
 
 describe('Signup', () => {
@@ -67,10 +67,9 @@ describe('Signup', () => {
     const mockEvent = { preventDefault: jest.fn() }
     wrapper.instance().handleSubmit(mockEvent)
     const actual = wrapper.state('error')
-    const expected = "Uh oh! make sure you fill out the required fields ...thats all of them"
+    const expected = "Check username and password"
 
     expect(actual).toEqual(expected)
-    // expect(history.push).toHaveBeenCalled()
   })
 
   it('should validate the form when validate is called', () => {
@@ -110,6 +109,12 @@ describe('Signup', () => {
 
     mappedProps.signIn(mockUser);
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  })
+
+  it('should call goBack when the form is closed', () => {
+    wrapper.find('a').simulate('click');
+
+    expect(history.goBack).toHaveBeenCalled();
   })
 
   it('should match the snapShot', () => {
