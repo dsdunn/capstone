@@ -61,8 +61,8 @@ export class Header extends Component {
                 <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
-                <a className='header-link' onClick={() => this.loginLocation()}>Login</a>
-                <a className='header-link' onClick={() => this.signupLocation()}>Create Account</a>
+                <a className='header-link login' onClick={() => this.loginLocation()}>Login</a>
+                <a className='header-link signup' onClick={() => this.signupLocation()}>Create Account</a>
                 <Link className='header-link' to={'/home'}>Get All</Link>
               </div>
           } 
