@@ -30,7 +30,6 @@ class Header extends Component {
 
   loginLocation = () => {
     let path = this.props.history.location.pathname;
-    console.log(this.props.match.path, this.props.history.location.pathname)
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
   }
 

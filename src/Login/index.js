@@ -34,6 +34,11 @@ class Login extends Component {
     })
   }
 
+  goBack = () => {
+    const path = this.props.history.location.pathname;
+    path === '/login' ? this.props.history.push('/home') : this.props.history.goBack();
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     auth.doSignInWithEmailAndPassword(this.state.email, this.state.password)
@@ -42,7 +47,7 @@ class Login extends Component {
         this.props.signIn(user);
         this.resetForm()
       })
-      .then(() => this.props.history.goBack())
+      .then(() => this.goBack())
       .catch(err => {
         this.setState({
           error: err.message
@@ -50,14 +55,10 @@ class Login extends Component {
       })
   }
 
-  goBack = () => {
-    this.props.history.goBack();
-  }
-
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
+        <a className='login-close-link' exact='true' onClick={() => this.history.goBack()}>
           <img className='img' src={close} />
         </a>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>

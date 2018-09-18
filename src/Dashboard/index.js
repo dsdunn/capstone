@@ -12,7 +12,9 @@ const Dashboard = (props) => {
   }
 
   const getPath = () => {
-    return props.history.location.pathname;
+    let path = props.history.location.pathname;
+    console.log(path)
+    return path === '/' ? path : path + '/';
   }
 
   return (
@@ -20,7 +22,7 @@ const Dashboard = (props) => {
       <p className='dashboard-username'>Hello, {props.user.username}.</p>
       <div>
       <NavLink className='dashboard-link dashboard-view-profile' onClick={() => {handleViewProfile()}} exact to={'/user'} >View Profile</NavLink>
-      <NavLink className='dashboard-link' to={getPath() + '/editprofile'}>Edit Profile</NavLink>
+      <NavLink className='dashboard-link' to={getPath() + 'editprofile'}>Edit Profile</NavLink>
       <NavLink className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</NavLink>
       <NavLink className='dashboard-link' to={'/user/settings'}>Account Settings</NavLink>
       <Link className='dashboard-link' to={'/'} onClick={() => props.handleSignOut()}>Sign Out</Link>
