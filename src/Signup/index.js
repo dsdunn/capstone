@@ -44,7 +44,7 @@ export class Signup extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.validate(this.state)) {
+    if (this.validate()) {
       auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
         .then(response => {
           let user = this.createUser(response)
