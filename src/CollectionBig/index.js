@@ -18,10 +18,24 @@ class CollectionBig extends Component {
     this.props.history.push('/user');
   }
 
-  render() {    
-    const { location, id, uid, username, title, description, avatar, image } = this.props.collection;
+  makeRows = (items) => {
+    if(!items) return;
+    return items.map(item => {
+      return (
+        <tr>
+          <td>{item.title}</td>
+          <td>{item.description}</td>
+          <td>{item.value}</td>
+          <td>unknown</td>
+        </tr>
+      )
+    })
+  }
 
-    const background = `https://collecshare.herokuapp.com/${image}`
+  render() {    
+    const { location, id, uid, username, title, description, avatar, image, items } = this.props.collection;
+    const background = `https://collecshare.herokuapp.com/${image}`;
+    const tableRows = this.makeRows(items);
 
     return (
       <div className='collection-big'>
@@ -48,7 +62,13 @@ class CollectionBig extends Component {
             <div>
               <h5>items</h5>
               <table>
-                <td
+                <tr>
+                  <th>Item</th>
+                  <th>Description</th>
+                  <th>Value</th>
+                  <th>Year</th>
+                </tr>
+                {tableRows}
               </table>
             </div>
           </div>
