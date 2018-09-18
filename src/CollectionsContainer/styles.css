@@ -2,9 +2,21 @@
   overflow: scroll;
   padding: 5%; }
 
+.collections-container-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
 .collections-cat-btn-container {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  height: 3rem; }
 
 .collections-container-cat-btn {
   color: #262425;
@@ -13,8 +25,9 @@
   border: none;
   background-color: transparent;
   margin-top: 0;
-  transition: margin-top 0.25s; }
-  .collections-container-cat-btn:hover {
+  transition: margin-top 0.25s;
+  text-shadow: .collections-container-cat-btn; }
+  .collections-container-cat-btn :hover {
     margin-top: -0.5rem; }
   .collections-container-cat-btn:focus {
     margin-top: -1.5rem; }

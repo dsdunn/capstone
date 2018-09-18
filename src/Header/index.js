@@ -7,7 +7,7 @@ import { signOut } from '../actions';
 import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
 
-class Header extends Component {
+export class Header extends Component {
   constructor(props){
     super();
 
