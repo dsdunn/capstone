@@ -11,11 +11,10 @@ export const getUserInfo = uid => {
 
 export const putUserInfo = (userInfo, uid) => {
   return apiFormDataFetch(`/users/${uid}`, 'PUT', userInfo)
-  // .then(response => console.log(response))
   .then(response => response.json())
 }
 
-export const postCollection = (collection, uid) => {
+export const postCollection = (collection) => {
   return apiFormDataFetch(`/collections`, `POST`, collection)
   .then(response => response.json())
 }

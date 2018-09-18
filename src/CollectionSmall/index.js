@@ -35,10 +35,10 @@ class CollectionSmall extends Component {
 
   render() {
 
-    const { title, description, category } = this.props.collection;
+    const { title, description, category, image } = this.props.collection;
     return(
       <div className='collection-small'>
-          <img className='collection-small-image'/>
+          <img className='collection-small-image' src={`https://collecshare.herokuapp.com/${image}`}/>
         <div className='collection-small-top'>
           <div className='collection-small-header'>
             <div>
