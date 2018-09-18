@@ -29,3 +29,8 @@ export const getUserCollections = uid => {
   return apiFetch(`/collections?uid=${uid}`)
   .then(response => response.json())
 }
+
+export const getCollectionsByCategory = (cat) => {
+  return apiFetch(`/collections?category=${cat}`)
+  .then(response => response.json())
+}

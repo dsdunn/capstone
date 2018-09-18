@@ -1,0 +1,11 @@
+.avatar-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.avatar-control,
+.avatar-controls {
+  width: 16rem;
+}

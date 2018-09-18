@@ -34,6 +34,11 @@ class Header extends Component {
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
   }
 
+  signupLocation = () => {
+    let path = this.props.history.location.pathname;
+    this.props.history.push( path === '/' ? path + 'signup': path + '/signup');
+  }
+
   handleSearchChange = (event) => {
     this.setState({ searchInput: event.target.value })
   }

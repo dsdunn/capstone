@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import AvatarEditor from 'react-avatar-editor'
+import React, { Component } from 'react';
+import AvatarEditor from 'react-avatar-editor';
+import './styles.css'
 
 class MyEditor extends Component {
   constructor(props) {
@@ -17,13 +18,14 @@ class MyEditor extends Component {
     this.setState({ [name]: value })
   }
 
-  handleRotate = () => {
+  handleRotate = (event) => {
+    event.preventDefault()
     this.setState({ rotate: this.state.rotate += 90 })
   }
 
   render () {
     return (
-      <div>
+      <div className='avatar-editor'>
         <AvatarEditor
           ref={this.props.test}
           image={this.props.avatar}
@@ -34,9 +36,11 @@ class MyEditor extends Component {
           rotate={this.state.rotate}
           borderRadius={150}
         />
-        <input type='range' min='10' max='100' name='size' onChange={this.handleChange} value={this.state.size}/>
-        <button onClick={this.props.save} >click me</button>
-        <button name='rotate' onClick={this.handleRotate} value={this.state.rotate} onChange={this.handleChange}>rotate</button>
+        <div className='avatar-controls'>
+          <input className='avatar-control' type='range' min='10' max='100' name='size' onChange={this.handleChange} value={this.state.size}/>
+          <button className='avatar-control' name='rotate' onClick={this.handleRotate} value={this.state.rotate} onChange={this.handleChange}>rotate 90</button>
+          <button className='avatar-control' onClick={this.props.save}>Save Avatar</button> 
+        </div>
       </div>
     )
   }

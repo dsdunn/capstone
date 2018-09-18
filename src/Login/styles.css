@@ -15,8 +15,7 @@
   box-shadow: 0 0 0 100vh rgba(25, 6, 6, 0.8); }
 
 input {
-  height: 3vh;
-  margin: 2% 0; }
+  height: 3vh; }
 
 .login-err-message {
   margin: 0 auto; }
@@ -24,10 +23,6 @@ input {
 .img {
   border-radius: 50%;
   background-color: #fff;
-  position: relative;
-  top: -30px;
-  left: 30rem;
-  width: 30px;
   transition: 0.70s;
   -webkit-transition: 0.70s;
   -moz-transition: 0.70s;
