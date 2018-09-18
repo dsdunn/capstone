@@ -1,0 +1,24 @@
+.collection-big{
+  position: relative;
+  top: 10vh;
+  padding: 4%;
+
+
+  .collection-bit-user-group {
+    float: right;
+  }
+
+  .collection-big-header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .collection-big-image {
+    height: 35vh;
+    // width: 100%;
+  }
+
+  .collection-big-avatar {
+    height: 15vh;
+  }
+}
