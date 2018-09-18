@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
 import { updateUser } from '../actions';
-
+import close from '../images/close.svg'
 import AvatarEditor from 'react-avatar-editor';
 import MyEditor from '../AvatarEditor'
 
@@ -18,7 +18,7 @@ class EditProfile extends Component {
       bio: '',
       location: '',
       avatar: '',
-      showEditor: true
+      showEditor: false
     }
   }
 
@@ -30,7 +30,7 @@ class EditProfile extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    // event.target.name === 'avatar' ? this.setState({ showEditor: true }) : this.setState({ showEditor: false }) 
+    event.target.name === 'avatar' ? this.setState({ showEditor: true }) : this.setState({ showEditor: false }) 
     this.setState({
       [name]: event.target.files ? event.target.files[0] : value,
     })
@@ -64,23 +64,49 @@ class EditProfile extends Component {
     }
   }
 
+  closeEditor = () => {
+    this.setState({ showEditor: false })
+  }
+
   setEditorRef = (editor) => this.editor = editor
 
   render() {
-    let editor = this.state.showEditor ?  <MyEditor avatar={this.state.avatar} 
-                                                           save={this.handleSaveAvatar}
-                                                           test={this.setEditorRef}
-                                                           /> : ''
-    
+    let editor = this.state.showEditor ?
+      <div>
+        <button onClick={this.closeEditor}>close editor</button>
+        <MyEditor avatar={this.state.avatar} 
+         save={this.handleSaveAvatar}
+         test={this.setEditorRef}
+         /> 
+      </div>  
+       : ''
+
+    let fileUpload = this.state.showEditor ? '' : 
+      <div className='test'>
+        <label htmlFor='avatar'>Select Image:</label>
+        <input type='file' name='avatar' onChange={this.handleChange}/>
+      </div>
+
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
+        <Link className='edit-profile-close-link' exact='true' to={'/user'}>
+          <img className='img' src={close} />
+        </Link>
         { editor }
-        <Link className='edit-profile-close-link' exact='true' to={'/user'}>Close</Link>
-        <input type='file' name='avatar' onChange={this.handleChange}/>
-        <input placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/>
-        <input placeholder='location' name='location' onChange={this.handleChange} value={this.state.location}/>
-        <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
-        <button>submit</button>
+        { fileUpload }
+        <div className='test'>
+          <label htmlFor='username'>username:</label>
+          <input className='edit-profile-input' placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/> 
+        </div>
+        <div className='test'>
+          <label htmlFor='location'>location:</label>
+          <input className='edit-profile-input' placeholder='location' name='location' onChange={this.handleChange} value={this.state.location}/>
+        </div>
+        <div className='test'>
+          <label htmlFor='bio'>bio:</label>
+          <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
+        </div>
+        <button className='edit-profile-submit-btn'>submit</button>
       </form>
     )
   }
