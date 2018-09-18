@@ -62,6 +62,7 @@ class EditProfile extends Component {
         this.setState({ avatar: blob })
       })
     }
+  }
 
   goBack = () => {
     this.props.history.goBack();
@@ -71,7 +72,7 @@ class EditProfile extends Component {
     this.setState({ showEditor: false })
   }
 
-  setEditorRef = (editor) => this.editor = editor
+  setEditorRef = (editor) => this.editor = editor;
 
   render() {
     let editor = this.state.showEditor ?
@@ -92,8 +93,8 @@ class EditProfile extends Component {
 
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
-        <a className='edit-profile-close-link' exact='true' onClick={() => this.goBack()}>Close
-        <img src=''/>
+        <a className='edit-profile-close-link' exact='true' onClick={() => this.goBack()} >Close
+          <img src={close}/>
         </a>
         { editor }
         { fileUpload }
@@ -113,7 +114,6 @@ class EditProfile extends Component {
       </form>
     )
   }
-
 }
 
 export const mapStateToProps = (state) => ({
