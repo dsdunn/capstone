@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup should match the snapShot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Signup
+    history={
+        Object {
+            "goBack": [Function],
+            "location": "location",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <a
+          className="signup-close-link"
+          exact="true"
+          onClick={[Function]}
+>
+          <img
+                    className="close-btn"
+                    src="close.svg"
+          />
+</a>,
+        <label
+          htmlFor="email"
+>
+          email
+</label>,
+        <input
+          id="email"
+          onChange={[Function]}
+          type="email"
+          value=""
+/>,
+        <label
+          htmlFor="username"
+>
+          username
+</label>,
+        <input
+          id="username"
+          onChange={[Function]}
+          value=""
+/>,
+        <label
+          htmlFor="password1"
+>
+          password
+</label>,
+        <input
+          id="password1"
+          onChange={[Function]}
+          type="password"
+          value=""
+/>,
+        <label
+          htmlFor="password2"
+>
+          confirm password
+</label>,
+        <input
+          id="password2"
+          onChange={[Function]}
+          type="password"
+          value=""
+/>,
+        <input
+          type="submit"
+/>,
+        <p
+          className="signup-err-message"
+/>,
+      ],
+      "className": "signup",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            className="close-btn"
+            src="close.svg"
+/>,
+          "className": "signup-close-link",
+          "exact": "true",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "close-btn",
+            "src": "close.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "a",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "email",
+          "htmlFor": "email",
+        },
+        "ref": null,
+        "rendered": "email",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "email",
+          "onChange": [Function],
+          "type": "email",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "username",
+          "htmlFor": "username",
+        },
+        "ref": null,
+        "rendered": "username",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "username",
+          "onChange": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "password",
+          "htmlFor": "password1",
+        },
+        "ref": null,
+        "rendered": "password",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "password1",
+          "onChange": [Function],
+          "type": "password",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "confirm password",
+          "htmlFor": "password2",
+        },
+        "ref": null,
+        "rendered": "confirm password",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "password2",
+          "onChange": [Function],
+          "type": "password",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": null,
+          "className": "signup-err-message",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <a
+            className="signup-close-link"
+            exact="true"
+            onClick={[Function]}
+>
+            <img
+                        className="close-btn"
+                        src="close.svg"
+            />
+</a>,
+          <label
+            htmlFor="email"
+>
+            email
+</label>,
+          <input
+            id="email"
+            onChange={[Function]}
+            type="email"
+            value=""
+/>,
+          <label
+            htmlFor="username"
+>
+            username
+</label>,
+          <input
+            id="username"
+            onChange={[Function]}
+            value=""
+/>,
+          <label
+            htmlFor="password1"
+>
+            password
+</label>,
+          <input
+            id="password1"
+            onChange={[Function]}
+            type="password"
+            value=""
+/>,
+          <label
+            htmlFor="password2"
+>
+            confirm password
+</label>,
+          <input
+            id="password2"
+            onChange={[Function]}
+            type="password"
+            value=""
+/>,
+          <input
+            type="submit"
+/>,
+          <p
+            className="signup-err-message"
+/>,
+        ],
+        "className": "signup",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              className="close-btn"
+              src="close.svg"
+/>,
+            "className": "signup-close-link",
+            "exact": "true",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "close-btn",
+              "src": "close.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "a",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "email",
+            "htmlFor": "email",
+          },
+          "ref": null,
+          "rendered": "email",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "email",
+            "onChange": [Function],
+            "type": "email",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "username",
+            "htmlFor": "username",
+          },
+          "ref": null,
+          "rendered": "username",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "username",
+            "onChange": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "password",
+            "htmlFor": "password1",
+          },
+          "ref": null,
+          "rendered": "password",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "password1",
+            "onChange": [Function],
+            "type": "password",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "confirm password",
+            "htmlFor": "password2",
+          },
+          "ref": null,
+          "rendered": "confirm password",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "password2",
+            "onChange": [Function],
+            "type": "password",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": null,
+            "className": "signup-err-message",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

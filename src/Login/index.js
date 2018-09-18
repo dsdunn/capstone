@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signIn } from '../actions';
+import { signIn, setProfile } from '../actions';
 import { auth } from '../firebase';
 import { getUserInfo } from '../services/fetch';
 import close from '../images/close.svg'
@@ -45,7 +45,8 @@ class Login extends Component {
       .then(response => getUserInfo(response.user.uid))
       .then(user => {
         this.props.signIn(user);
-        this.resetForm()
+        this.props.setProfile(user);
+        this.resetForm();
       })
       .then(() => this.goBack())
       .catch(err => {
@@ -75,7 +76,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  signIn: (userId) => dispatch(signIn(userId))
+  signIn: (userId) => dispatch(signIn(userId)),
+  setProfile: (user) => dispatch(setProfile(user))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

@@ -15,6 +15,7 @@ class UserProfile extends Component {
   componentDidMount() {
     getUserCollections(this.props.profile.uid)
       .then(results => {
+        console.log(results)
         const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} />);
       this.setState({
         collections
@@ -33,7 +34,7 @@ class UserProfile extends Component {
           <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
-          {this.state.collections.length || <p>To get started, hit up that dashboard and add a collection!</p>}
+          {this.state.collections || <p>To get started, hit up that dashboard and add a collection!</p>}
         </section>
       </div>
     )

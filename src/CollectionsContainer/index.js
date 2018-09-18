@@ -3,6 +3,13 @@ import { getAllCollections, getCollectionsByCategory } from '../services/fetch';
 import CollectionSmall from '../CollectionSmall';
 import './styles.css';
 
+import vinyl from '../images/vinyl.jpg'
+import cards from '../images/baseballcards2.jpeg'
+import coins from '../images/highrescoincol.jpg'
+import all from '../images/collection-focus-magnifier-248993.jpg'
+import comics from '../images/160318ComicBooks_0.jpg'
+
+
 class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
@@ -32,17 +39,36 @@ class CollectionsContainer extends Component {
 
   render() {
     const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
+    let imgbg;
+    switch (this.state.category) {
+      case 'vinyl': imgbg = vinyl
+      break;
+      case 'cards': imgbg = cards
+      break;
+      case 'all': imgbg = all;
+      break;
+      case 'coins': imgbg = coins
+      break;
+      case 'comics': imgbg = comics
+      break
+      default: imgbg = all
+    }
+
     return (
-      <div className='collections-container'>
-      <h1 className='collections-category-name'>{this.state.category}.</h1>
-      <div className='collections-cat-btn-container'>
-        <button className='collections-container-cat-btn' name='comics' onClick={this.handleClick}>Comics</button>
-        <button className='collections-container-cat-btn' name='cards' onClick={this.handleClick}>Cards</button>
-        <button className='collections-container-cat-btn' name='coins' onClick={this.handleClick}>Coins</button>
-        <button className='collections-container-cat-btn' name='vinyl' onClick={this.handleClick}>Vinyl</button>
-        <button className='collections-container-cat-btn' name='other' onClick={this.handleClick}>Other</button>
-      </div>
-        {list}
+      <div>
+      <div className='collections-container-bg' style={{ backgroundImage: `url(${imgbg})`}}></div>
+        <div className='collections-container'>
+        <h1 className='collections-category-name'>{this.state.category}.</h1>
+        <div className='collections-cat-btn-container'>
+          <button className='collections-container-cat-btn' name='comics' onClick={this.handleClick}>comics</button>
+          <button className='collections-container-cat-btn' name='cards' onClick={this.handleClick}>cards</button>
+          <button className='collections-container-cat-btn' name='coins' onClick={this.handleClick}>coins</button>
+          <button className='collections-container-cat-btn' name='vinyl' onClick={this.handleClick}>vinyl</button>
+          <button className='collections-container-cat-btn' name='other' onClick={this.handleClick}>other</button>
+        </div>
+          {list}
+        </div>
+
       </div>
     )
   }

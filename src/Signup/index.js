@@ -7,7 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 import close from '../images/close.svg'
 import './styles.css'
 
-class Signup extends Component {
+export class Signup extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +20,6 @@ class Signup extends Component {
   }
 
   handleChange = (event) => {
-    event.preventDefault();
     const { id, value } = event.target;
 
     this.setState({
