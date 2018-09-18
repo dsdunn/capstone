@@ -11,8 +11,22 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
+import { firebase } from '../firebase';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = { authUser: null};
+  }
+
+  componentDidMount() {
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState({ authUser })
+        : this.setState({ authUser: null });
+    });
+  }
+
   render() {
     return (
       <div className="App">
