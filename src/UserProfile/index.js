@@ -4,7 +4,7 @@ import { getUserCollections } from '../services/fetch';
 import './styles.css'
 import CollectionSmall from '../CollectionSmall';
 
-class UserProfile extends Component {
+export class UserProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,6 @@ class UserProfile extends Component {
   componentDidMount() {
     getUserCollections(this.props.profile.uid)
       .then(results => {
-        console.log(results)
         const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} />);
       this.setState({
         collections
@@ -34,7 +33,7 @@ class UserProfile extends Component {
           <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
-          {this.state.collections || <p>To get started, hit up that dashboard and add a collection!</p>}
+          {this.state.collections.length ? this.state.collections : <p className='message'>To get started, hit up that dashboard and add a collection!</p>}
         </section>
       </div>
     )
@@ -45,11 +44,7 @@ export const mapStateToProps = (state) => ({
   profile: state.profile
 })
 
-export const mapDispatchToProps = (dispatch) => ({
-
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);
+export default connect(mapStateToProps)(UserProfile);
 
 
 
