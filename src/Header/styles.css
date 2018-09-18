@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
   background-color: #262425;
   padding: 1.5% 2%;
   height: 5vh;
+  width: 100%;
   z-index: 2; }
 
 .header-logo {
