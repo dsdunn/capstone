@@ -21,12 +21,13 @@
 .edit-profile-form label {
   margin-right: 1rem; }
 
-.edit-profile-submit-btn {
+.edit-profile-submit-btn,
+.close-avatar-editor {
   display: block;
   width: 10vw;
   margin: 0.5% auto; }
 
-.test {
+.edit-profile-input-container {
   display: flex;
   justify-content: space-between;
   align-items: center; }

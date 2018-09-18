@@ -77,16 +77,15 @@ class EditProfile extends Component {
   render() {
     let editor = this.state.showEditor ?
       <div>
-        <button onClick={this.closeEditor}>close editor</button>
+        <button className='close-avatar-editor' onClick={this.closeEditor}>close editor</button>
         <MyEditor avatar={this.state.avatar} 
          save={this.handleSaveAvatar}
-         test={this.setEditorRef}
-         /> 
+         test={this.setEditorRef} /> 
       </div>  
        : ''
 
     let fileUpload = this.state.showEditor ? '' : 
-      <div className='test'>
+      <div className='edit-profile-input-container'>
         <label htmlFor='avatar'>Select Image:</label>
         <input type='file' name='avatar' onChange={this.handleChange}/>
       </div>
@@ -98,15 +97,15 @@ class EditProfile extends Component {
         </a>
         { editor }
         { fileUpload }
-        <div className='test'>
+        <div className='edit-profile-input-container'>
           <label htmlFor='username'>username:</label>
           <input className='edit-profile-input' placeholder='new display name' name='username' onChange={this.handleChange} value={this.state.username}/> 
         </div>
-        <div className='test'>
+        <div className='edit-profile-input-container'>
           <label htmlFor='location'>location:</label>
           <input className='edit-profile-input' placeholder='location' name='location' onChange={this.handleChange} value={this.state.location}/>
         </div>
-        <div className='test'>
+        <div className='edit-profile-input-container'>
           <label htmlFor='bio'>bio:</label>
           <textarea placeholder='tell us a little about yourself and what you like to collect' name='bio' onChange={this.handleChange} value={this.state.bio}/>
         </div>
