@@ -33,7 +33,7 @@ class UserProfile extends Component {
           <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
-          {this.state.collections || 'your collections will go here!!!!'}
+          {this.state.collections.length || <p>To get started, hit up that dashboard and add a collection!</p>}
         </section>
       </div>
     )

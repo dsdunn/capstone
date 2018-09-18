@@ -32,7 +32,7 @@
   justify-content: space-between;
   align-items: center; }
 
-.img {
+.close-btn {
   width: 1.5rem;
   border-radius: 50%;
   background-color: #fff;
@@ -41,7 +41,7 @@
   -moz-transition: 0.70s;
   -ms-transition: 0.70s;
   -o-transition: 0.70s; }
-  .img:hover {
+  .close-btn:hover {
     transition: 0.70s;
     -webkit-transition: 0.70s;
     -moz-transition: 0.70s;

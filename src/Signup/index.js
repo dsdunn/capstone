@@ -87,7 +87,7 @@ class Signup extends Component {
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
         <a className='signup-close-link' exact='true' onClick={() => this.goBack()}>
-          <img className='img' src={close} />
+          <img className='close-btn' src={close} />
         </a>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
