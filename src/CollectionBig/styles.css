@@ -1,13 +1,71 @@
 .collection-big {
+  margin: 0; }
+  .collection-big .collection-big-title {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    top: 6vh;
+    margin: 5%; }
+
+.collection-big-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1; }
+
+.collection-big-main {
   position: relative;
-  top: 10vh;
-  padding: 4%; }
-  .collection-big .collection-bit-user-group {
-    float: right; }
-  .collection-big .collection-big-header {
-    text-align: center;
+  background: linear-gradient(to bottom, white 0%, #f6f6f6 47%, #ededed 100%);
+  overflow: scroll;
+  margin: 5% 5% 0 5%;
+  top: 8vh;
+  height: 100vh;
+  padding: 5%;
+  box-shadow: 0px 0px 10px 1px #888888; }
+  .collection-big-main hr {
+    margin-top: 4vh; }
+  .collection-big-main .collection-big-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .collection-big-main .collection-big-header .collection-big-user-group {
+      padding: 5%;
+      text-align: center;
+      margin: auto; }
+      .collection-big-main .collection-big-header .collection-big-user-group:hover {
+        cursor: pointer; }
+        .collection-big-main .collection-big-header .collection-big-user-group:hover .collection-big-avatar {
+          opacity: 0.8;
+          box-shadow: 0 0 5px #a62c19; }
+      .collection-big-main .collection-big-header .collection-big-user-group .collection-big-username {
+        font-size: 1.5em; }
+      .collection-big-main .collection-big-header .collection-big-user-group * {
+        margin: 4%; }
+  .collection-big-main .collection-big-user-group-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%; }
-  .collection-big .collection-big-image {
-    height: 35vh; }
-  .collection-big .collection-big-avatar {
-    height: 15vh; }
+  .collection-big-main .collection-big-image {
+    height: 35vh;
+    width: 500px;
+    box-shadow: 0px 0px 2px 1px #888888; }
+  .collection-big-main .collection-big-avatar {
+    height: 15vh;
+    width: 15vh;
+    margin: 2%;
+    border-radius: 50%; }
+  .collection-big-main .collection-big-body {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+    padding: 5%; }
+    .collection-big-main .collection-big-body * {
+      margin: 2% auto; }
+    .collection-big-main .collection-big-body li {
+      list-style: none; }

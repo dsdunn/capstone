@@ -21,28 +21,37 @@ class CollectionBig extends Component {
   render() {    
     const { location, id, uid, username, title, description, avatar, image } = this.props.collection;
 
+    const background = `https://collecshare.herokuapp.com/${image}`
+
     return (
       <div className='collection-big'>
-        <header className='collection-big-header'>
-          <img className='collection-big-image' src={`https://collecshare.herokuapp.com/${image}`}/>
-          <h3 className='collection-big-title'>{title}</h3>
-        </header>
-          <div className='collection-big-user-group'>
-            <img className='collection-big-avatar' src={`https://collecshare.herokuapp.com/${avatar}`} />
-            <h4 className='collection-big-username'>{username}</h4>
-            <button onClick={this.goToProfile}>view profile</button>
-            <p className='collection-big-location'>{location}</p>
+        <div className={'collection-big-background'} style={{backgroundImage: `url(${background})`}}>
+        </div>
+        <h1 className='collection-big-title'>{title}</h1>
+        <main className='collection-big-main'>
+          <header className='collection-big-header'>
+            <img className='collection-big-image' src={`https://collecshare.herokuapp.com/${image}`}/>
+            <div className='collection-big-user-group-wrapper'>
+              <div className='collection-big-user-group'>
+                <img className='collection-big-avatar' src={`https://collecshare.herokuapp.com/${avatar}`} onClick={this.goToProfile}/>
+                <h4 className='collection-big-username'>{username}</h4>
+                <p className='collection-big-location'>{location}</p>
+              </div>
+            </div>
+          </header>
+          <hr/>
+          <div className='collection-big-body'>
+            <div>
+              <h5>description: </h5>
+              <p className='collection-big-description>'>{description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.</p>
+            </div>
+            <div>
+              <h5>items</h5>
+              <table>
+                <td
+              </table>
+            </div>
           </div>
-        <main className='collection-big-body'>
-          <h5>description: </h5>
-          <p className='collection-big-description>'>{description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue. Proin id mauris orci. Fusce molestie ligula tortor, at congue mauris porta id. Nullam aliquam vestibulum porta. Integer sagittis nulla nisi. Quisque semper enim urna, non dignissim justo efficitur non.</p>
-          <h5>items</h5>
-            <ul>
-              <li>item 1</li>
-              <li>item 2</li>
-              <li>item 3</li>
-              <li>item 4</li>
-            </ul>
         </main>
       </div>
     )
