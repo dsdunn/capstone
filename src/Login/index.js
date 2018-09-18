@@ -59,11 +59,11 @@ class Login extends Component {
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <a className='login-close-link' exact='true' onClick={() => this.history.goBack()}>
+        <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
           <img className='close-btn' src={close} />
         </a>
         <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
-        <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
+        <input id='password' type='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
         <input type='submit'/>
         <p className='login-err-message'>{this.state.errorMessage}</p>
       </form>
