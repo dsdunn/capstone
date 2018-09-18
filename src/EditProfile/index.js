@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
 import { updateUser } from '../actions';
@@ -48,7 +48,7 @@ class EditProfile extends Component {
     putUserInfo(body, this.state.uid)
     .then(result => {
       this.props.updateUser(result)
-      this.props.history.push('/')
+      this.props.history.push('/user');
     })
   }
 
@@ -64,11 +64,15 @@ class EditProfile extends Component {
     }
   }
 
+  goBack = () => {
+    this.props.history.goBack();
+  }
+
   closeEditor = () => {
     this.setState({ showEditor: false })
   }
 
-  setEditorRef = (editor) => this.editor = editor
+  setEditorRef = (editor) => this.editor = editor;
 
   render() {
     let editor = this.state.showEditor ?
@@ -89,9 +93,9 @@ class EditProfile extends Component {
 
     return (
       <form ref={el => (this.form = el)} className='edit-profile-form' id='photo-form' onSubmit={this.handleSubmit}>
-        <Link className='edit-profile-close-link' exact='true' to={'/user'}>
-          <img className='img' src={close} />
-        </Link>
+        <a className='edit-profile-close-link' exact='true' onClick={() => this.goBack()} >Close
+          <img src={close}/>
+        </a>
         { editor }
         { fileUpload }
         <div className='test'>
@@ -110,7 +114,6 @@ class EditProfile extends Component {
       </form>
     )
   }
-
 }
 
 export const mapStateToProps = (state) => ({
@@ -122,7 +125,7 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditProfile);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditProfile));
 
 
 

@@ -17,16 +17,17 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Route path={'/addcollection'} component={AddCollection} />
+        <Route path={'/user/addcollection'} component={AddCollection} />
         <Route exact path={'/'} component={LandingPage} />
         <Route exact path={'/login'} render={() => (<div><LandingPage/><Login/></div>)} />
         <Route exact path={'/user/login'} render={() => (<div><UserProfile/><Login/></div>)} />
         <Route exact path={'/home/login'} render={() => (<div><CollectionsContainer/><Login/></div>)} />
-        <Route exact path={'/signup'} render={() => (<div><LandingPage/><Signup/></div>)} />
-        <Route exact path={'/user/signup'} render={() => (<div><UserProfile/><Signup/></div>)} />
-        <Route exact path={'/home/signup'} render={() => (<div><CollectionsContainer/><Signup/></div>)} />
+        <Route path={'/signup'} render={() => (<div><LandingPage/><Signup/></div>)} />
+        <Route path={'/user/signup'} render={Signup} />
+        <Route path={'/home/signup'} component={Signup} />
         <Route path={'/user'} component={UserProfile} />
         <Route path={'/user/editprofile'} component={EditProfile} />
+        <Route path={'/home/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/home'} component={CollectionsContainer}/>
       </div>

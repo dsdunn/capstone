@@ -17,35 +17,37 @@ class AddCollection extends Component {
 
   componentDidMount() {
     this.setState({
-      uid: this.props.user.uid,
+      uid: this.props.user.uid
     })
   }
 
   handleChange = event => {
-    let { id, value } = event.target;
+    let { name, value } = event.target;
     this.setState({
-      [id]: value
+      [name]: value
     })
   }
 
-  submitCollection = event => {
+  handleSubmit = event => {
     event.preventDefault();
-    postCollection(this.state)
+    const body = new FormData(this.form);
+
+    postCollection(body, this.state.uid)
       .then(this.props.history.push('/user'))
   }
 
   render() {
     return (
-      <form className='add-collection-form' onSubmit={this.submitCollection}>
+      <form ref={el => (this.form = el)} className='add-collection-form' onSubmit={this.handleSubmit}>
         <label for='collection-image'>Upload a picture of your collection</label>
-        <input id='collection-image' type='file' />
+        <input name='collection-image' ref={this.fileInput} type='file' />
         <label for='title'>Collection name: </label>
-        <input id='title' placeholder='my collection' value={this.state.title} onChange={this.handleChange}/>
+        <input name='title' placeholder='my collection' value={this.state.title} onChange={this.handleChange}/>
         <label for='description'>Describe your Collection:</label>
-        <textarea id='description' value={this.state.description} onChange={this.handleChange}/>
+        <textarea name='description' value={this.state.description} onChange={this.handleChange}/>
         <label htmlFor='collection-form-category'>Select a Category</label>
         <div className='collection-form-bottom'>
-          <select id='category' required={true} onChange={this.handleChange}>
+          <select name='category' required={true} onChange={this.handleChange}>
             <option value=''>choose a category</option>
             <option value='coins'>Coins</option>
             <option value='comics'>Comics</option>
