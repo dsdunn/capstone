@@ -24,7 +24,7 @@ class AddCollection extends Component {
   handleChange = event => {
     let { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: event.target.files ? event.target.files[0] : value
     })
   }
 
@@ -32,7 +32,8 @@ class AddCollection extends Component {
     event.preventDefault();
     const body = new FormData(this.form);
 
-    postCollection(body, this.state.uid)
+    body.append('uid', this.state.uid)
+    postCollection(body)
       .then(this.props.history.push('/user'))
   }
 
@@ -40,7 +41,7 @@ class AddCollection extends Component {
     return (
       <form ref={el => (this.form = el)} className='add-collection-form' onSubmit={this.handleSubmit}>
         <label for='collection-image'>Upload a picture of your collection</label>
-        <input name='collection-image' ref={this.fileInput} type='file' />
+        <input name='image' ref={this.fileInput} type='file' />
         <label for='title'>Collection name: </label>
         <input name='title' placeholder='my collection' value={this.state.title} onChange={this.handleChange}/>
         <label for='description'>Describe your Collection:</label>
