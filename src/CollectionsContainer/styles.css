@@ -56,9 +56,9 @@
 .vinyl-txt,
 .all-txt,
 .other-txt {
-  animation-duration: 0.5s;
-  animation-name: fadeAway;
-  /*transition: color 1s ease-in-out;*/ }
+  /*  animation-duration: 0.5s;
+  animation-name: fadeAway;*/
+  transition: color 1s ease-in-out; }
 
 .collections-cat-btn-container {
   display: flex;
