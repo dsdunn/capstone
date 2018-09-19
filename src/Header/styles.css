@@ -7,7 +7,6 @@
   background-color: #262425;
   padding: 1.5% 2%;
   height: 50px;
-  /*max-height: 5.75vh;*/
   width: 100%;
   z-index: 2; }
 
@@ -22,7 +21,6 @@
   border: 1.5px solid #fff;
   border-radius: 50%;
   top: 1rem;
-  /*width: 2.5vw;*/
   height: 35px;
   max-width: 35px; }
   .header-avatar:hover {
