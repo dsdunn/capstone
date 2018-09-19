@@ -5,7 +5,7 @@ import { getUserInfo, postCollection } from '../services/fetch';
 import PropTypes from 'prop-types';
 import './styles.css'
 
-class AddCollection extends Component {
+export class AddCollection extends Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -43,3 +43,14 @@ export const getUserInfo = jest.fn().mockImplementation(() => {
       id: 666
     }])
   })
+
+export const postCollection = jest.fn().mockImplementation(() => {
+  return Promise.resolve([{  
+      id: 666,
+      uid: 'string',
+      category: 'vinyl',
+      title: 'string',
+      description: 'string',
+      image: 'string'
+    }])
+  })
