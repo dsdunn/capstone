@@ -36,8 +36,8 @@ npm test
 * **Spenser Leighton** - *Initial work* - [@spenserleighton1](https://github.com/spenserleighton1)
 * **Adam Lusk** - *Initial work* - [@Valusk](https://github.com/valusk)
 
-![landingpage](https://github.com/dsdunn/collecshare/collecshare_landing.png)
-![collection](https://github.com/dsdunn/collecshare/collecshare_collection.png)
+![landingpage](./collecshare_landing.png)
+![collection](./collecshare_collection.png)
 ![home](./collecshare_home.png)
 
 
