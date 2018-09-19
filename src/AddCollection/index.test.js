@@ -32,4 +32,3 @@ describe('AddCollection', () => {
     expect(postCollection).toBeCalled();
   })
 })
-
