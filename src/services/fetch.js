@@ -15,7 +15,7 @@ export const putUserInfo = (userInfo, uid) => {
 }
 
 export const getCollection = (id) => {
-  return apiFetch(`/collections/1`, 'GET')
+  return apiFetch(`/collections/${id}`, 'GET')
   .then(response => response.json())
 }
 

@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import { Dashboard, mapDispatchToProps, mapStateToProps, } from './'
 import { setProfile } from '../actions';
 
+
 describe('Dashboard', () => {
   let wrapper;
   let mockSetProfile;

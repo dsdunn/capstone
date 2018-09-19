@@ -36,6 +36,9 @@ ShallowWrapper {
                     src="close.svg"
           />
 </a>,
+        <h5>
+          Sign Up
+</h5>,
         <label
           htmlFor="email"
 >
@@ -118,6 +121,17 @@ ShallowWrapper {
           "type": "img",
         },
         "type": "a",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sign Up",
+        },
+        "ref": null,
+        "rendered": "Sign Up",
+        "type": "h5",
       },
       Object {
         "instance": null,
@@ -265,6 +279,9 @@ ShallowWrapper {
                         src="close.svg"
             />
 </a>,
+          <h5>
+            Sign Up
+</h5>,
           <label
             htmlFor="email"
 >
@@ -347,6 +364,17 @@ ShallowWrapper {
             "type": "img",
           },
           "type": "a",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sign Up",
+          },
+          "ref": null,
+          "rendered": "Sign Up",
+          "type": "h5",
         },
         Object {
           "instance": null,

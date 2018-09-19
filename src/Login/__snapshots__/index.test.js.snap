@@ -38,16 +38,28 @@ ShallowWrapper {
                     src="close.svg"
           />
 </a>,
+        <h5>
+          Login
+</h5>,
+        <label
+          for="email"
+>
+          email
+</label>,
         <input
           id="email"
           onChange={[Function]}
-          placeholder="email"
           value=""
 />,
+        <label
+          for="password"
+>
+          password
+</label>,
         <input
           id="password"
           onChange={[Function]}
-          placeholder="password"
+          type="password"
           value=""
 />,
         <input
@@ -95,9 +107,31 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Login",
+        },
+        "ref": null,
+        "rendered": "Login",
+        "type": "h5",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "email",
+          "for": "email",
+        },
+        "ref": null,
+        "rendered": "email",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "id": "email",
           "onChange": [Function],
-          "placeholder": "email",
           "value": "",
         },
         "ref": null,
@@ -109,9 +143,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "password",
+          "for": "password",
+        },
+        "ref": null,
+        "rendered": "password",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "id": "password",
           "onChange": [Function],
-          "placeholder": "password",
+          "type": "password",
           "value": "",
         },
         "ref": null,
@@ -161,16 +207,28 @@ ShallowWrapper {
                         src="close.svg"
             />
 </a>,
+          <h5>
+            Login
+</h5>,
+          <label
+            for="email"
+>
+            email
+</label>,
           <input
             id="email"
             onChange={[Function]}
-            placeholder="email"
             value=""
 />,
+          <label
+            for="password"
+>
+            password
+</label>,
           <input
             id="password"
             onChange={[Function]}
-            placeholder="password"
+            type="password"
             value=""
 />,
           <input
@@ -218,9 +276,31 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Login",
+          },
+          "ref": null,
+          "rendered": "Login",
+          "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "email",
+            "for": "email",
+          },
+          "ref": null,
+          "rendered": "email",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "id": "email",
             "onChange": [Function],
-            "placeholder": "email",
             "value": "",
           },
           "ref": null,
@@ -232,9 +312,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "password",
+            "for": "password",
+          },
+          "ref": null,
+          "rendered": "password",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "id": "password",
             "onChange": [Function],
-            "placeholder": "password",
+            "type": "password",
             "value": "",
           },
           "ref": null,

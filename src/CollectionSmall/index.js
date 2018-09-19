@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { setProfile, setCollection } from '../actions'
 import './styles.css';
 
-class CollectionSmall extends Component {
+export class CollectionSmall extends Component {
   constructor(props) {
     super(props);
     this.state = {
