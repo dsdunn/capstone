@@ -35,6 +35,8 @@ npm test
 * **David Starr Dunn** - *Initial work* - [@dsdunn](https://github.com/dsdunn)
 * **Spenser Leighton** - *Initial work* - [@spenserleighton1](https://github.com/spenserleighton1)
 
-[landingpage](collecshare/collecshare_collection.png)
+[landingpage](https://github.com/dsdunn/collecshare/collecshare_landing.png)
+[collection](https://github.com/dsdunn/collecshare/collecshare_collection.png)
+[home](https://github.com/dsdunn/collecshare/collecshare_home.png)
 
 
