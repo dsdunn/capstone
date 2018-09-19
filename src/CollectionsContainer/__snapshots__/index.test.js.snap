@@ -19,21 +19,15 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="collections-container-bg"
-          style={
-                    Object {
-                              "backgroundImage": "url(collection-focus-magnifier-248993.jpg)",
-                            }
-          }
+          className="collections-container-bg all"
 />,
         <div
           className="collections-container"
 >
           <h1
-                    className="collections-category-name"
+                    className="collections-category-name all-txt"
           >
                     all
-                    .
           </h1>
           <div
                     className="collections-cat-btn-container"
@@ -96,10 +90,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "collections-container-bg",
-          "style": Object {
-            "backgroundImage": "url(collection-focus-magnifier-248993.jpg)",
-          },
+          "className": "collections-container-bg all",
         },
         "ref": null,
         "rendered": null,
@@ -112,10 +103,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h1
-              className="collections-category-name"
+              className="collections-category-name all-txt"
 >
               all
-              .
 </h1>,
             <div
               className="collections-cat-btn-container"
@@ -180,17 +170,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "all",
-                ".",
-              ],
-              "className": "collections-category-name",
+              "children": "all",
+              "className": "collections-category-name all-txt",
             },
             "ref": null,
-            "rendered": Array [
-              "all",
-              ".",
-            ],
+            "rendered": "all",
             "type": "h1",
           },
           Object {
@@ -344,21 +328,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="collections-container-bg"
-            style={
-                        Object {
-                                    "backgroundImage": "url(collection-focus-magnifier-248993.jpg)",
-                                  }
-            }
+            className="collections-container-bg all"
 />,
           <div
             className="collections-container"
 >
             <h1
-                        className="collections-category-name"
+                        className="collections-category-name all-txt"
             >
                         all
-                        .
             </h1>
             <div
                         className="collections-cat-btn-container"
@@ -421,10 +399,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "collections-container-bg",
-            "style": Object {
-              "backgroundImage": "url(collection-focus-magnifier-248993.jpg)",
-            },
+            "className": "collections-container-bg all",
           },
           "ref": null,
           "rendered": null,
@@ -437,10 +412,9 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h1
-                className="collections-category-name"
+                className="collections-category-name all-txt"
 >
                 all
-                .
 </h1>,
               <div
                 className="collections-cat-btn-container"
@@ -505,17 +479,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "all",
-                  ".",
-                ],
-                "className": "collections-category-name",
+                "children": "all",
+                "className": "collections-category-name all-txt",
               },
               "ref": null,
-              "rendered": Array [
-                "all",
-                ".",
-              ],
+              "rendered": "all",
               "type": "h1",
             },
             Object {

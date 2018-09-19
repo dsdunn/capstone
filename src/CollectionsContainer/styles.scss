@@ -6,7 +6,7 @@
 
 .collections-container-bg {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw 100vh; 
   opacity: 0.4;
   z-index: -1;
   position: fixed;
@@ -15,6 +15,46 @@
   bottom: 0;
   left: 0;
 }
+
+.cards, 
+.comics,
+.coins,
+.vinyl,
+.all,
+.other {  
+  transition: background-image 0.3s linear;
+}
+
+.comics { background-image: url('../images/160318ComicBooks_0.jpg') }
+.vinyl { background-image: url('../images/vinyl.jpg') }
+.coins { background-image: url('../images/highrescoincol.jpg') }
+.all { background-image: url('../images/collection-focus-magnifier-248993.jpg') }
+.cards { background-image: url('../images/baseballcards2.jpeg') }
+.other { background-image: url('../images/collection-focus-magnifier-248993.jpg') }
+
+.collections-category-name {
+  font-family: 'Roboto', sans-serif;
+  color: #262425;
+
+}
+
+@keyframes fadeAway {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.cards-txt, 
+.comics-txt,
+.coins-txt,
+.vinyl-txt,
+.all-txt,
+.other-txt {
+/*  animation-duration: 0.5s;
+  animation-name: fadeAway;*/
+  transition: color 1s ease-in-out;
+  
+}
+
 
 .collections-cat-btn-container {
   display: flex;
@@ -31,7 +71,6 @@
   background-color: transparent;
   margin-top: 0;
   transition: margin-top 0.25s;
-  text-shadow: 
 
   &:hover {
     margin-top: -0.5rem;
@@ -41,9 +80,4 @@
     margin-top: -1.5rem; 
   }
 
-}
-
-.collections-category-name {
-  font-family: 'Roboto', sans-serif;
-  color: #262425;
 }

@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  top: 0;
   background-color: #262425;
   padding: 1.5% 2%;
-  height: 5.75vh;
-  max-height: 5.75vh;
+  height: 50px;
   width: 100%;
   z-index: 2; }
 
@@ -21,8 +21,8 @@
   border: 1.5px solid #fff;
   border-radius: 50%;
   top: 1rem;
-  width: 2.5vw;
-  height: 2.5vw; }
+  height: 35px;
+  max-width: 35px; }
   .header-avatar:hover {
     opacity: 0.8;
     border: 1.5px solid #C0C0C0; }
@@ -63,7 +63,7 @@ a {
 
 .header-app-name {
   color: #ecdb7e;
-  font-size: 3vw;
+  font-size: 2rem;
   margin: 0; }
 
 .header-app-name span {
