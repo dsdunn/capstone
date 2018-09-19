@@ -100,6 +100,38 @@
     li {
       list-style: none;
     }
+
+    h5 {
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5em;
+      text-transform: lowercase;
+    }
+
+    .collection-big-items {
+      width: 100%;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th {
+          height: 4vh;
+          padding: 1%;
+          text-transform: uppercase;
+          background-color: #222121;
+          color: #f9f9f9;
+        }
+
+        td {
+          background-color: snow;
+          text-align: center;
+          border: 1px solid #888888;
+          height: 4vh;
+          padding: 1%;
+        }
+      }
+    }
   }
 
 }

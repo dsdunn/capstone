@@ -56,11 +56,11 @@ class CollectionBig extends Component {
           <hr/>
           <div className='collection-big-body'>
             <div>
-              <h5>description: </h5>
+              <h5>Description: </h5>
               <p className='collection-big-description>'>{description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.</p>
             </div>
-            <div>
-              <h5>items</h5>
+            <div className='collection-big-items'>
+              <h5>Items:</h5>
               <table>
                 <thead>
                   <tr>

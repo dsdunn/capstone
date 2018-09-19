@@ -69,3 +69,25 @@
       margin: 2% auto; }
     .collection-big-main .collection-big-body li {
       list-style: none; }
+    .collection-big-main .collection-big-body h5 {
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5em;
+      text-transform: lowercase; }
+    .collection-big-main .collection-big-body .collection-big-items {
+      width: 100%; }
+      .collection-big-main .collection-big-body .collection-big-items table {
+        width: 100%;
+        border-collapse: collapse; }
+        .collection-big-main .collection-big-body .collection-big-items table th {
+          height: 4vh;
+          padding: 1%;
+          text-transform: uppercase;
+          background-color: #222121;
+          color: #f9f9f9; }
+        .collection-big-main .collection-big-body .collection-big-items table td {
+          background-color: snow;
+          text-align: center;
+          border: 1px solid #888888;
+          height: 4vh;
+          padding: 1%; }
