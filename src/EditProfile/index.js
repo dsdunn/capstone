@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
-import { updateUser } from '../actions';
+import { updateUser, setProfile } from '../actions';
 import close from '../images/close.svg'
 import AvatarEditor from 'react-avatar-editor';
 import MyEditor from '../AvatarEditor'
@@ -48,6 +48,7 @@ export class EditProfile extends Component {
     putUserInfo(body, this.state.uid)
     .then(result => {
       this.props.updateUser(result)
+      this.props.setProfile(result)
       this.props.history.push('/user');
     })
   }
@@ -120,6 +121,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
+  setProfile: (user) => dispatch(setProfile(user)),
   updateUser: (user) => dispatch(updateUser(user))
 })
 
