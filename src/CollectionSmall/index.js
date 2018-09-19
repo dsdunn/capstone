@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getUserInfo } from '../services/fetch'
+import { getUserInfo, getCollection } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setProfile, setCollection } from '../actions'
@@ -28,7 +28,8 @@ class CollectionSmall extends Component {
   }
 
   viewCollectionBig = () => {
-    this.props.setCollection({...this.props.collection, ...this.state.user});
+    getCollection(this.props.collection.id)
+      .then(response => this.props.setCollection({...response, ...this.state.user}));
     this.props.history.push('/collection');
 
   }

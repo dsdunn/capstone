@@ -13,7 +13,6 @@ const Dashboard = (props) => {
 
   const getPath = () => {
     let path = props.history.location.pathname;
-    console.log(path)
     let destination = path === '/' ? path + 'editprofile' : path + '/editprofile';
     props.history.push(destination)
   }

@@ -14,6 +14,11 @@ export const putUserInfo = (userInfo, uid) => {
   .then(response => response.json())
 }
 
+export const getCollection = (id) => {
+  return apiFetch(`/collections/1`, 'GET')
+  .then(response => response.json())
+}
+
 export const postCollection = (collection) => {
   return apiFormDataFetch(`/collections`, `POST`, collection)
   .then(response => response.json())

@@ -62,13 +62,17 @@ class CollectionBig extends Component {
             <div>
               <h5>items</h5>
               <table>
-                <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Value</th>
-                  <th>Year</th>
-                </tr>
-                {tableRows}
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Value</th>
+                    <th>Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableRows}
+                </tbody>
               </table>
             </div>
           </div>
