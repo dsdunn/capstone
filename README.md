@@ -34,10 +34,13 @@ npm test
 
 * **David Starr Dunn** - *Initial work* - [@dsdunn](https://github.com/dsdunn)
 * **Spenser Leighton** - *Initial work* - [@spenserleighton1](https://github.com/spenserleighton1)
-* **Adam Lusk** - *Initial work* - [@Valusk
+* **Adam Lusk** - *Initial work* - [@Valusk](https://github.com/valusk)
 
 ![landingpage](https://github.com/dsdunn/collecshare/collecshare_landing.png)
 ![collection](https://github.com/dsdunn/collecshare/collecshare_collection.png)
-![home](https://github.com/dsdunn/collecshare/collecshare_home.png)
+![home](./collecshare_home.png)
+
+
+    
 
 
