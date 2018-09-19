@@ -3,13 +3,6 @@ import { getAllCollections, getCollectionsByCategory } from '../services/fetch';
 import CollectionSmall from '../CollectionSmall';
 import './styles.css';
 
-import vinyl from '../images/vinyl.jpg'
-import cards from '../images/baseballcards2.jpeg'
-import coins from '../images/highrescoincol.jpg'
-import all from '../images/collection-focus-magnifier-248993.jpg'
-import comics from '../images/160318ComicBooks_0.jpg'
-
-
 export class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
@@ -38,27 +31,14 @@ export class CollectionsContainer extends Component {
 
   render() {
     const list = this.state.collections.map(collection => <CollectionSmall collection={collection} key={collection.id}/>)
-    let imgbg;
-
-    switch (this.state.category) {
-      case 'vinyl': imgbg = vinyl
-      break;
-      case 'cards': imgbg = cards
-      break;
-      case 'all': imgbg = all;
-      break;
-      case 'coins': imgbg = coins
-      break;
-      case 'comics': imgbg = comics
-      break
-      default: imgbg = all
-    }
+    let selectedBg = `collections-container-bg ${this.state.category}`
+    let selectedTxt = `collections-category-name ${this.state.category}-txt`
 
     return (
       <div>
-      <div className='collections-container-bg' style={{ backgroundImage: `url(${imgbg})`}}></div>
+      <div className={selectedBg}></div>
         <div className='collections-container'>
-        <h1 className='collections-category-name'>{this.state.category}.</h1>
+        <h1 className={selectedTxt}>{this.state.category}</h1>
         <div className='collections-cat-btn-container'>
           <button className='collections-container-cat-btn' name='comics' onClick={this.handleClick}>comics</button>
           <button className='collections-container-cat-btn' name='cards' onClick={this.handleClick}>cards</button>
