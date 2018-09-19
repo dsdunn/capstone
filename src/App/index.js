@@ -41,7 +41,7 @@ class App extends Component {
         <Route path={'/home/signup'} component={Signup} />
         <Route path={'/user'} component={UserProfile} />
         <Route path={'/user/editprofile'} component={EditProfile} />
-        <Route path={'/editprofile'} component={EditProfile} />
+        <Route path={'/home/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/home'} component={CollectionsContainer}/>
       </div>
