@@ -10,7 +10,7 @@ import all from '../images/collection-focus-magnifier-248993.jpg'
 import comics from '../images/160318ComicBooks_0.jpg'
 
 
-class CollectionsContainer extends Component {
+export class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +29,6 @@ class CollectionsContainer extends Component {
     let category = event.target.name;
     this.setState({ category })
     this.fetchByCategory(category)
-
   }
 
   fetchByCategory = (category) => {
@@ -40,6 +39,7 @@ class CollectionsContainer extends Component {
   render() {
     const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
     let imgbg;
+
     switch (this.state.category) {
       case 'vinyl': imgbg = vinyl
       break;

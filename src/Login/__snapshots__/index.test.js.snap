@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Signup should match the snapShot 1`] = `
+exports[`Login should match the snapShot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Signup
+  Symbol(enzyme.__unrendered__): <Login
     history={
         Object {
             "goBack": [Function],
-            "location": "location",
+            "location": Object {
+              "pathname": "/",
+            },
             "push": [Function],
           }
     }
@@ -27,7 +29,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <a
-          className="signup-close-link"
+          className="login-close-link"
           exact="true"
           onClick={[Function]}
 >
@@ -37,47 +39,25 @@ ShallowWrapper {
           />
 </a>,
         <h5>
-          Sign Up
+          Login
 </h5>,
         <label
-          htmlFor="email"
+          for="email"
 >
           email
 </label>,
         <input
           id="email"
           onChange={[Function]}
-          type="email"
           value=""
 />,
         <label
-          htmlFor="username"
->
-          username
-</label>,
-        <input
-          id="username"
-          onChange={[Function]}
-          value=""
-/>,
-        <label
-          htmlFor="password1"
+          for="password"
 >
           password
 </label>,
         <input
-          id="password1"
-          onChange={[Function]}
-          type="password"
-          value=""
-/>,
-        <label
-          htmlFor="password2"
->
-          confirm password
-</label>,
-        <input
-          id="password2"
+          id="password"
           onChange={[Function]}
           type="password"
           value=""
@@ -86,10 +66,10 @@ ShallowWrapper {
           type="submit"
 />,
         <p
-          className="signup-err-message"
+          className="login-err-message"
 />,
       ],
-      "className": "signup",
+      "className": "login",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -103,7 +83,7 @@ ShallowWrapper {
             className="close-btn"
             src="close.svg"
 />,
-          "className": "signup-close-link",
+          "className": "login-close-link",
           "exact": "true",
           "onClick": [Function],
         },
@@ -127,10 +107,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Sign Up",
+          "children": "Login",
         },
         "ref": null,
-        "rendered": "Sign Up",
+        "rendered": "Login",
         "type": "h5",
       },
       Object {
@@ -139,7 +119,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "email",
-          "htmlFor": "email",
+          "for": "email",
         },
         "ref": null,
         "rendered": "email",
@@ -151,32 +131,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "id": "email",
-          "onChange": [Function],
-          "type": "email",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "username",
-          "htmlFor": "username",
-        },
-        "ref": null,
-        "rendered": "username",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "id": "username",
           "onChange": [Function],
           "value": "",
         },
@@ -190,7 +144,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "password",
-          "htmlFor": "password1",
+          "for": "password",
         },
         "ref": null,
         "rendered": "password",
@@ -201,33 +155,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "id": "password1",
-          "onChange": [Function],
-          "type": "password",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "confirm password",
-          "htmlFor": "password2",
-        },
-        "ref": null,
-        "rendered": "confirm password",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "id": "password2",
+          "id": "password",
           "onChange": [Function],
           "type": "password",
           "value": "",
@@ -252,8 +180,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": null,
-          "className": "signup-err-message",
+          "children": undefined,
+          "className": "login-err-message",
         },
         "ref": null,
         "rendered": null,
@@ -270,7 +198,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <a
-            className="signup-close-link"
+            className="login-close-link"
             exact="true"
             onClick={[Function]}
 >
@@ -280,47 +208,25 @@ ShallowWrapper {
             />
 </a>,
           <h5>
-            Sign Up
+            Login
 </h5>,
           <label
-            htmlFor="email"
+            for="email"
 >
             email
 </label>,
           <input
             id="email"
             onChange={[Function]}
-            type="email"
             value=""
 />,
           <label
-            htmlFor="username"
->
-            username
-</label>,
-          <input
-            id="username"
-            onChange={[Function]}
-            value=""
-/>,
-          <label
-            htmlFor="password1"
+            for="password"
 >
             password
 </label>,
           <input
-            id="password1"
-            onChange={[Function]}
-            type="password"
-            value=""
-/>,
-          <label
-            htmlFor="password2"
->
-            confirm password
-</label>,
-          <input
-            id="password2"
+            id="password"
             onChange={[Function]}
             type="password"
             value=""
@@ -329,10 +235,10 @@ ShallowWrapper {
             type="submit"
 />,
           <p
-            className="signup-err-message"
+            className="login-err-message"
 />,
         ],
-        "className": "signup",
+        "className": "login",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -346,7 +252,7 @@ ShallowWrapper {
               className="close-btn"
               src="close.svg"
 />,
-            "className": "signup-close-link",
+            "className": "login-close-link",
             "exact": "true",
             "onClick": [Function],
           },
@@ -370,10 +276,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Sign Up",
+            "children": "Login",
           },
           "ref": null,
-          "rendered": "Sign Up",
+          "rendered": "Login",
           "type": "h5",
         },
         Object {
@@ -382,7 +288,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "email",
-            "htmlFor": "email",
+            "for": "email",
           },
           "ref": null,
           "rendered": "email",
@@ -394,32 +300,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "id": "email",
-            "onChange": [Function],
-            "type": "email",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "username",
-            "htmlFor": "username",
-          },
-          "ref": null,
-          "rendered": "username",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "id": "username",
             "onChange": [Function],
             "value": "",
           },
@@ -433,7 +313,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "password",
-            "htmlFor": "password1",
+            "for": "password",
           },
           "ref": null,
           "rendered": "password",
@@ -444,33 +324,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "id": "password1",
-            "onChange": [Function],
-            "type": "password",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "confirm password",
-            "htmlFor": "password2",
-          },
-          "ref": null,
-          "rendered": "confirm password",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "id": "password2",
+            "id": "password",
             "onChange": [Function],
             "type": "password",
             "value": "",
@@ -495,8 +349,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": null,
-            "className": "signup-err-message",
+            "children": undefined,
+            "className": "login-err-message",
           },
           "ref": null,
           "rendered": null,

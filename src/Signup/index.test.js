@@ -1,13 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Signup } from './';
+import { signIn } from '../actions';
+import { Signup, mapDispatchToProps } from './';
 
 describe('Signup', () => {
   let wrapper;
   let history;
 
   beforeEach(() => {
-    history = { location: 'location', goBack: jest.fn() }
+    history = { location: 'location',
+                goBack: jest.fn(),
+                push: jest.fn() }
     wrapper = shallow(<Signup history={ history }/>)
   })
 
@@ -60,11 +63,15 @@ describe('Signup', () => {
     expect(actual).toEqual(expected)
   })
 
-  // it('should submit the form when handleSubmit is called', () => {
-  //   const mockEvent = { preventDefault: jest.fn() }
-  //   wrapper.instance().handleSubmit(mockEvent)
-  //   console.log(actual)
-  // })
+  it('should submit the form when handleSubmit is called', () => {
+    const mockEvent = { preventDefault: jest.fn() }
+    wrapper.instance().handleSubmit(mockEvent)
+    const actual = wrapper.state('error')
+    const expected = "Check username and password"
+
+    expect(actual).toEqual(expected)
+  })
+
   it('should validate the form when validate is called', () => {
     wrapper.setState({ password1: '123456', password2: '1234567' })
     const actual = wrapper.instance().validate()
@@ -74,7 +81,10 @@ describe('Signup', () => {
   })
 
   it('should validate the form when validate is called', () => {
-    wrapper.setState({ password1: '123456', password2: '123456' })
+    wrapper.setState({ password1: '123456',
+                       password2: '123456',
+                       email: 'heck@yeah.com',
+                       username: 'Sparkle' })
     const actual = wrapper.instance().validate()
     const expected = true
 
@@ -86,6 +96,26 @@ describe('Signup', () => {
     expect(history.goBack).toHaveBeenCalled()
   })
 
+  it('should return a props object with signIn', () => {
+    const mockSignIn = jest.fn();
+    const mockDispatch = jest.fn();
+    const mockUser = { password1: '123456',
+                       password2: '123456',
+                       email: 'heck@yeah.com',
+                       username: 'Sparkle' }
+
+    const mappedProps = mapDispatchToProps(mockDispatch)
+    const actionToDispatch = signIn(mockUser);
+
+    mappedProps.signIn(mockUser);
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  })
+
+  it('should call goBack when the form is closed', () => {
+    wrapper.find('a').simulate('click');
+
+    expect(history.goBack).toHaveBeenCalled();
+  })
 
   it('should match the snapShot', () => {
     expect(wrapper).toMatchSnapshot()

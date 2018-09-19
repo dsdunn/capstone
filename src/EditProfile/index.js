@@ -9,7 +9,7 @@ import MyEditor from '../AvatarEditor'
 
 import './styles.css'
 
-class EditProfile extends Component {
+export class EditProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {

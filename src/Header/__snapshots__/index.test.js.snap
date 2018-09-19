@@ -3,7 +3,26 @@
 exports[`Header should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(Header)) />,
+  Symbol(enzyme.__unrendered__): <Header
+    history={
+        Object {
+            "goBack": [Function],
+            "location": Object {
+              "pathname": "/",
+            },
+            "push": [Function],
+          }
+    }
+    signOut={[Function]}
+    user={
+        Object {
+            "avatar": "2 comes out in 2020",
+            "bio": "dome",
+            "location": "somewhere else",
+            "username": "username? username for what?",
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,25 +34,613 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <div
+          className="header"
+>
+          <Link
+                    replace={false}
+                    to="/home"
+          >
+                    <h1
+                              className="header-app-name"
+                    >
+                              Collec
+                              <span>
+                                        share
+                              </span>
+                    </h1>
+          </Link>
+          <input
+                    className="header-search-bar"
+                    onChange={[Function]}
+                    placeholder="Search"
+                    type="text"
+                    value=""
+          />
+          <div
+                    className="header-nav"
+          >
+                    <div>
+                              <a
+                                        className="header-link test1"
+                                        onClick={[Function]}
+                              >
+                                        Login
+                              </a>
+                              <a
+                                        className="header-link test2"
+                                        onClick={[Function]}
+                              >
+                                        Create Account
+                              </a>
+                              <Link
+                                        className="header-link"
+                                        replace={false}
+                                        to="/home"
+                              >
+                                        Get All
+                              </Link>
+                    </div>
+          </div>
+</div>,
+        <withRouter(Connect(Component))
+          active={false}
+          handleSignOut={[Function]}
+/>,
+      ],
+      "className": "header-container",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              replace={false}
+              to="/home"
+>
+              <h1
+                            className="header-app-name"
+              >
+                            Collec
+                            <span>
+                                          share
+                            </span>
+              </h1>
+</Link>,
+            <input
+              className="header-search-bar"
+              onChange={[Function]}
+              placeholder="Search"
+              type="text"
+              value=""
+/>,
+            <div
+              className="header-nav"
+>
+              <div>
+                            <a
+                                          className="header-link test1"
+                                          onClick={[Function]}
+                            >
+                                          Login
+                            </a>
+                            <a
+                                          className="header-link test2"
+                                          onClick={[Function]}
+                            >
+                                          Create Account
+                            </a>
+                            <Link
+                                          className="header-link"
+                                          replace={false}
+                                          to="/home"
+                            >
+                                          Get All
+                            </Link>
+              </div>
+</div>,
+          ],
+          "className": "header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <h1
+                className="header-app-name"
+>
+                Collec
+                <span>
+                                share
+                </span>
+</h1>,
+              "replace": false,
+              "to": "/home",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Collec",
+                  <span>
+                    share
+</span>,
+                ],
+                "className": "header-app-name",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Collec",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "share",
+                  },
+                  "ref": null,
+                  "rendered": "share",
+                  "type": "span",
+                },
+              ],
+              "type": "h1",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "header-search-bar",
+              "onChange": [Function],
+              "placeholder": "Search",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div>
+                <a
+                                className="header-link test1"
+                                onClick={[Function]}
+                >
+                                Login
+                </a>
+                <a
+                                className="header-link test2"
+                                onClick={[Function]}
+                >
+                                Create Account
+                </a>
+                <Link
+                                className="header-link"
+                                replace={false}
+                                to="/home"
+                >
+                                Get All
+                </Link>
+</div>,
+              "className": "header-nav",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a
+                    className="header-link test1"
+                    onClick={[Function]}
+>
+                    Login
+</a>,
+                  <a
+                    className="header-link test2"
+                    onClick={[Function]}
+>
+                    Create Account
+</a>,
+                  <Link
+                    className="header-link"
+                    replace={false}
+                    to="/home"
+>
+                    Get All
+</Link>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Login",
+                    "className": "header-link test1",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create Account",
+                    "className": "header-link test2",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Create Account",
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Get All",
+                    "className": "header-link",
+                    "replace": false,
+                    "to": "/home",
+                  },
+                  "ref": null,
+                  "rendered": "Get All",
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "handleSignOut": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <div
+            className="header"
+>
+            <Link
+                        replace={false}
+                        to="/home"
+            >
+                        <h1
+                                    className="header-app-name"
+                        >
+                                    Collec
+                                    <span>
+                                                share
+                                    </span>
+                        </h1>
+            </Link>
+            <input
+                        className="header-search-bar"
+                        onChange={[Function]}
+                        placeholder="Search"
+                        type="text"
+                        value=""
+            />
+            <div
+                        className="header-nav"
+            >
+                        <div>
+                                    <a
+                                                className="header-link test1"
+                                                onClick={[Function]}
+                                    >
+                                                Login
+                                    </a>
+                                    <a
+                                                className="header-link test2"
+                                                onClick={[Function]}
+                                    >
+                                                Create Account
+                                    </a>
+                                    <Link
+                                                className="header-link"
+                                                replace={false}
+                                                to="/home"
+                                    >
+                                                Get All
+                                    </Link>
+                        </div>
+            </div>
+</div>,
+          <withRouter(Connect(Component))
+            active={false}
+            handleSignOut={[Function]}
+/>,
+        ],
+        "className": "header-container",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                replace={false}
+                to="/home"
+>
+                <h1
+                                className="header-app-name"
+                >
+                                Collec
+                                <span>
+                                                share
+                                </span>
+                </h1>
+</Link>,
+              <input
+                className="header-search-bar"
+                onChange={[Function]}
+                placeholder="Search"
+                type="text"
+                value=""
+/>,
+              <div
+                className="header-nav"
+>
+                <div>
+                                <a
+                                                className="header-link test1"
+                                                onClick={[Function]}
+                                >
+                                                Login
+                                </a>
+                                <a
+                                                className="header-link test2"
+                                                onClick={[Function]}
+                                >
+                                                Create Account
+                                </a>
+                                <Link
+                                                className="header-link"
+                                                replace={false}
+                                                to="/home"
+                                >
+                                                Get All
+                                </Link>
+                </div>
+</div>,
+            ],
+            "className": "header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <h1
+                  className="header-app-name"
+>
+                  Collec
+                  <span>
+                                    share
+                  </span>
+</h1>,
+                "replace": false,
+                "to": "/home",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Collec",
+                    <span>
+                      share
+</span>,
+                  ],
+                  "className": "header-app-name",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Collec",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "share",
+                    },
+                    "ref": null,
+                    "rendered": "share",
+                    "type": "span",
+                  },
+                ],
+                "type": "h1",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "header-search-bar",
+                "onChange": [Function],
+                "placeholder": "Search",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div>
+                  <a
+                                    className="header-link test1"
+                                    onClick={[Function]}
+                  >
+                                    Login
+                  </a>
+                  <a
+                                    className="header-link test2"
+                                    onClick={[Function]}
+                  >
+                                    Create Account
+                  </a>
+                  <Link
+                                    className="header-link"
+                                    replace={false}
+                                    to="/home"
+                  >
+                                    Get All
+                  </Link>
+</div>,
+                "className": "header-nav",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <a
+                      className="header-link test1"
+                      onClick={[Function]}
+>
+                      Login
+</a>,
+                    <a
+                      className="header-link test2"
+                      onClick={[Function]}
+>
+                      Create Account
+</a>,
+                    <Link
+                      className="header-link"
+                      replace={false}
+                      to="/home"
+>
+                      Get All
+</Link>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Login",
+                      "className": "header-link test1",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Login",
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create Account",
+                      "className": "header-link test2",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Create Account",
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Get All",
+                      "className": "header-link",
+                      "replace": false,
+                      "to": "/home",
+                    },
+                    "ref": null,
+                    "rendered": "Get All",
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "handleSignOut": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -44,9 +44,10 @@ export class Signup extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.validate(this.state)) {
+    if (this.validate()) {
       auth.doCreateUserWithEmailAndPassword(this.state.email, this.state.password1)
         .then(response => {
+          console.log(response)
           let user = this.createUser(response)
           return postUserInfo(user)
         })
@@ -59,7 +60,9 @@ export class Signup extends Component {
         .catch(error => {
           this.setState({error: error.message})
         })
-    } 
+    } else {
+      this.setState({ error: 'Check username and password'})
+    }
   }
 
   validate() {

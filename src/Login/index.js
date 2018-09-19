@@ -7,7 +7,7 @@ import { getUserInfo } from '../services/fetch';
 import close from '../images/close.svg'
 import './styles.css'
 
-class Login extends Component {
+export class Login extends Component {
   constructor(props) {
     super();
     this.state = {

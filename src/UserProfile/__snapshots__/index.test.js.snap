@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should match the snapShot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <UserProfile
+    profile={
+        Object {
+            "avatar": "2 comes out in 2020",
+            "bio": "dome",
+            "location": "somewhere else",
+            "username": "username? username for what?",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="profile-top"
+>
+          <img
+                    alt="profile"
+                    className="profile-img"
+                    src="https://collecshare.herokuapp.com/2 comes out in 2020"
+          />
+          <h3
+                    className="profile-display-name"
+          >
+                    username? username for what?
+          </h3>
+          <h5
+                    className="profile-location"
+          >
+                    somewhere else
+          </h5>
+          <p
+                    className="profile-bio"
+          >
+                    dome
+          </p>
+</section>,
+        <section
+          className="profile-collections"
+>
+          <withRouter(Connect(CollectionSmall))
+                    collection={
+                              Object {
+                                        "category": "string",
+                                        "description": "string",
+                                        "id": 666,
+                                        "image": "string",
+                                        "title": "string",
+                                        "uid": "string",
+                                      }
+                    }
+                    hideuser={true}
+          />
+</section>,
+      ],
+      "className": "user-profile",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="profile"
+              className="profile-img"
+              src="https://collecshare.herokuapp.com/2 comes out in 2020"
+/>,
+            <h3
+              className="profile-display-name"
+>
+              username? username for what?
+</h3>,
+            <h5
+              className="profile-location"
+>
+              somewhere else
+</h5>,
+            <p
+              className="profile-bio"
+>
+              dome
+</p>,
+          ],
+          "className": "profile-top",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "profile",
+              "className": "profile-img",
+              "src": "https://collecshare.herokuapp.com/2 comes out in 2020",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "username? username for what?",
+              "className": "profile-display-name",
+            },
+            "ref": null,
+            "rendered": "username? username for what?",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "somewhere else",
+              "className": "profile-location",
+            },
+            "ref": null,
+            "rendered": "somewhere else",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "dome",
+              "className": "profile-bio",
+            },
+            "ref": null,
+            "rendered": "dome",
+            "type": "p",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <withRouter(Connect(CollectionSmall))
+              collection={
+                            Object {
+                                          "category": "string",
+                                          "description": "string",
+                                          "id": 666,
+                                          "image": "string",
+                                          "title": "string",
+                                          "uid": "string",
+                                        }
+              }
+              hideuser={true}
+/>,
+          ],
+          "className": "profile-collections",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "collection": Object {
+                "category": "string",
+                "description": "string",
+                "id": 666,
+                "image": "string",
+                "title": "string",
+                "uid": "string",
+              },
+              "hideuser": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="profile-top"
+>
+            <img
+                        alt="profile"
+                        className="profile-img"
+                        src="https://collecshare.herokuapp.com/2 comes out in 2020"
+            />
+            <h3
+                        className="profile-display-name"
+            >
+                        username? username for what?
+            </h3>
+            <h5
+                        className="profile-location"
+            >
+                        somewhere else
+            </h5>
+            <p
+                        className="profile-bio"
+            >
+                        dome
+            </p>
+</section>,
+          <section
+            className="profile-collections"
+>
+            <withRouter(Connect(CollectionSmall))
+                        collection={
+                                    Object {
+                                                "category": "string",
+                                                "description": "string",
+                                                "id": 666,
+                                                "image": "string",
+                                                "title": "string",
+                                                "uid": "string",
+                                              }
+                        }
+                        hideuser={true}
+            />
+</section>,
+        ],
+        "className": "user-profile",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="profile"
+                className="profile-img"
+                src="https://collecshare.herokuapp.com/2 comes out in 2020"
+/>,
+              <h3
+                className="profile-display-name"
+>
+                username? username for what?
+</h3>,
+              <h5
+                className="profile-location"
+>
+                somewhere else
+</h5>,
+              <p
+                className="profile-bio"
+>
+                dome
+</p>,
+            ],
+            "className": "profile-top",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "profile",
+                "className": "profile-img",
+                "src": "https://collecshare.herokuapp.com/2 comes out in 2020",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "username? username for what?",
+                "className": "profile-display-name",
+              },
+              "ref": null,
+              "rendered": "username? username for what?",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "somewhere else",
+                "className": "profile-location",
+              },
+              "ref": null,
+              "rendered": "somewhere else",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "dome",
+                "className": "profile-bio",
+              },
+              "ref": null,
+              "rendered": "dome",
+              "type": "p",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <withRouter(Connect(CollectionSmall))
+                collection={
+                                Object {
+                                                "category": "string",
+                                                "description": "string",
+                                                "id": 666,
+                                                "image": "string",
+                                                "title": "string",
+                                                "uid": "string",
+                                              }
+                }
+                hideuser={true}
+/>,
+            ],
+            "className": "profile-collections",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "collection": Object {
+                  "category": "string",
+                  "description": "string",
+                  "id": 666,
+                  "image": "string",
+                  "title": "string",
+                  "uid": "string",
+                },
+                "hideuser": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
