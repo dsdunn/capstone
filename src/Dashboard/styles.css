@@ -3,7 +3,6 @@
   color: #C0C0C0;
   margin: 0 1rem; }
   .dashboard-link:hover {
-    border-bottom: 1px solid red;
     color: #A9A9A9; }
 
 .active {
@@ -11,15 +10,15 @@
 
 @keyframes active {
   from {
-    top: -20rem; }
+    top: 0; }
   to {
-    top: 0; } }
+    top: 3rem; } }
 
 @keyframes hidden {
   from {
-    top: 0; }
+    top: 3rem; }
   to {
-    top: -20rem; } }
+    top: 0; } }
 
 h5 {
   margin: 0; }
@@ -35,7 +34,7 @@ h5 {
   background-color: rgba(0, 0, 0, 0.6);
   height: 2rem;
   position: relative;
-  top: 0;
+  top: 3rem;
   z-index: 1; }
 
 .dashboardShow {
@@ -45,4 +44,4 @@ h5 {
 .dashboardHide {
   animation-duration: 0.5s;
   animation-name: hidden;
-  top: -20rem; }
+  top: -3rem; }
