@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getUserCollections } from '../services/fetch';
-import './styles.css'
+import './styles.css';
 import CollectionSmall from '../CollectionSmall';
+import PropTypes from 'prop-types';
 
 export class UserProfile extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export class UserProfile extends Component {
   componentDidMount() {
     getUserCollections(this.props.profile.uid)
       .then(results => {
-        const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} />);
+        const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />);
       this.setState({
         collections
       })
@@ -48,7 +49,10 @@ export const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps)(UserProfile);
 
-
+UserProfile.propTypes = {
+  history: PropTypes.object,
+  profile: PropTypes.object
+}
 
 
 

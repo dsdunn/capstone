@@ -37,7 +37,7 @@ export class CollectionsContainer extends Component {
   }
 
   render() {
-    const list = this.state.collections.map(collection => <CollectionSmall collection={collection} />)
+    const list = this.state.collections.map(collection => <CollectionSmall collection={collection} key={collection.id}/>)
     let imgbg;
 
     switch (this.state.category) {

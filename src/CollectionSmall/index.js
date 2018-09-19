@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { getUserInfo, getCollection } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setProfile, setCollection } from '../actions'
+import { setProfile, setCollection } from '../actions';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 export class CollectionSmall extends Component {
@@ -69,3 +70,9 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(CollectionSmall))
+
+CollectionSmall.propTypes = {
+  setCollection: PropTypes.func,
+  setProfile: PropTypes.func,
+  hideuser: PropTypes.bool
+}

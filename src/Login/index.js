@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { signIn, setProfile } from '../actions';
 import { auth } from '../firebase';
 import { getUserInfo } from '../services/fetch';
-import close from '../images/close.svg'
+import close from '../images/close.svg';
+import PropTypes from 'prop-types';
 import './styles.css'
 
 export class Login extends Component {
@@ -84,4 +85,10 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
+Login.propTypes = {
+  history: PropTypes.object,
+  signOut: PropTypes.func,
+  signIn: PropTypes.func,
+  user: PropTypes.object
+}
 

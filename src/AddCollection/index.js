@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, postCollection } from '../services/fetch';
+import PropTypes from 'prop-types';
 import './styles.css'
 
 class AddCollection extends Component {
@@ -68,4 +69,11 @@ export const mapStateToProps = state => ({
 })
 
 export default withRouter(connect(mapStateToProps)(AddCollection));
+
+AddCollection.propTypes = {
+  history: PropTypes.object,
+  user: PropTypes.object
+}
+
+
 

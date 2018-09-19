@@ -13,6 +13,7 @@ import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
 import { firebase } from '../firebase';
 
+
 class App extends Component {
   constructor() {
     super()

@@ -6,6 +6,7 @@ import './styles.css';
 import { signOut } from '../actions';
 import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
+import PropTypes from 'prop-types';
 
 export class Header extends Component {
   constructor(props){
@@ -85,6 +86,11 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
 
+Header.propTypes = {
+  history: PropTypes.object,
+  signOut: PropTypes.func,
+  user: PropTypes.object
+}
 
 
 

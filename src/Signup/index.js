@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import { signIn } from '../actions';
 import { postUserInfo } from '../services/fetch';
 import { Link, withRouter } from 'react-router-dom';
-import close from '../images/close.svg'
+import close from '../images/close.svg';
+import PropTypes from 'prop-types';
+
 import './styles.css'
 
 export class Signup extends Component {
@@ -113,4 +115,7 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default withRouter(connect(null, mapDispatchToProps)(Signup));
 
-
+Signup.propTypes = {
+  history: PropTypes.object,
+  signIn: PropTypes.func
+}

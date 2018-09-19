@@ -30,26 +30,28 @@ ShallowWrapper {
         <section
           className="profile-top"
 >
+          <div>
+                    <h3
+                              className="profile-display-name"
+                    >
+                              username? username for what?
+                    </h3>
+                    <h5
+                              className="profile-location"
+                    >
+                              somewhere else
+                    </h5>
+                    <p
+                              className="profile-bio"
+                    >
+                              dome
+                    </p>
+          </div>
           <img
                     alt="profile"
                     className="profile-img"
                     src="https://collecshare.herokuapp.com/2 comes out in 2020"
           />
-          <h3
-                    className="profile-display-name"
-          >
-                    username? username for what?
-          </h3>
-          <h5
-                    className="profile-location"
-          >
-                    somewhere else
-          </h5>
-          <p
-                    className="profile-bio"
-          >
-                    dome
-          </p>
 </section>,
         <section
           className="profile-collections"
@@ -79,31 +81,97 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <div>
+              <h3
+                            className="profile-display-name"
+              >
+                            username? username for what?
+              </h3>
+              <h5
+                            className="profile-location"
+              >
+                            somewhere else
+              </h5>
+              <p
+                            className="profile-bio"
+              >
+                            dome
+              </p>
+</div>,
             <img
               alt="profile"
               className="profile-img"
               src="https://collecshare.herokuapp.com/2 comes out in 2020"
 />,
-            <h3
-              className="profile-display-name"
->
-              username? username for what?
-</h3>,
-            <h5
-              className="profile-location"
->
-              somewhere else
-</h5>,
-            <p
-              className="profile-bio"
->
-              dome
-</p>,
           ],
           "className": "profile-top",
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="profile-display-name"
+>
+                  username? username for what?
+</h3>,
+                <h5
+                  className="profile-location"
+>
+                  somewhere else
+</h5>,
+                <p
+                  className="profile-bio"
+>
+                  dome
+</p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "username? username for what?",
+                  "className": "profile-display-name",
+                },
+                "ref": null,
+                "rendered": "username? username for what?",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "somewhere else",
+                  "className": "profile-location",
+                },
+                "ref": null,
+                "rendered": "somewhere else",
+                "type": "h5",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "dome",
+                  "className": "profile-bio",
+                },
+                "ref": null,
+                "rendered": "dome",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -116,42 +184,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "username? username for what?",
-              "className": "profile-display-name",
-            },
-            "ref": null,
-            "rendered": "username? username for what?",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "somewhere else",
-              "className": "profile-location",
-            },
-            "ref": null,
-            "rendered": "somewhere else",
-            "type": "h5",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "dome",
-              "className": "profile-bio",
-            },
-            "ref": null,
-            "rendered": "dome",
-            "type": "p",
           },
         ],
         "type": "section",
@@ -182,7 +214,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "666",
             "nodeType": "function",
             "props": Object {
               "collection": Object {
@@ -215,26 +247,28 @@ ShallowWrapper {
           <section
             className="profile-top"
 >
+            <div>
+                        <h3
+                                    className="profile-display-name"
+                        >
+                                    username? username for what?
+                        </h3>
+                        <h5
+                                    className="profile-location"
+                        >
+                                    somewhere else
+                        </h5>
+                        <p
+                                    className="profile-bio"
+                        >
+                                    dome
+                        </p>
+            </div>
             <img
                         alt="profile"
                         className="profile-img"
                         src="https://collecshare.herokuapp.com/2 comes out in 2020"
             />
-            <h3
-                        className="profile-display-name"
-            >
-                        username? username for what?
-            </h3>
-            <h5
-                        className="profile-location"
-            >
-                        somewhere else
-            </h5>
-            <p
-                        className="profile-bio"
-            >
-                        dome
-            </p>
 </section>,
           <section
             className="profile-collections"
@@ -264,31 +298,97 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <div>
+                <h3
+                                className="profile-display-name"
+                >
+                                username? username for what?
+                </h3>
+                <h5
+                                className="profile-location"
+                >
+                                somewhere else
+                </h5>
+                <p
+                                className="profile-bio"
+                >
+                                dome
+                </p>
+</div>,
               <img
                 alt="profile"
                 className="profile-img"
                 src="https://collecshare.herokuapp.com/2 comes out in 2020"
 />,
-              <h3
-                className="profile-display-name"
->
-                username? username for what?
-</h3>,
-              <h5
-                className="profile-location"
->
-                somewhere else
-</h5>,
-              <p
-                className="profile-bio"
->
-                dome
-</p>,
             ],
             "className": "profile-top",
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="profile-display-name"
+>
+                    username? username for what?
+</h3>,
+                  <h5
+                    className="profile-location"
+>
+                    somewhere else
+</h5>,
+                  <p
+                    className="profile-bio"
+>
+                    dome
+</p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "username? username for what?",
+                    "className": "profile-display-name",
+                  },
+                  "ref": null,
+                  "rendered": "username? username for what?",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "somewhere else",
+                    "className": "profile-location",
+                  },
+                  "ref": null,
+                  "rendered": "somewhere else",
+                  "type": "h5",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "dome",
+                    "className": "profile-bio",
+                  },
+                  "ref": null,
+                  "rendered": "dome",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
             Object {
               "instance": null,
               "key": undefined,
@@ -301,42 +401,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": null,
               "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "username? username for what?",
-                "className": "profile-display-name",
-              },
-              "ref": null,
-              "rendered": "username? username for what?",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "somewhere else",
-                "className": "profile-location",
-              },
-              "ref": null,
-              "rendered": "somewhere else",
-              "type": "h5",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "dome",
-                "className": "profile-bio",
-              },
-              "ref": null,
-              "rendered": "dome",
-              "type": "p",
             },
           ],
           "type": "section",
@@ -367,7 +431,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "666",
               "nodeType": "function",
               "props": Object {
                 "collection": Object {

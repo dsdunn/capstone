@@ -3,9 +3,10 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, putUserInfo } from '../services/fetch';
 import { updateUser, setProfile } from '../actions';
-import close from '../images/close.svg'
+import close from '../images/close.svg';
 import AvatarEditor from 'react-avatar-editor';
-import MyEditor from '../AvatarEditor'
+import MyEditor from '../AvatarEditor';
+import PropTypes from 'prop-types';
 
 import './styles.css'
 
@@ -128,6 +129,12 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditProfile));
 
+EditProfile.propTypes = {
+  history: PropTypes.object,
+  setProfile: PropTypes.func,
+  updateUser: PropTypes.func,
+  user: PropTypes.object
+}
 
 
 

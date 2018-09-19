@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo } from '../services/fetch';
 import './styles.css';
+import PropTypes from 'prop-types';
 
 
 class CollectionBig extends Component {
@@ -92,5 +93,9 @@ export const mapStateToProps = (state) => ({
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CollectionBig))
 
+CollectionBig.propTypes = {
+  collection: PropTypes.array,
+  setProfile: PropTypes.func
+}
 
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { setProfile } from '../actions';
+import PropTypes from 'prop-types';
 
 export const Dashboard = (props) => {
 
@@ -40,3 +41,10 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));
+
+Dashboard.propTypes = {
+  history: PropTypes.object,
+  setProfile: PropTypes.func,
+  handleSignOut: PropTypes.func,
+  user: PropTypes.object
+}
