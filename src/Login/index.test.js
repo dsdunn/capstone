@@ -74,6 +74,7 @@ describe('Login', () => {
                        password2: '123456',
                        email: 'heck@yeah.com',
                        username: 'Sparkle' }
+                       
 
     const mappedProps = mapDispatchToProps(mockDispatch)
     const actionToDispatch = setProfile(mockUser);
