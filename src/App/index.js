@@ -17,17 +17,8 @@ import { getUserInfo } from '../services/fetch';
 import { firebase } from '../firebase';
 
 
-<<<<<<< HEAD
 export class App extends Component {
-  constructor() {
-    super()
-    this.state = { authUser: null};
-  }
 
-=======
-class App extends Component {
-  
->>>>>>> Add onAuthStateChaned to App
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
       if (authUser) {
