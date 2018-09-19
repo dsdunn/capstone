@@ -31,7 +31,13 @@ describe('UserProfile', () => {
     wrapper.setState({ collections: [] })
     expect(wrapper.find('.message').length).toEqual(1);
   })
+
+  it('should return a props object', () => {
+    const mockState = {profile: {}};
+    const expected = {"profile": {}};
+
+    const mappedProps = mapStateToProps(mockState)
+
+    expect(mappedProps).toEqual(expected)
+  })
 })
-
-
-  //   wrapper.setState({ })

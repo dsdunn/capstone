@@ -89,7 +89,6 @@ describe('Login', () => {
     expect(spy).toHaveBeenCalled();
   })
 
-  
   it('should go call goBack when goBack', () => {
     wrapper.instance().goBack()
     expect(history.goBack).toHaveBeenCalled()
@@ -97,5 +96,14 @@ describe('Login', () => {
 
   it('should match the snapShot', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should return a props object', () => {
+    const mockState = {user: {}};
+    const expected = {"user": {}};
+
+    const mappedProps = mapStateToProps(mockState)
+
+    expect(mappedProps).toEqual(expected)
   })
 })
