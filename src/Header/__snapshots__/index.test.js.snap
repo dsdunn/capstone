@@ -65,13 +65,13 @@ ShallowWrapper {
           >
                     <div>
                               <a
-                                        className="header-link login"
+                                        className="header-link test1"
                                         onClick={[Function]}
                               >
                                         Login
                               </a>
                               <a
-                                        className="header-link signup"
+                                        className="header-link test2"
                                         onClick={[Function]}
                               >
                                         Create Account
@@ -86,7 +86,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        <withRouter(Connect(Dashboard))
+        <withRouter(Connect(Component))
           active={false}
           handleSignOut={[Function]}
 />,
@@ -126,13 +126,13 @@ ShallowWrapper {
 >
               <div>
                             <a
-                                          className="header-link login"
+                                          className="header-link test1"
                                           onClick={[Function]}
                             >
                                           Login
                             </a>
                             <a
-                                          className="header-link signup"
+                                          className="header-link test2"
                                           onClick={[Function]}
                             >
                                           Create Account
@@ -222,13 +222,13 @@ ShallowWrapper {
             "props": Object {
               "children": <div>
                 <a
-                                className="header-link login"
+                                className="header-link test1"
                                 onClick={[Function]}
                 >
                                 Login
                 </a>
                 <a
-                                className="header-link signup"
+                                className="header-link test2"
                                 onClick={[Function]}
                 >
                                 Create Account
@@ -251,13 +251,13 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <a
-                    className="header-link login"
+                    className="header-link test1"
                     onClick={[Function]}
 >
                     Login
 </a>,
                   <a
-                    className="header-link signup"
+                    className="header-link test2"
                     onClick={[Function]}
 >
                     Create Account
@@ -279,7 +279,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Login",
-                    "className": "header-link login",
+                    "className": "header-link test1",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -292,7 +292,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Create Account",
-                    "className": "header-link signup",
+                    "className": "header-link test2",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -371,13 +371,13 @@ ShallowWrapper {
             >
                         <div>
                                     <a
-                                                className="header-link login"
+                                                className="header-link test1"
                                                 onClick={[Function]}
                                     >
                                                 Login
                                     </a>
                                     <a
-                                                className="header-link signup"
+                                                className="header-link test2"
                                                 onClick={[Function]}
                                     >
                                                 Create Account
@@ -392,7 +392,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          <withRouter(Connect(Dashboard))
+          <withRouter(Connect(Component))
             active={false}
             handleSignOut={[Function]}
 />,
@@ -432,13 +432,13 @@ ShallowWrapper {
 >
                 <div>
                                 <a
-                                                className="header-link login"
+                                                className="header-link test1"
                                                 onClick={[Function]}
                                 >
                                                 Login
                                 </a>
                                 <a
-                                                className="header-link signup"
+                                                className="header-link test2"
                                                 onClick={[Function]}
                                 >
                                                 Create Account
@@ -528,13 +528,13 @@ ShallowWrapper {
               "props": Object {
                 "children": <div>
                   <a
-                                    className="header-link login"
+                                    className="header-link test1"
                                     onClick={[Function]}
                   >
                                     Login
                   </a>
                   <a
-                                    className="header-link signup"
+                                    className="header-link test2"
                                     onClick={[Function]}
                   >
                                     Create Account
@@ -557,13 +557,13 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <a
-                      className="header-link login"
+                      className="header-link test1"
                       onClick={[Function]}
 >
                       Login
 </a>,
                     <a
-                      className="header-link signup"
+                      className="header-link test2"
                       onClick={[Function]}
 >
                       Create Account
@@ -585,7 +585,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Login",
-                      "className": "header-link login",
+                      "className": "header-link test1",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -598,7 +598,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Create Account",
-                      "className": "header-link signup",
+                      "className": "header-link test2",
                       "onClick": [Function],
                     },
                     "ref": null,

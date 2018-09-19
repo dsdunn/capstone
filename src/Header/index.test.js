@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Header, mapDispatchToProps } from './'
+import { Header, mapDispatchToProps, mapStateToProps } from './'
 import { signOut } from '../actions';
 
 describe('Header', () => {
@@ -55,14 +55,14 @@ describe('Header', () => {
 
   it('should call loginLocation when the Login btn is clicked', () => {
     const spy = jest.spyOn(wrapper.instance(), 'loginLocation')
-    wrapper.find('.login').simulate('click');
+    wrapper.find('.test1').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   })
 
   it('should call signupLocation when the Login btn is clicked', () => {
     const spy = jest.spyOn(wrapper.instance(), 'signupLocation')
-    wrapper.find('.signup').simulate('click');
+    wrapper.find('.test2').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   })
@@ -85,6 +85,15 @@ describe('Header', () => {
 
     mappedProps.signOut();
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  })
+
+  it('should return a props object', () => {
+    const mockState = {user: {}};
+    const expected = {"user": {}};
+
+    const mappedProps = mapStateToProps(mockState)
+
+    expect(mappedProps).toEqual(expected)
   })
 })
 
