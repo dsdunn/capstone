@@ -56,7 +56,7 @@ export class Signup extends Component {
           this.props.signIn(user)
           this.resetForm()
         })
-        .then(() => this.props.history.push('/editprofile'))
+        .then(() => this.props.history.push('/home/editprofile'))
         .catch(error => {
           this.setState({error: error.message})
         })

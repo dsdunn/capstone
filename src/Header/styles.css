@@ -5,7 +5,8 @@
   position: fixed;
   background-color: #262425;
   padding: 1.5% 2%;
-  height: 5vh;
+  height: 5.75vh;
+  max-height: 5.75vh;
   width: 100%;
   z-index: 2; }
 
