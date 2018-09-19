@@ -57,7 +57,7 @@ export class Header extends Component {
           {
             this.props.user.uid ? 
               <div className='avatar-dash'>
-                <button className='header-dash board-btn' onClick={this.handleDashboard}>Dashboard</button>
+                <button className='header-dashboard-btn' onClick={this.handleDashboard}>Dashboard</button>
                 <img className='header-avatar' src={headerAvatar} alt='avatar' />
               </div> :
               <div>
