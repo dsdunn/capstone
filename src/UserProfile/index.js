@@ -27,10 +27,12 @@ export class UserProfile extends Component {
     return (
       <div className={'user-profile'}>
         <section className='profile-top'>
+          <div>
+            <h3 className='profile-display-name'>{this.props.profile.username}</h3>
+            <h5 className='profile-location'>{this.props.profile.location}</h5>
+            <p className='profile-bio'>{this.props.profile.bio}</p>
+          </div>
           <img className='profile-img' alt='profile' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
-          <h3 className='profile-display-name'>{this.props.profile.username}</h3>
-          <h5 className='profile-location'>{this.props.profile.location}</h5>
-          <p className='profile-bio'>{this.props.profile.bio}</p>
         </section>
         <section className='profile-collections'>
           {this.state.collections.length ? this.state.collections : <p className='message'>To get started, hit up that dashboard and add a collection!</p>}

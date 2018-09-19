@@ -29,6 +29,8 @@
   align-items: center;
   text-align: right;
   width: 20%; }
+  .collection-small-user-display.hidden {
+    display: none; }
   .collection-small-user-display:hover {
     cursor: pointer; }
     .collection-small-user-display:hover .collection-small-avatar {

@@ -36,6 +36,10 @@
   text-align: right;
   width: 20%;
 
+  &.hidden {
+    display: none;
+  }
+
   &:hover{
     cursor: pointer;
 
