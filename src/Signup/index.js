@@ -88,6 +88,7 @@ export class Signup extends Component {
         <a className='signup-close-link' exact='true' onClick={() => this.goBack()}>
           <img className='close-btn' src={close} />
         </a>
+        <h5>Sign Up</h5>
         <label htmlFor='email'>email</label>
         <input id='email' type='email' value={this.state.email} onChange={this.handleChange}/>
         <label htmlFor='username'>username</label>
