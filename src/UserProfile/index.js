@@ -23,18 +23,6 @@ export class UserProfile extends Component {
     })
   }
 
-  // componentDidUpdate() {
-  //   getUserCollections(this.props.profile.uid)
-  //     .then(results => {
-  //       const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />);
-  //     this.setState({
-  //       collections
-  //     })
-  //   })
-  // }
-  
-
-
   render() {
     return (
       <div className={'user-profile'}>

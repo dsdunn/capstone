@@ -44,22 +44,6 @@
   font-family: 'Roboto', sans-serif;
   color: #262425; }
 
-@keyframes fadeAway {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.cards-txt,
-.comics-txt,
-.coins-txt,
-.vinyl-txt,
-.all-txt,
-.other-txt {
-  /*  animation-duration: 0.5s;
-  animation-name: fadeAway;*/
-  transition: color 1s ease-in-out; }
-
 .collections-cat-btn-container {
   display: flex;
   justify-content: space-around;
