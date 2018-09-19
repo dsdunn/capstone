@@ -7,7 +7,6 @@ import { getUserInfo } from '../services/fetch';
 import close from '../images/close.svg'
 import './styles.css'
 
-
 class Login extends Component {
   constructor(props) {
     super();
@@ -59,11 +58,14 @@ class Login extends Component {
   render() {
     return (
       <form className='login' onSubmit={this.handleSubmit}>
-        <a className='login-close-link' exact='true' onClick={() => this.history.goBack()}>
+        <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
           <img className='close-btn' src={close} />
         </a>
-        <input id='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
-        <input id='password' value={this.state.password} placeholder='password' onChange={this.handleChange}/>
+        <h5>Login</h5>
+        <label for='email'>email</label>
+        <input id='email' value={this.state.email} onChange={this.handleChange}/>
+        <label for='password'>password</label>
+        <input id='password' type='password' value={this.state.password} onChange={this.handleChange}/>
         <input type='submit'/>
         <p className='login-err-message'>{this.state.errorMessage}</p>
       </form>

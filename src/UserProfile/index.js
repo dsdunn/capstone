@@ -8,7 +8,7 @@ class UserProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collections: []
+      collections: null
     }
   }
 

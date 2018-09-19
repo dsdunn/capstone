@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getUserInfo } from '../services/fetch'
+import { getUserInfo, getCollection } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setProfile, setCollection } from '../actions'
@@ -28,7 +28,8 @@ class CollectionSmall extends Component {
   }
 
   viewCollectionBig = () => {
-    this.props.setCollection({...this.props.collection, ...this.state.user});
+    getCollection(this.props.collection.id)
+      .then(response => this.props.setCollection({...response, ...this.state.user}));
     this.props.history.push('/collection');
 
   }
@@ -47,11 +48,12 @@ class CollectionSmall extends Component {
               <div className='collection-small-category'>category: {category}
               </div>
             </div>
-            <div className={`collection-small-user-display ${this.props.hideuser ? 'hidden' : ''}`}>
-              <p className='collection-small-username'>{this.state.user.username}</p>
-              <p className='collection-small-location'>{this.state.user.location || 'earth'}</p>
-              <button onClick={this.viewProfile}className='collection-small-profile-button'>view profile
-              </button>
+            <div className={`collection-small-user-display ${this.props.hideuser ? 'hidden' : ''}` } onClick={this.viewProfile}>
+              <div>
+                <p className='collection-small-username'>{this.state.user.username}</p>
+                <p className='collection-small-location'>{this.state.user.location || 'earth'}</p>
+              </div>
+              <span><img className='collection-small-avatar' src={`https://collecshare.herokuapp.com/${this.state.user.avatar}`}/></span>
             </div>
           </div>
           <p className='collection-small-description'>{description}</p>
