@@ -11,21 +11,34 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
+import { connect } from 'react-redux';
+import { signIn, setProfile } from '../actions';
+import { getUserInfo } from '../services/fetch';
 import { firebase } from '../firebase';
 
 
+<<<<<<< HEAD
 export class App extends Component {
   constructor() {
     super()
     this.state = { authUser: null};
   }
 
+=======
+class App extends Component {
+  
+>>>>>>> Add onAuthStateChaned to App
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
-      authUser
-        ? this.setState({ authUser })
-        : this.setState({ authUser: null });
-    });
+      if (authUser) {
+        getUserInfo(authUser.uid)
+          .then(user => {
+            this.props.signIn(user)
+            this.props.setProfile(user)
+          })
+      }
+    })
+
   }
 
   render() {
@@ -50,4 +63,9 @@ export class App extends Component {
   }
 }
 
-export default withRouter(App);
+export const mapDispatchToProps = (dispatch) => ({
+  signIn: (userId) => dispatch(signIn(userId)),
+  setProfile: (user) => dispatch(setProfile(user))
+})
+
+export default withRouter(connect(null, mapDispatchToProps)(App));

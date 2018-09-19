@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo, postCollection } from '../services/fetch';
 import PropTypes from 'prop-types';
+import UserProfile from '../UserProfile';
 import './styles.css'
 
 export class AddCollection extends Component {

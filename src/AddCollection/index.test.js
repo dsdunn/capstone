@@ -31,5 +31,5 @@ describe('AddCollection', () => {
     wrapper.find('form').simulate('submit', mockEvent);
     expect(postCollection).toBeCalled();
   })
-
 })
+
