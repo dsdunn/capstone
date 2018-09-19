@@ -3,7 +3,18 @@
 exports[`AddCollection should match the snapShot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(AddCollection)) />,
+  Symbol(enzyme.__unrendered__): <AddCollection
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    user={
+        Object {
+            "uid": 1,
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,25 +26,727 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <label
+          for="collection-image"
+>
+          Upload a picture of your collection
+</label>,
+        <input
+          name="image"
+          type="file"
+/>,
+        <label
+          for="title"
+>
+          Collection name: 
+</label>,
+        <input
+          name="title"
+          onChange={[Function]}
+          placeholder="my collection"
+          value=""
+/>,
+        <label
+          for="description"
+>
+          Describe your Collection:
+</label>,
+        <textarea
+          name="description"
+          onChange={[Function]}
+          value=""
+/>,
+        <label
+          htmlFor="collection-form-category"
+>
+          Select a Category
+</label>,
+        <div
+          className="collection-form-bottom"
+>
+          <select
+                    name="category"
+                    onChange={[Function]}
+                    required={true}
+          >
+                    <option
+                              value=""
+                    >
+                              choose a category
+                    </option>
+                    <option
+                              value="coins"
+                    >
+                              Coins
+                    </option>
+                    <option
+                              value="comics"
+                    >
+                              Comics
+                    </option>
+                    <option
+                              value="cards"
+                    >
+                              Cards
+                    </option>
+                    <option
+                              value="vinyl"
+                    >
+                              Vinyl
+                    </option>
+                    <option
+                              value="other"
+                    >
+                              Other
+                    </option>
+          </select>
+          <button>
+                    Submit
+          </button>
+</div>,
+      ],
+      "className": "add-collection-form",
+      "onSubmit": [Function],
     },
-    "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "ref": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Upload a picture of your collection",
+          "for": "collection-image",
+        },
+        "ref": null,
+        "rendered": "Upload a picture of your collection",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "image",
+          "type": "file",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Collection name: ",
+          "for": "title",
+        },
+        "ref": null,
+        "rendered": "Collection name: ",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "title",
+          "onChange": [Function],
+          "placeholder": "my collection",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Describe your Collection:",
+          "for": "description",
+        },
+        "ref": null,
+        "rendered": "Describe your Collection:",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "description",
+          "onChange": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Select a Category",
+          "htmlFor": "collection-form-category",
+        },
+        "ref": null,
+        "rendered": "Select a Category",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <select
+              name="category"
+              onChange={[Function]}
+              required={true}
+>
+              <option
+                            value=""
+              >
+                            choose a category
+              </option>
+              <option
+                            value="coins"
+              >
+                            Coins
+              </option>
+              <option
+                            value="comics"
+              >
+                            Comics
+              </option>
+              <option
+                            value="cards"
+              >
+                            Cards
+              </option>
+              <option
+                            value="vinyl"
+              >
+                            Vinyl
+              </option>
+              <option
+                            value="other"
+              >
+                            Other
+              </option>
+</select>,
+            <button>
+              Submit
+</button>,
+          ],
+          "className": "collection-form-bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value=""
+>
+                  choose a category
+</option>,
+                <option
+                  value="coins"
+>
+                  Coins
+</option>,
+                <option
+                  value="comics"
+>
+                  Comics
+</option>,
+                <option
+                  value="cards"
+>
+                  Cards
+</option>,
+                <option
+                  value="vinyl"
+>
+                  Vinyl
+</option>,
+                <option
+                  value="other"
+>
+                  Other
+</option>,
+              ],
+              "name": "category",
+              "onChange": [Function],
+              "required": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "choose a category",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": "choose a category",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Coins",
+                  "value": "coins",
+                },
+                "ref": null,
+                "rendered": "Coins",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Comics",
+                  "value": "comics",
+                },
+                "ref": null,
+                "rendered": "Comics",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cards",
+                  "value": "cards",
+                },
+                "ref": null,
+                "rendered": "Cards",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Vinyl",
+                  "value": "vinyl",
+                },
+                "ref": null,
+                "rendered": "Vinyl",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Other",
+                  "value": "other",
+                },
+                "ref": null,
+                "rendered": "Other",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "form",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <label
+            for="collection-image"
+>
+            Upload a picture of your collection
+</label>,
+          <input
+            name="image"
+            type="file"
+/>,
+          <label
+            for="title"
+>
+            Collection name: 
+</label>,
+          <input
+            name="title"
+            onChange={[Function]}
+            placeholder="my collection"
+            value=""
+/>,
+          <label
+            for="description"
+>
+            Describe your Collection:
+</label>,
+          <textarea
+            name="description"
+            onChange={[Function]}
+            value=""
+/>,
+          <label
+            htmlFor="collection-form-category"
+>
+            Select a Category
+</label>,
+          <div
+            className="collection-form-bottom"
+>
+            <select
+                        name="category"
+                        onChange={[Function]}
+                        required={true}
+            >
+                        <option
+                                    value=""
+                        >
+                                    choose a category
+                        </option>
+                        <option
+                                    value="coins"
+                        >
+                                    Coins
+                        </option>
+                        <option
+                                    value="comics"
+                        >
+                                    Comics
+                        </option>
+                        <option
+                                    value="cards"
+                        >
+                                    Cards
+                        </option>
+                        <option
+                                    value="vinyl"
+                        >
+                                    Vinyl
+                        </option>
+                        <option
+                                    value="other"
+                        >
+                                    Other
+                        </option>
+            </select>
+            <button>
+                        Submit
+            </button>
+</div>,
+        ],
+        "className": "add-collection-form",
+        "onSubmit": [Function],
       },
-      "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "ref": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Upload a picture of your collection",
+            "for": "collection-image",
+          },
+          "ref": null,
+          "rendered": "Upload a picture of your collection",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "image",
+            "type": "file",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Collection name: ",
+            "for": "title",
+          },
+          "ref": null,
+          "rendered": "Collection name: ",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "title",
+            "onChange": [Function],
+            "placeholder": "my collection",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Describe your Collection:",
+            "for": "description",
+          },
+          "ref": null,
+          "rendered": "Describe your Collection:",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "description",
+            "onChange": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Select a Category",
+            "htmlFor": "collection-form-category",
+          },
+          "ref": null,
+          "rendered": "Select a Category",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <select
+                name="category"
+                onChange={[Function]}
+                required={true}
+>
+                <option
+                                value=""
+                >
+                                choose a category
+                </option>
+                <option
+                                value="coins"
+                >
+                                Coins
+                </option>
+                <option
+                                value="comics"
+                >
+                                Comics
+                </option>
+                <option
+                                value="cards"
+                >
+                                Cards
+                </option>
+                <option
+                                value="vinyl"
+                >
+                                Vinyl
+                </option>
+                <option
+                                value="other"
+                >
+                                Other
+                </option>
+</select>,
+              <button>
+                Submit
+</button>,
+            ],
+            "className": "collection-form-bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value=""
+>
+                    choose a category
+</option>,
+                  <option
+                    value="coins"
+>
+                    Coins
+</option>,
+                  <option
+                    value="comics"
+>
+                    Comics
+</option>,
+                  <option
+                    value="cards"
+>
+                    Cards
+</option>,
+                  <option
+                    value="vinyl"
+>
+                    Vinyl
+</option>,
+                  <option
+                    value="other"
+>
+                    Other
+</option>,
+                ],
+                "name": "category",
+                "onChange": [Function],
+                "required": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "choose a category",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": "choose a category",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Coins",
+                    "value": "coins",
+                  },
+                  "ref": null,
+                  "rendered": "Coins",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Comics",
+                    "value": "comics",
+                  },
+                  "ref": null,
+                  "rendered": "Comics",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cards",
+                    "value": "cards",
+                  },
+                  "ref": null,
+                  "rendered": "Cards",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Vinyl",
+                    "value": "vinyl",
+                  },
+                  "ref": null,
+                  "rendered": "Vinyl",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Other",
+                    "value": "other",
+                  },
+                  "ref": null,
+                  "rendered": "Other",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "form",
     },
   ],
   Symbol(enzyme.__options__): Object {

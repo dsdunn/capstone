@@ -53,7 +53,6 @@ describe('Login', () => {
   })
 
   it('should return a props object with signIn', () => {
-    const mockSignIn = jest.fn();
     const mockDispatch = jest.fn();
     const mockUser = { password1: '123456',
                        password2: '123456',
@@ -68,7 +67,6 @@ describe('Login', () => {
   })
 
   it('should return a props object with setProfile', () => {
-    const mockSignIn = jest.fn();
     const mockDispatch = jest.fn();
     const mockUser = { password1: '123456',
                        password2: '123456',

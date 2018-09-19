@@ -36,7 +36,8 @@
       "!src/services/config.js",
       "!src/firebase/**",
       "!src/**/styles.scss",
-      "!src/**/styles.css"
+      "!src/**/styles.css",
+      "!src/AvatarEditor/**"
     ]
   }
 }

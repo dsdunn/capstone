@@ -7,14 +7,13 @@ import './styles.css';
 import PropTypes from 'prop-types';
 
 
-class CollectionBig extends Component {
+export class CollectionBig extends Component {
   constructor(props){
     super(props);
   }
 
-
   goToProfile = () => {
-    getUserInfo(this.props.collection.uid || 'kUq7VixehNQ3znsMEcPpijzWGBV2')
+    getUserInfo(this.props.collection.uid)
       .then(result => this.props.setProfile(result));
     this.props.history.push('/user');
   }
@@ -23,7 +22,7 @@ class CollectionBig extends Component {
     if(!items) return;
     return items.map(item => {
       return (
-        <tr>
+        <tr key={item.id}>
           <td>{item.title}</td>
           <td>{item.description}</td>
           <td>{item.value}</td>
@@ -94,7 +93,7 @@ export const mapStateToProps = (state) => ({
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CollectionBig))
 
 CollectionBig.propTypes = {
-  collection: PropTypes.array,
+  collection: PropTypes.object,
   setProfile: PropTypes.func
 }
 

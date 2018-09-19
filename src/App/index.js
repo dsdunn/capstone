@@ -14,7 +14,7 @@ import CollectionsContainer from '../CollectionsContainer';
 import { firebase } from '../firebase';
 
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super()
     this.state = { authUser: null};
