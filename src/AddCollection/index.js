@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getUserInfo, postCollection } from '../services/fetch';
 import PropTypes from 'prop-types';
 import UserProfile from '../UserProfile';
+import close from '../images/close.svg';
+import { setCollection } from '../actions';
 import './styles.css'
 
 export class AddCollection extends Component {
@@ -36,12 +38,16 @@ export class AddCollection extends Component {
 
     body.append('uid', this.state.uid)
     postCollection(body)
+      .then(result => this.props.setCollection(result))
       .then(this.props.history.push('/user'))
   }
 
   render() {
     return (
       <form ref={el => (this.form = el)} className='add-collection-form' onSubmit={this.handleSubmit}>
+        <a className='login-close-link' exact='true' onClick={() => this.props.history.push('/user')}>
+          <img className='close-btn' src={close} />
+        </a>
         <label for='collection-image'>Upload a picture of your collection</label>
         <input name='image' ref={this.fileInput} type='file' />
         <label for='title'>Collection name: </label>
@@ -69,7 +75,11 @@ export const mapStateToProps = state => ({
   user: state.user
 })
 
-export default withRouter(connect(mapStateToProps)(AddCollection));
+export const mapDispatchToProps = dispatch => ({
+  setCollection: (collection) => dispatch(setCollection(collection)) 
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddCollection));
 
 AddCollection.propTypes = {
   history: PropTypes.object,
