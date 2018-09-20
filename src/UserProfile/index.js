@@ -23,20 +23,7 @@ export class UserProfile extends Component {
     })
   }
 
-  // componentDidUpdate() {
-    
-  // }
-
-  // static getDerivedStateFromProps(props, state) {
-  //   if (props.collection) {
-  //     return {
-  //       collections: getUserCollections(this.props.profile.uid)
-  //     .then(results => const collections = this.mapResults(results))
-  //     }
-  //   }
-  // }
-
-  mapResults = (arr) => arr.results.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />)
+  mapResults = (arr) => arr.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />)
 
 
   render() {
