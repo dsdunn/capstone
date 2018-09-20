@@ -16,34 +16,57 @@ export class UserProfile extends Component {
   componentDidMount() {
     getUserCollections(this.props.profile.uid)
       .then(results => {
-        const collections = results.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />);
+        const collections = this.mapResults(results)
       this.setState({
         collections
       })
     })
   }
 
+  // componentDidUpdate() {
+    
+  // }
+
+  // static getDerivedStateFromProps(props, state) {
+  //   if (props.collection) {
+  //     return {
+  //       collections: getUserCollections(this.props.profile.uid)
+  //     .then(results => const collections = this.mapResults(results))
+  //     }
+  //   }
+  // }
+
+  mapResults = (arr) => arr.results.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />)
+
+
   render() {
     return (
-      <div className={'user-profile'}>
+      <div>
+      <div className='user-profile-background'></div>
+        <div className='user-profile'>
+            <h1 className='profile-display-name'>{this.props.profile.username}</h1>
         <section className='profile-top'>
           <div>
-            <h3 className='profile-display-name'>{this.props.profile.username}</h3>
-            <h5 className='profile-location'>{this.props.profile.location}</h5>
-            <p className='profile-bio'>{this.props.profile.bio}</p>
+            <p className='profile-location'>LOCATION: <span className='profile-location-span'>{this.props.profile.location}</span></p>
+            <p className='profile-bio'>ABOUT ME: <span className='profile-bio-span'>{this.props.profile.bio}</span></p>
           </div>
+          <div className='profile-avatar-container'>
           <img className='profile-img' alt='profile' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
+          </div>
         </section>
         <section className='profile-collections'>
           {this.state.collections.length ? this.state.collections : <p className='message'>To get started, hit up that dashboard and add a collection!</p>}
         </section>
+      </div>    
       </div>
+
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
-  profile: state.profile
+  profile: state.profile,
+  collection: state.collection
 })
 
 export default connect(mapStateToProps)(UserProfile);
