@@ -18,7 +18,6 @@ import { firebase } from '../firebase';
 
 
 export class App extends Component {
-
   componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
       if (authUser) {
@@ -29,7 +28,6 @@ export class App extends Component {
           })
       }
     })
-
   }
 
   render() {
