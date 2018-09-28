@@ -61,8 +61,12 @@ ShallowWrapper {
                               <div
                                         className="collection-small-category"
                               >
-                                        category: 
-                                        string
+                                        CATEGORY: 
+                                        <span
+                                                  className="collection-small-category-span"
+                                        >
+                                                  string
+                                        </span>
                               </div>
                     </div>
                     <div
@@ -133,8 +137,12 @@ ShallowWrapper {
                             <div
                                           className="collection-small-category"
                             >
-                                          category: 
-                                          string
+                                          CATEGORY: 
+                                          <span
+                                                        className="collection-small-category-span"
+                                          >
+                                                        string
+                                          </span>
                             </div>
               </div>
               <div
@@ -189,8 +197,12 @@ ShallowWrapper {
                   <div
                                     className="collection-small-category"
                   >
-                                    category: 
-                                    string
+                                    CATEGORY: 
+                                    <span
+                                                      className="collection-small-category-span"
+                                    >
+                                                      string
+                                    </span>
                   </div>
 </div>,
                 <div
@@ -238,8 +250,12 @@ ShallowWrapper {
                     <div
                       className="collection-small-category"
 >
-                      category: 
-                      string
+                      CATEGORY: 
+                      <span
+                                            className="collection-small-category-span"
+                      >
+                                            string
+                      </span>
 </div>,
                   ],
                 },
@@ -279,15 +295,30 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        "category: ",
-                        "string",
+                        "CATEGORY: ",
+                        <span
+                          className="collection-small-category-span"
+>
+                          string
+</span>,
                       ],
                       "className": "collection-small-category",
                     },
                     "ref": null,
                     "rendered": Array [
-                      "category: ",
-                      "string",
+                      "CATEGORY: ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "string",
+                          "className": "collection-small-category-span",
+                        },
+                        "ref": null,
+                        "rendered": "string",
+                        "type": "span",
+                      },
                     ],
                     "type": "div",
                   },
@@ -447,8 +478,12 @@ ShallowWrapper {
                                     <div
                                                 className="collection-small-category"
                                     >
-                                                category: 
-                                                string
+                                                CATEGORY: 
+                                                <span
+                                                            className="collection-small-category-span"
+                                                >
+                                                            string
+                                                </span>
                                     </div>
                         </div>
                         <div
@@ -519,8 +554,12 @@ ShallowWrapper {
                                 <div
                                                 className="collection-small-category"
                                 >
-                                                category: 
-                                                string
+                                                CATEGORY: 
+                                                <span
+                                                                className="collection-small-category-span"
+                                                >
+                                                                string
+                                                </span>
                                 </div>
                 </div>
                 <div
@@ -575,8 +614,12 @@ ShallowWrapper {
                     <div
                                         className="collection-small-category"
                     >
-                                        category: 
-                                        string
+                                        CATEGORY: 
+                                        <span
+                                                            className="collection-small-category-span"
+                                        >
+                                                            string
+                                        </span>
                     </div>
 </div>,
                   <div
@@ -624,8 +667,12 @@ ShallowWrapper {
                       <div
                         className="collection-small-category"
 >
-                        category: 
-                        string
+                        CATEGORY: 
+                        <span
+                                                className="collection-small-category-span"
+                        >
+                                                string
+                        </span>
 </div>,
                     ],
                   },
@@ -665,15 +712,30 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [
-                          "category: ",
-                          "string",
+                          "CATEGORY: ",
+                          <span
+                            className="collection-small-category-span"
+>
+                            string
+</span>,
                         ],
                         "className": "collection-small-category",
                       },
                       "ref": null,
                       "rendered": Array [
-                        "category: ",
-                        "string",
+                        "CATEGORY: ",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "string",
+                            "className": "collection-small-category-span",
+                          },
+                          "ref": null,
+                          "rendered": "string",
+                          "type": "span",
+                        },
                       ],
                       "type": "div",
                     },

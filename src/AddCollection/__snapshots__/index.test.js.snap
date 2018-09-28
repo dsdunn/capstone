@@ -9,6 +9,7 @@ ShallowWrapper {
             "push": [Function],
           }
     }
+    setCollection={[Function]}
     user={
         Object {
             "uid": 1,

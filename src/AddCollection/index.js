@@ -35,8 +35,8 @@ export class AddCollection extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const body = new FormData(this.form);
-
     body.append('uid', this.state.uid)
+    
     postCollection(body)
       .then(result => this.props.setCollection(result))
       .then(this.props.history.push('/user'))
