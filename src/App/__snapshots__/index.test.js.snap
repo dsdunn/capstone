@@ -75,6 +75,10 @@ ShallowWrapper {
           component={[Function]}
           path="/home"
 />,
+        <Route
+          component={[Function]}
+          path="/collection/editcollection"
+/>,
       ],
       "className": "App",
     },
@@ -249,6 +253,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/collection/editcollection",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -315,6 +331,10 @@ ShallowWrapper {
           <Route
             component={[Function]}
             path="/home"
+/>,
+          <Route
+            component={[Function]}
+            path="/collection/editcollection"
 />,
         ],
         "className": "App",
@@ -485,6 +505,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "path": "/home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/collection/editcollection",
           },
           "ref": null,
           "rendered": null,
