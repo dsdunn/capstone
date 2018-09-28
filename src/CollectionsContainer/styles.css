@@ -22,22 +22,22 @@
   transition: background-image 0.3s linear; }
 
 .comics {
-  background-image: url("../images/160318ComicBooks_0.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/160318ComicBooks_0.jpg"); }
 
 .vinyl {
-  background-image: url("../images/vinyl.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/vinyl.jpg"); }
 
 .coins {
-  background-image: url("../images/highrescoincol.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/highrescoincol.jpg"); }
 
 .all {
-  background-image: url("../images/collection-focus-magnifier-248993.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/collection-focus-magnifier-248993.jpg"); }
 
 .cards {
-  background-image: url("../images/baseballcards2.jpeg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/baseballcards2.jpeg"); }
 
 .other {
-  background-image: url("../images/collection-focus-magnifier-248993.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/collection-focus-magnifier-248993.jpg"); }
 
 .collections-category-name {
   font-family: 'Roboto', sans-serif;

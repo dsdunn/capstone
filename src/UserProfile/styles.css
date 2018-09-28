@@ -18,7 +18,7 @@
   background-color: white; }
 
 .user-profile-background {
-  background-image: url("../images/highresrecords5.jpg");
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/highresrecords5.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   opacity: 0.4;

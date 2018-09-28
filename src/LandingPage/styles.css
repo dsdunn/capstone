@@ -55,16 +55,16 @@ h1 {
   height: 65vh; }
 
 .bg1::after {
-  background-image: url("../images/vinyl.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/vinyl.jpg"); }
 
 .bg2::after {
-  background-image: url("http://mediad.publicbroadcasting.net/p/wglt/files/styles/x_large/public/201603/160318ComicBooks_0.jpg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/160318ComicBooks_0.jpg"); }
 
 .bg3::after {
-  background-image: url("http://sports.mearsonlineauctions.com/ItemImages/000076/76208a_lg.jpeg"); }
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/baseballcards2.jpeg"); }
 
 .bg4::after {
-  background-image: url("../images/highrescoincol.jpg");
+  background-image: url("https://collecshare.herokuapp.com/backgrounds/highrescoincol.jpg");
   background-position: bottom; }
 
 .s1 {
