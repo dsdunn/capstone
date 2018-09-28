@@ -39,5 +39,8 @@
       "!src/**/styles.css",
       "!src/AvatarEditor/**"
     ]
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.1"
   }
 }
