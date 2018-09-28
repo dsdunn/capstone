@@ -86,7 +86,8 @@ export class Signup extends Component {
   }
 
   render() {
-    const location = this.props.history.location.pathname;
+    let location = this.props.history.location.pathname;
+    let errorMessage = this.state.error ? 'signup-err-message activeError' : 'signup-err-message'
 
     return (
       <form className='signup'onSubmit={this.handleSubmit}>
@@ -103,7 +104,7 @@ export class Signup extends Component {
         <label htmlFor='password2'>confirm password</label>
         <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
         <input type='submit'/>
-        <p className='signup-err-message' >{this.state.error}</p>
+        <p className={errorMessage}>{this.state.error}</p>
       </form>
     )
   }
