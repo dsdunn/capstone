@@ -6,6 +6,7 @@ import { postCollection } from '../services/fetch';
 jest.mock('../services/fetch.js');
 
 describe('AddCollection', () => {
+  let mockSetCollection;
   let wrapper;
   let mockHandleChange = jest.fn();
   let mockEvent = {
@@ -14,7 +15,8 @@ describe('AddCollection', () => {
   }
 
   beforeEach(() => {
-    wrapper = shallow(<AddCollection user={{uid: 1}} history={{push: jest.fn()}} />);
+    mockSetCollection = jest.fn()
+    wrapper = shallow(<AddCollection setCollection={mockSetCollection} user={{uid: 1}} history={{push: jest.fn()}} />);
   })
 
   it('should match the snapShot', () => {
@@ -25,7 +27,6 @@ describe('AddCollection', () => {
     wrapper.instance().handleChange(mockEvent)
     expect(wrapper.state('title')).toEqual('sweet')
   })
-
 
   it('should call postCollection on submit', () => {
     wrapper.find('form').simulate('submit', mockEvent);

@@ -20,7 +20,12 @@
     margin: 1% 0 3% 0; }
 
 .signup-err-message {
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: transparent; }
+
+.activeError {
+  transition: color 0.15s linear;
+  color: black; }
 
 .close-btn {
   border-radius: 50%;

@@ -1,11 +1,12 @@
 .login {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   border: 1px solid #883955;
   border-radius: 0.25rem;
   background-color: white;
   width: 50%;
+  height: 18rem;
   margin: auto;
   position: absolute;
   top: 10rem;
@@ -21,7 +22,12 @@
     margin: 1% 0 3% 0; }
 
 .login-err-message {
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: transparent; }
+
+.activeError {
+  transition: color 0.15s linear;
+  color: black; }
 
 .close-btn {
   border-radius: 50%;
