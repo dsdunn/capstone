@@ -57,6 +57,7 @@ export class Login extends Component {
   }
 
   render() {
+    let errorMessage = this.state.error ? 'login-err-message activeError' : 'login-err-message'
     return (
       <form className='login' onSubmit={this.handleSubmit}>
         <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
@@ -68,7 +69,7 @@ export class Login extends Component {
         <label for='password'>password</label>
         <input id='password' type='password' value={this.state.password} onChange={this.handleChange}/>
         <input type='submit'/>
-        <p className='login-err-message'>{this.state.errorMessage}</p>
+        <p className={errorMessage}>{this.state.error}</p>
       </form>
     )
   }
