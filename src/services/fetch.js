@@ -24,6 +24,11 @@ export const postCollection = (collection) => {
   .then(response => response.json())
 }
 
+export const putCollection = (collection, id) => {
+  return apiFormDataFetch(`/collections/${id}`, 'PUT', collection)
+  .then(response => response.json())
+}
+
 export const getAllCollections = () => {
   return apiFetch('/collections')
   .then(response => response.json())
