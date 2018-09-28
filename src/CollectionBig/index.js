@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { setProfile } from '../actions';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo } from '../services/fetch';
 import './styles.css';
@@ -39,6 +39,9 @@ export class CollectionBig extends Component {
 
     return (
       <div className='collection-big'>
+      <Link to={'/collection/editcollection'}>
+        <h1>edit collection</h1>
+      </Link>
         <div className={'collection-big-background'} style={{backgroundImage: `url(${background})`}}>
         </div>
         <h1 className='collection-big-title'>{title}</h1>

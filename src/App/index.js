@@ -11,6 +11,7 @@ import LandingPage from '../LandingPage';
 import CollectionBig from '../CollectionBig';
 import AddCollection from '../AddCollection';
 import CollectionsContainer from '../CollectionsContainer';
+import EditCollection from '../EditCollection';
 import { connect } from 'react-redux';
 import { signIn, setProfile } from '../actions';
 import { getUserInfo } from '../services/fetch';
@@ -47,6 +48,7 @@ export class App extends Component {
         <Route path={'/home/editprofile'} component={EditProfile} />
         <Route path={'/collection'} component={CollectionBig}/>
         <Route path={'/home'} component={CollectionsContainer}/>
+        <Route path={'/collection/editcollection'} component={EditCollection}/>
       </div>
     );
   }
