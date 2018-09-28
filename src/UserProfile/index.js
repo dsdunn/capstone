@@ -25,7 +25,6 @@ export class UserProfile extends Component {
 
   mapResults = (arr) => arr.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />)
 
-
   render() {
     return (
       <div>

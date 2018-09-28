@@ -58,6 +58,7 @@ export class Login extends Component {
 
   render() {
     let errorMessage = this.state.error ? 'login-err-message activeError' : 'login-err-message'
+    
     return (
       <form className='login' onSubmit={this.handleSubmit}>
         <a className='login-close-link' exact='true' onClick={() => this.goBack()}>
