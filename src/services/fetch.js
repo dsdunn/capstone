@@ -29,6 +29,11 @@ export const putCollection = (collection, id) => {
   .then(response => response.json())
 }
 
+export const deleteCollection = (id) => {
+  return apiFetch(`/collections/${id}`, 'DELETE')
+  .then(response => response.json())
+}
+
 export const getAllCollections = () => {
   return apiFetch('/collections')
   .then(response => response.json())

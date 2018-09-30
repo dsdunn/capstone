@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { putCollection } from '../services/fetch';
+import { putCollection, deleteCollection } from '../services/fetch';
 import { updateUser, setProfile, setCollection } from '../actions';
 import close from '../images/close.svg';
 import PropTypes from 'prop-types';
@@ -57,6 +57,14 @@ export class EditCollection extends Component {
     this.props.history.goBack();
   }
 
+  deleteCollection = (event) => {
+    event.preventDefault();
+    if (window.confirm("Are you sure you want to delete this collection?")) {
+      deleteCollection(this.props.collection.id);
+      this.props.history.push('/user')   
+    }
+  }
+
 
   render() {
     return (
@@ -88,6 +96,7 @@ export class EditCollection extends Component {
           <option value='other'>Other</option>
         </select>
         <button className='edit-collection-submit-btn'>submit</button>
+        <button className='edit-collection-delete-btn' onClick={this.deleteCollection}>delete collection</button>
       </form>
     )
   }
