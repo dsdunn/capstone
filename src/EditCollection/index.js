@@ -16,7 +16,11 @@ export class EditCollection extends Component {
       title: '',
       description: '',
       image: '',
-      category: ''
+      category: '',
+      items: [],
+      username: '',
+      avatar: '',
+      location: ''
     }
   }
 
@@ -43,7 +47,8 @@ export class EditCollection extends Component {
 
     putCollection(body, this.state.id)
     .then(result => {
-      this.props.setCollection(result);
+      this.setState({...result})
+      this.props.setCollection(this.state);
       this.props.history.goBack();
     })
   }
