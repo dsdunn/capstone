@@ -32,6 +32,10 @@ export class CollectionBig extends Component {
     })
   }
 
+  isOwn() {
+    return this.props.user.uid === this.props.collection.uid;
+  }
+
   render() {    
     const { location, id, uid, username, title, description, avatar, image, items } = this.props.collection;
     const background = `https://collecshare.herokuapp.com/${image}`;
@@ -39,9 +43,6 @@ export class CollectionBig extends Component {
 
     return (
       <div className='collection-big'>
-      <Link to={'/collection/editcollection'}>
-        <h1>edit collection</h1>
-      </Link>
         <div className={'collection-big-background'} style={{backgroundImage: `url(${background})`}}>
         </div>
         <h1 className='collection-big-title'>{title}</h1>
@@ -56,6 +57,12 @@ export class CollectionBig extends Component {
               </div>
             </div>
           </header>
+          { 
+          this.isOwn() && 
+            <Link className='collection-big-edit-link' to={'/collection/editcollection'}>
+              <h4>EDIT COLLECTION</h4>
+            </Link>
+          }
           <hr/>
           <div className='collection-big-body'>
             <div>
@@ -90,7 +97,8 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export const mapStateToProps = (state) => ({
-  collection: state.collection
+  collection: state.collection,
+  user: state.user
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CollectionBig))
