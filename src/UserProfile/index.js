@@ -14,6 +14,14 @@ export class UserProfile extends Component {
   }
 
   componentDidMount() {
+    this.getCollections();
+  }
+
+  componentDidUpdate() {
+    this.getCollections();
+  }
+
+  getCollections() {
     getUserCollections(this.props.profile.uid)
       .then(results => {
         const collections = this.mapResults(results)
