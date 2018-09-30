@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { putCollection } from '../services/fetch';
-import { updateUser, setProfile } from '../actions';
+import { updateUser, setProfile, setCollection } from '../actions';
 import close from '../images/close.svg';
 // import AvatarEditor from 'react-avatar-editor';
 // import MyEditor from '../AvatarEditor';
@@ -45,9 +45,10 @@ export class EditCollection extends Component {
 
     putCollection(body, this.state.id)
     .then(result => {
-      this.props.updateUser(result)
-      this.props.setProfile(result)
-      this.props.history.push('/user');
+      // this.props.updateUser(result)
+      // this.props.setProfile(result)
+      this.props.setCollection(result);
+      this.props.history.goBack();
     })
   }
 
@@ -92,13 +93,14 @@ export class EditCollection extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  user: state.user,
+  // user: state.user,
   collection: state.collection
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  setProfile: (user) => dispatch(setProfile(user)),
-  updateUser: (user) => dispatch(updateUser(user))
+  // setProfile: (user) => dispatch(setProfile(user)),
+  // updateUser: (user) => dispatch(updateUser(user))
+  setCollection: (collection) => dispatch(setCollection(collection))
 })
 
 
