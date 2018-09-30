@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { putCollection } from '../services/fetch';
 import { updateUser, setProfile, setCollection } from '../actions';
 import close from '../images/close.svg';
-// import AvatarEditor from 'react-avatar-editor';
-// import MyEditor from '../AvatarEditor';
 import PropTypes from 'prop-types';
 
 // import './styles.css'
@@ -45,8 +43,6 @@ export class EditCollection extends Component {
 
     putCollection(body, this.state.id)
     .then(result => {
-      // this.props.updateUser(result)
-      // this.props.setProfile(result)
       this.props.setCollection(result);
       this.props.history.goBack();
     })
@@ -93,20 +89,16 @@ export class EditCollection extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  // user: state.user,
   collection: state.collection
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  // setProfile: (user) => dispatch(setProfile(user)),
-  // updateUser: (user) => dispatch(updateUser(user))
   setCollection: (collection) => dispatch(setCollection(collection))
 })
 
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditCollection));
 
-// export default withRouter(EditCollection);
 
 EditCollection.propTypes = {
   history: PropTypes.object,
