@@ -48,11 +48,11 @@ export class AddCollection extends Component {
         <a className='login-close-link' exact='true' onClick={() => this.props.history.push('/user')}>
           <img className='close-btn' src={close} />
         </a>
-        <label for='collection-image'>Upload a picture of your collection</label>
+        <label htmlFor='collection-image'>Upload a picture of your collection</label>
         <input name='image' ref={this.fileInput} type='file' />
-        <label for='title'>Collection name: </label>
+        <label htmlFor='title'>Collection name: </label>
         <input name='title' placeholder='my collection' value={this.state.title} onChange={this.handleChange}/>
-        <label for='description'>Describe your Collection:</label>
+        <label htmlFor='description'>Describe your Collection:</label>
         <textarea name='description' value={this.state.description} onChange={this.handleChange}/>
         <label htmlFor='collection-form-category'>Select a Category</label>
         <div className='collection-form-bottom'>
