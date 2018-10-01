@@ -19,10 +19,6 @@ describe('UserProfile', () => {
     wrapper = shallow(<UserProfile profile={mockProfile} /> )
   })
 
-  it('should getUserCollections on componentDidMount', () => {
-    expect(getUserCollections).toHaveBeenCalled()
-  })
-
   it('should match the snapShot', () => {
     expect(wrapper).toMatchSnapshot()
   })

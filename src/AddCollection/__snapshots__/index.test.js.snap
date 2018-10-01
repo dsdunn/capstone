@@ -41,7 +41,7 @@ ShallowWrapper {
           />
 </a>,
         <label
-          for="collection-image"
+          htmlFor="collection-image"
 >
           Upload a picture of your collection
 </label>,
@@ -50,7 +50,7 @@ ShallowWrapper {
           type="file"
 />,
         <label
-          for="title"
+          htmlFor="title"
 >
           Collection name: 
 </label>,
@@ -61,7 +61,7 @@ ShallowWrapper {
           value=""
 />,
         <label
-          for="description"
+          htmlFor="description"
 >
           Describe your Collection:
 </label>,
@@ -158,7 +158,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Upload a picture of your collection",
-          "for": "collection-image",
+          "htmlFor": "collection-image",
         },
         "ref": null,
         "rendered": "Upload a picture of your collection",
@@ -182,7 +182,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Collection name: ",
-          "for": "title",
+          "htmlFor": "title",
         },
         "ref": null,
         "rendered": "Collection name: ",
@@ -208,7 +208,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Describe your Collection:",
-          "for": "description",
+          "htmlFor": "description",
         },
         "ref": null,
         "rendered": "Describe your Collection:",
@@ -442,7 +442,7 @@ ShallowWrapper {
             />
 </a>,
           <label
-            for="collection-image"
+            htmlFor="collection-image"
 >
             Upload a picture of your collection
 </label>,
@@ -451,7 +451,7 @@ ShallowWrapper {
             type="file"
 />,
           <label
-            for="title"
+            htmlFor="title"
 >
             Collection name: 
 </label>,
@@ -462,7 +462,7 @@ ShallowWrapper {
             value=""
 />,
           <label
-            for="description"
+            htmlFor="description"
 >
             Describe your Collection:
 </label>,
@@ -559,7 +559,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Upload a picture of your collection",
-            "for": "collection-image",
+            "htmlFor": "collection-image",
           },
           "ref": null,
           "rendered": "Upload a picture of your collection",
@@ -583,7 +583,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Collection name: ",
-            "for": "title",
+            "htmlFor": "title",
           },
           "ref": null,
           "rendered": "Collection name: ",
@@ -609,7 +609,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Describe your Collection:",
-            "for": "description",
+            "htmlFor": "description",
           },
           "ref": null,
           "rendered": "Describe your Collection:",

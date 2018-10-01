@@ -46,7 +46,9 @@
 .collections-cat-btn-container {
   display: flex;
   justify-content: space-around;
-  height: 3rem; }
+  height: 3rem;
+  max-width: 75em;
+  margin: auto; }
 
 .collections-container-cat-btn {
   color: #262425;

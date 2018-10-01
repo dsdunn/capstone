@@ -76,19 +76,11 @@ ShallowWrapper {
           <section
                     className="profile-collections"
           >
-                    <withRouter(Connect(CollectionSmall))
-                              collection={
-                                        Object {
-                                                  "category": "string",
-                                                  "description": "string",
-                                                  "id": 666,
-                                                  "image": "string",
-                                                  "title": "string",
-                                                  "uid": "string",
-                                                }
-                              }
-                              hideuser={true}
-                    />
+                    <p
+                              className="message"
+                    >
+                              No Collections yet!
+                    </p>
           </section>
 </div>,
       ],
@@ -155,19 +147,11 @@ ShallowWrapper {
             <section
               className="profile-collections"
 >
-              <withRouter(Connect(CollectionSmall))
-                            collection={
-                                          Object {
-                                                        "category": "string",
-                                                        "description": "string",
-                                                        "id": 666,
-                                                        "image": "string",
-                                                        "title": "string",
-                                                        "uid": "string",
-                                                      }
-                            }
-                            hideuser={true}
-              />
+              <p
+                            className="message"
+              >
+                            No Collections yet!
+              </p>
 </section>,
           ],
           "className": "user-profile",
@@ -363,45 +347,26 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <withRouter(Connect(CollectionSmall))
-                  collection={
-                                    Object {
-                                                      "category": "string",
-                                                      "description": "string",
-                                                      "id": 666,
-                                                      "image": "string",
-                                                      "title": "string",
-                                                      "uid": "string",
-                                                    }
-                  }
-                  hideuser={true}
-/>,
-              ],
+              "children": <p
+                className="message"
+>
+                No Collections yet!
+</p>,
               "className": "profile-collections",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "666",
-                "nodeType": "function",
-                "props": Object {
-                  "collection": Object {
-                    "category": "string",
-                    "description": "string",
-                    "id": 666,
-                    "image": "string",
-                    "title": "string",
-                    "uid": "string",
-                  },
-                  "hideuser": true,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "No Collections yet!",
+                "className": "message",
               },
-            ],
+              "ref": null,
+              "rendered": "No Collections yet!",
+              "type": "p",
+            },
             "type": "section",
           },
         ],
@@ -466,19 +431,11 @@ ShallowWrapper {
             <section
                         className="profile-collections"
             >
-                        <withRouter(Connect(CollectionSmall))
-                                    collection={
-                                                Object {
-                                                            "category": "string",
-                                                            "description": "string",
-                                                            "id": 666,
-                                                            "image": "string",
-                                                            "title": "string",
-                                                            "uid": "string",
-                                                          }
-                                    }
-                                    hideuser={true}
-                        />
+                        <p
+                                    className="message"
+                        >
+                                    No Collections yet!
+                        </p>
             </section>
 </div>,
         ],
@@ -545,19 +502,11 @@ ShallowWrapper {
               <section
                 className="profile-collections"
 >
-                <withRouter(Connect(CollectionSmall))
-                                collection={
-                                                Object {
-                                                                "category": "string",
-                                                                "description": "string",
-                                                                "id": 666,
-                                                                "image": "string",
-                                                                "title": "string",
-                                                                "uid": "string",
-                                                              }
-                                }
-                                hideuser={true}
-                />
+                <p
+                                className="message"
+                >
+                                No Collections yet!
+                </p>
 </section>,
             ],
             "className": "user-profile",
@@ -753,45 +702,26 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <withRouter(Connect(CollectionSmall))
-                    collection={
-                                        Object {
-                                                            "category": "string",
-                                                            "description": "string",
-                                                            "id": 666,
-                                                            "image": "string",
-                                                            "title": "string",
-                                                            "uid": "string",
-                                                          }
-                    }
-                    hideuser={true}
-/>,
-                ],
+                "children": <p
+                  className="message"
+>
+                  No Collections yet!
+</p>,
                 "className": "profile-collections",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "666",
-                  "nodeType": "function",
-                  "props": Object {
-                    "collection": Object {
-                      "category": "string",
-                      "description": "string",
-                      "id": 666,
-                      "image": "string",
-                      "title": "string",
-                      "uid": "string",
-                    },
-                    "hideuser": true,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "No Collections yet!",
+                  "className": "message",
                 },
-              ],
+                "ref": null,
+                "rendered": "No Collections yet!",
+                "type": "p",
+              },
               "type": "section",
             },
           ],

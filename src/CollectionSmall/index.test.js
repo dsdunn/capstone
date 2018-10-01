@@ -44,7 +44,7 @@ describe('CollectionSmall', () => {
   })
 
   it('should do the thing when viewCollectoinBig is called', () => {
-    wrapper.instance().viewCollectionBig()
+    wrapper.instance().viewCollectionBig({target: {classList: ['xyz']}})
     expect(history.push).toHaveBeenCalled()
   })
 

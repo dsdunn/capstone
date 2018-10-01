@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { putCollection } from '../services/fetch';
-import { updateUser, setProfile } from '../actions';
+import { putCollection, deleteCollection } from '../services/fetch';
+import { updateUser, setProfile, setCollection } from '../actions';
 import close from '../images/close.svg';
-// import AvatarEditor from 'react-avatar-editor';
-// import MyEditor from '../AvatarEditor';
 import PropTypes from 'prop-types';
 
 // import './styles.css'
@@ -18,7 +16,11 @@ export class EditCollection extends Component {
       title: '',
       description: '',
       image: '',
-      category: ''
+      category: '',
+      items: [],
+      username: '',
+      avatar: '',
+      location: ''
     }
   }
 
@@ -45,14 +47,22 @@ export class EditCollection extends Component {
 
     putCollection(body, this.state.id)
     .then(result => {
-      this.props.updateUser(result)
-      this.props.setProfile(result)
-      this.props.history.push('/user');
+      this.setState({...result})
+      this.props.setCollection(this.state);
+      this.props.history.goBack();
     })
   }
 
   goBack = () => {
     this.props.history.goBack();
+  }
+
+  deleteCollection = (event) => {
+    event.preventDefault();
+    if (window.confirm("Are you sure you want to delete this collection?")) {
+      deleteCollection(this.props.collection.id);
+      this.props.history.push('/user')   
+    }
   }
 
 
@@ -86,25 +96,23 @@ export class EditCollection extends Component {
           <option value='other'>Other</option>
         </select>
         <button className='edit-collection-submit-btn'>submit</button>
+        <button className='edit-collection-delete-btn' onClick={this.deleteCollection}>delete collection</button>
       </form>
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
-  user: state.user,
   collection: state.collection
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  setProfile: (user) => dispatch(setProfile(user)),
-  updateUser: (user) => dispatch(updateUser(user))
+  setCollection: (collection) => dispatch(setCollection(collection))
 })
 
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditCollection));
 
-// export default withRouter(EditCollection);
 
 EditCollection.propTypes = {
   history: PropTypes.object,
