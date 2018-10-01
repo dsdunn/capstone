@@ -3,13 +3,20 @@ import './styles.css';
 import { connect } from 'react-redux';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
-import { setProfile } from '../actions';
+import { setProfile, addCollections } from '../actions';
+import { getUserCollections } from '../services/fetch.js';
 import PropTypes from 'prop-types';
 
 export const Dashboard = (props) => {
 
   const handleViewProfile = () => {
     props.setProfile(props.user);
+    getUserCollections(props.user.uid)
+     .then(results => {
+      console.log(results);
+      props.addCollections(results);
+      props.history.push('/user');
+      });
   }
 
   const getPath = () => {
@@ -24,8 +31,8 @@ export const Dashboard = (props) => {
       <div>
       <NavLink className='dashboard-link dashboard-view-profile' onClick={() => {handleViewProfile()}} exact to={'/user'} >View Profile</NavLink>
       <a className='dashboard-link test3' onClick={getPath}>Edit Profile</a>
-      <NavLink className='dashboard-link' to={'/user/addcollection'}>Add/Edit Collection</NavLink>
-      <NavLink className='dashboard-link' to={'/user/settings'}>Account Settings</NavLink>
+      <NavLink className='dashboard-link' to={'/user/addcollection'}>Add Collection
+      </NavLink>
       <Link className='dashboard-link test4' to={'/'} onClick={() => props.handleSignOut()}>Sign Out</Link>
       </div>
     </div>
@@ -37,7 +44,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  setProfile: (user) => dispatch(setProfile(user))
+  setProfile: (user) => dispatch(setProfile(user)),
+  addCollections: (collections) => dispatch(addCollections(collections))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));

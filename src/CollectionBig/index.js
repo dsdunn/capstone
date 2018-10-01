@@ -14,11 +14,15 @@ export class CollectionBig extends Component {
 
   goToProfile = () => {
     getUserInfo(this.props.collection.uid)
-      .then(result => this.props.setProfile(result));
-    getUserCollections(this.props.collection.uid)
-      .then(results => {
-        this.props.addCollections(results);
-        this.props.history.push('/user');
+      .then(result => {
+        this.props.setProfile(result)
+      })
+      .then(() => {
+        getUserCollections(this.props.collection.uid)
+          .then(results => {
+            this.props.addCollections(results);
+            this.props.history.push('/user');
+          })
       })
   }
 
@@ -71,7 +75,7 @@ export class CollectionBig extends Component {
           <div className='collection-big-body'>
             <div>
               <h5>Description: </h5>
-              <p className='collection-big-description>'>{description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.</p>
+              <p className='collection-big-description>'>{description}</p>
             </div>
             <div className='collection-big-items'>
               <h5>Items:</h5>
