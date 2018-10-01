@@ -13,27 +13,11 @@ export class UserProfile extends Component {
     }
   }
 
-  componentDidMount() {
-    this.getCollections();
-  }
-
-  componentDidUpdate() {
-    this.getCollections();
-  }
-
-  getCollections() {
-    getUserCollections(this.props.profile.uid)
-      .then(results => {
-        const collections = this.mapResults(results)
-      this.setState({
-        collections
-      })
-    })
-  }
-
   mapResults = (arr) => arr.map(collection => <CollectionSmall collection={collection} hideuser={true} key={collection.id} />)
 
   render() {
+    const collections = this.props.profile.collections ? this.mapResults(this.props.profile.collections) :  <p className='message'>No Collections yet!</p>
+
     return (
       <div>
         <div className='user-profile-background'></div>
@@ -49,7 +33,7 @@ export class UserProfile extends Component {
             </div>
           </section>
           <section className='profile-collections'>
-            {this.state.collections.length ? this.state.collections : <p className='message'>To get started, hit up that dashboard and add a collection!</p>}
+            {collections}
           </section>
         </div>    
       </div>
