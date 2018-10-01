@@ -13,7 +13,6 @@ export const Dashboard = (props) => {
     props.setProfile(props.user);
     getUserCollections(props.user.uid)
      .then(results => {
-      console.log(results);
       props.addCollections(results);
       props.history.push('/user');
       });
