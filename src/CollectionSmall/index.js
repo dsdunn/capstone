@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getUserInfo, getCollection } from '../services/fetch'
+import { getUserInfo, getCollection, getUserCollections } from '../services/fetch'
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setProfile, setCollection } from '../actions';
+import { setProfile, setCollection, addCollections } from '../actions';
 import PropTypes from 'prop-types';
 import './styles.css';
 
@@ -25,7 +25,11 @@ export class CollectionSmall extends Component {
 
   viewProfile = () => {
     this.props.setProfile(this.state.user);
-    this.props.history.push('/user');
+    getUserCollections(this.props.collection.uid)
+      .then(results => {
+        this.props.addCollections(results);
+        this.props.history.push('/user');
+      })
   }
 
   viewCollectionBig = (event) => {
@@ -50,7 +54,7 @@ export class CollectionSmall extends Component {
                 
                 <div className='collection-small-category'>CATEGORY: <span className='collection-small-category-span'>{category}</span></div>
               </div>
-              <div className={`user-link collection-small-user-display${this.props.hideuser ? 'hidden' : ''}` } onClick={this.viewProfile}>
+              <div className={`user-link collection-small-user-display ${this.props.hideuser ? 'hidden' : ''}` } onClick={this.viewProfile}>
                 <div>
                   <p className='user-link collection-small-username'>{this.state.user.username}</p>
                   <p className='user-link collection-small-location'>{this.state.user.location || 'earth'}</p>
@@ -68,7 +72,8 @@ export class CollectionSmall extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   setProfile: (profile) => dispatch(setProfile(profile)),
-  setCollection: (collection) => dispatch(setCollection(collection))
+  setCollection: (collection) => dispatch(setCollection(collection)),
+  addCollections: (collections) => dispatch(addCollections(collections))
 })
 
 export default withRouter(connect(null, mapDispatchToProps)(CollectionSmall))

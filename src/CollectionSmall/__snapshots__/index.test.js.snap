@@ -36,419 +36,69 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <img
-          className="collection-small-image"
-          src="https://collecshare.herokuapp.com/string"
-/>,
-        <div
-          className="collection-small-top"
+      "children": <div
+        className="collection-small"
 >
-          <div
-                    className="collection-small-header"
-          >
-                    <div>
-                              <a
-                                        exact="true"
-                                        onClick={[Function]}
-                              >
-                                        <h3
-                                                  className="collection-small-title"
-                                        >
-                                                  string
-                                        </h3>
-                              </a>
-                              <div
+        <img
+                className="collection-small-image"
+                src="https://collecshare.herokuapp.com/string"
+        />
+        <div
+                className="collection-small-top"
+        >
+                <div
+                        className="collection-small-header"
+                >
+                        <div>
+                                <h3
+                                        className="collection-small-title"
+                                >
+                                        string
+                                </h3>
+                                <div
                                         className="collection-small-category"
-                              >
+                                >
                                         CATEGORY: 
                                         <span
-                                                  className="collection-small-category-span"
+                                                className="collection-small-category-span"
                                         >
-                                                  string
+                                                string
                                         </span>
-                              </div>
-                    </div>
-                    <div
-                              className="collection-small-user-display "
-                              onClick={[Function]}
-                    >
-                              <div>
+                                </div>
+                        </div>
+                        <div
+                                className="user-link collection-small-user-display "
+                                onClick={[Function]}
+                        >
+                                <div>
                                         <p
-                                                  className="collection-small-username"
+                                                className="user-link collection-small-username"
                                         />
                                         <p
-                                                  className="collection-small-location"
+                                                className="user-link collection-small-location"
                                         >
-                                                  earth
+                                                earth
                                         </p>
-                              </div>
-                              <span>
+                                </div>
+                                <span>
                                         <img
-                                                  className="collection-small-avatar"
-                                                  src="https://collecshare.herokuapp.com/undefined"
+                                                className="user-link collection-small-avatar"
+                                                src="https://collecshare.herokuapp.com/undefined"
                                         />
-                              </span>
-                    </div>
-          </div>
-          <p
-                    className="collection-small-description"
-          >
-                    string
-          </p>
+                                </span>
+                        </div>
+                </div>
+                <p
+                        className="collection-small-description"
+                >
+                        string
+                </p>
+        </div>
 </div>,
-      ],
-      "className": "collection-small",
+      "onClick": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "collection-small-image",
-          "src": "https://collecshare.herokuapp.com/string",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="collection-small-header"
->
-              <div>
-                            <a
-                                          exact="true"
-                                          onClick={[Function]}
-                            >
-                                          <h3
-                                                        className="collection-small-title"
-                                          >
-                                                        string
-                                          </h3>
-                            </a>
-                            <div
-                                          className="collection-small-category"
-                            >
-                                          CATEGORY: 
-                                          <span
-                                                        className="collection-small-category-span"
-                                          >
-                                                        string
-                                          </span>
-                            </div>
-              </div>
-              <div
-                            className="collection-small-user-display "
-                            onClick={[Function]}
-              >
-                            <div>
-                                          <p
-                                                        className="collection-small-username"
-                                          />
-                                          <p
-                                                        className="collection-small-location"
-                                          >
-                                                        earth
-                                          </p>
-                            </div>
-                            <span>
-                                          <img
-                                                        className="collection-small-avatar"
-                                                        src="https://collecshare.herokuapp.com/undefined"
-                                          />
-                            </span>
-              </div>
-</div>,
-            <p
-              className="collection-small-description"
->
-              string
-</p>,
-          ],
-          "className": "collection-small-top",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div>
-                  <a
-                                    exact="true"
-                                    onClick={[Function]}
-                  >
-                                    <h3
-                                                      className="collection-small-title"
-                                    >
-                                                      string
-                                    </h3>
-                  </a>
-                  <div
-                                    className="collection-small-category"
-                  >
-                                    CATEGORY: 
-                                    <span
-                                                      className="collection-small-category-span"
-                                    >
-                                                      string
-                                    </span>
-                  </div>
-</div>,
-                <div
-                  className="collection-small-user-display "
-                  onClick={[Function]}
->
-                  <div>
-                                    <p
-                                                      className="collection-small-username"
-                                    />
-                                    <p
-                                                      className="collection-small-location"
-                                    >
-                                                      earth
-                                    </p>
-                  </div>
-                  <span>
-                                    <img
-                                                      className="collection-small-avatar"
-                                                      src="https://collecshare.herokuapp.com/undefined"
-                                    />
-                  </span>
-</div>,
-              ],
-              "className": "collection-small-header",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <a
-                      exact="true"
-                      onClick={[Function]}
->
-                      <h3
-                                            className="collection-small-title"
-                      >
-                                            string
-                      </h3>
-</a>,
-                    <div
-                      className="collection-small-category"
->
-                      CATEGORY: 
-                      <span
-                                            className="collection-small-category-span"
-                      >
-                                            string
-                      </span>
-</div>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <h3
-                        className="collection-small-title"
->
-                        string
-</h3>,
-                      "exact": "true",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "string",
-                        "className": "collection-small-title",
-                      },
-                      "ref": null,
-                      "rendered": "string",
-                      "type": "h3",
-                    },
-                    "type": "a",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        "CATEGORY: ",
-                        <span
-                          className="collection-small-category-span"
->
-                          string
-</span>,
-                      ],
-                      "className": "collection-small-category",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      "CATEGORY: ",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "string",
-                          "className": "collection-small-category-span",
-                        },
-                        "ref": null,
-                        "rendered": "string",
-                        "type": "span",
-                      },
-                    ],
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <div>
-                      <p
-                                            className="collection-small-username"
-                      />
-                      <p
-                                            className="collection-small-location"
-                      >
-                                            earth
-                      </p>
-</div>,
-                    <span>
-                      <img
-                                            className="collection-small-avatar"
-                                            src="https://collecshare.herokuapp.com/undefined"
-                      />
-</span>,
-                  ],
-                  "className": "collection-small-user-display ",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        <p
-                          className="collection-small-username"
-/>,
-                        <p
-                          className="collection-small-location"
->
-                          earth
-</p>,
-                      ],
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": undefined,
-                          "className": "collection-small-username",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "p",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "earth",
-                          "className": "collection-small-location",
-                        },
-                        "ref": null,
-                        "rendered": "earth",
-                        "type": "p",
-                      },
-                    ],
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <img
-                        className="collection-small-avatar"
-                        src="https://collecshare.herokuapp.com/undefined"
-/>,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "collection-small-avatar",
-                        "src": "https://collecshare.herokuapp.com/undefined",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    "type": "span",
-                  },
-                ],
-                "type": "div",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "string",
-              "className": "collection-small-description",
-            },
-            "ref": null,
-            "rendered": "string",
-            "type": "p",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -465,16 +115,11 @@ ShallowWrapper {
                         className="collection-small-header"
             >
                         <div>
-                                    <a
-                                                exact="true"
-                                                onClick={[Function]}
+                                    <h3
+                                                className="collection-small-title"
                                     >
-                                                <h3
-                                                            className="collection-small-title"
-                                                >
-                                                            string
-                                                </h3>
-                                    </a>
+                                                string
+                                    </h3>
                                     <div
                                                 className="collection-small-category"
                                     >
@@ -487,22 +132,22 @@ ShallowWrapper {
                                     </div>
                         </div>
                         <div
-                                    className="collection-small-user-display "
+                                    className="user-link collection-small-user-display "
                                     onClick={[Function]}
                         >
                                     <div>
                                                 <p
-                                                            className="collection-small-username"
+                                                            className="user-link collection-small-username"
                                                 />
                                                 <p
-                                                            className="collection-small-location"
+                                                            className="user-link collection-small-location"
                                                 >
                                                             earth
                                                 </p>
                                     </div>
                                     <span>
                                                 <img
-                                                            className="collection-small-avatar"
+                                                            className="user-link collection-small-avatar"
                                                             src="https://collecshare.herokuapp.com/undefined"
                                                 />
                                     </span>
@@ -541,16 +186,11 @@ ShallowWrapper {
                 className="collection-small-header"
 >
                 <div>
-                                <a
-                                                exact="true"
-                                                onClick={[Function]}
+                                <h3
+                                                className="collection-small-title"
                                 >
-                                                <h3
-                                                                className="collection-small-title"
-                                                >
-                                                                string
-                                                </h3>
-                                </a>
+                                                string
+                                </h3>
                                 <div
                                                 className="collection-small-category"
                                 >
@@ -563,22 +203,22 @@ ShallowWrapper {
                                 </div>
                 </div>
                 <div
-                                className="collection-small-user-display "
+                                className="user-link collection-small-user-display "
                                 onClick={[Function]}
                 >
                                 <div>
                                                 <p
-                                                                className="collection-small-username"
+                                                                className="user-link collection-small-username"
                                                 />
                                                 <p
-                                                                className="collection-small-location"
+                                                                className="user-link collection-small-location"
                                                 >
                                                                 earth
                                                 </p>
                                 </div>
                                 <span>
                                                 <img
-                                                                className="collection-small-avatar"
+                                                                className="user-link collection-small-avatar"
                                                                 src="https://collecshare.herokuapp.com/undefined"
                                                 />
                                 </span>
@@ -601,16 +241,11 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div>
-                    <a
-                                        exact="true"
-                                        onClick={[Function]}
+                    <h3
+                                        className="collection-small-title"
                     >
-                                        <h3
-                                                            className="collection-small-title"
-                                        >
-                                                            string
-                                        </h3>
-                    </a>
+                                        string
+                    </h3>
                     <div
                                         className="collection-small-category"
                     >
@@ -623,22 +258,22 @@ ShallowWrapper {
                     </div>
 </div>,
                   <div
-                    className="collection-small-user-display "
+                    className="user-link collection-small-user-display "
                     onClick={[Function]}
 >
                     <div>
                                         <p
-                                                            className="collection-small-username"
+                                                            className="user-link collection-small-username"
                                         />
                                         <p
-                                                            className="collection-small-location"
+                                                            className="user-link collection-small-location"
                                         >
                                                             earth
                                         </p>
                     </div>
                     <span>
                                         <img
-                                                            className="collection-small-avatar"
+                                                            className="user-link collection-small-avatar"
                                                             src="https://collecshare.herokuapp.com/undefined"
                                         />
                     </span>
@@ -654,16 +289,11 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <a
-                        exact="true"
-                        onClick={[Function]}
+                      <h3
+                        className="collection-small-title"
 >
-                        <h3
-                                                className="collection-small-title"
-                        >
-                                                string
-                        </h3>
-</a>,
+                        string
+</h3>,
                       <div
                         className="collection-small-category"
 >
@@ -683,28 +313,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": <h3
-                          className="collection-small-title"
->
-                          string
-</h3>,
-                        "exact": "true",
-                        "onClick": [Function],
+                        "children": "string",
+                        "className": "collection-small-title",
                       },
                       "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "string",
-                          "className": "collection-small-title",
-                        },
-                        "ref": null,
-                        "rendered": "string",
-                        "type": "h3",
-                      },
-                      "type": "a",
+                      "rendered": "string",
+                      "type": "h3",
                     },
                     Object {
                       "instance": null,
@@ -750,22 +364,22 @@ ShallowWrapper {
                     "children": Array [
                       <div>
                         <p
-                                                className="collection-small-username"
+                                                className="user-link collection-small-username"
                         />
                         <p
-                                                className="collection-small-location"
+                                                className="user-link collection-small-location"
                         >
                                                 earth
                         </p>
 </div>,
                       <span>
                         <img
-                                                className="collection-small-avatar"
+                                                className="user-link collection-small-avatar"
                                                 src="https://collecshare.herokuapp.com/undefined"
                         />
 </span>,
                     ],
-                    "className": "collection-small-user-display ",
+                    "className": "user-link collection-small-user-display ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -777,10 +391,10 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           <p
-                            className="collection-small-username"
+                            className="user-link collection-small-username"
 />,
                           <p
-                            className="collection-small-location"
+                            className="user-link collection-small-location"
 >
                             earth
 </p>,
@@ -794,7 +408,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": undefined,
-                            "className": "collection-small-username",
+                            "className": "user-link collection-small-username",
                           },
                           "ref": null,
                           "rendered": null,
@@ -806,7 +420,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": "earth",
-                            "className": "collection-small-location",
+                            "className": "user-link collection-small-location",
                           },
                           "ref": null,
                           "rendered": "earth",
@@ -821,7 +435,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <img
-                          className="collection-small-avatar"
+                          className="user-link collection-small-avatar"
                           src="https://collecshare.herokuapp.com/undefined"
 />,
                       },
@@ -831,7 +445,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "collection-small-avatar",
+                          "className": "user-link collection-small-avatar",
                           "src": "https://collecshare.herokuapp.com/undefined",
                         },
                         "ref": null,
@@ -863,6 +477,458 @@ ShallowWrapper {
         },
       ],
       "type": "div",
+    },
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="collection-small"
+>
+          <img
+                    className="collection-small-image"
+                    src="https://collecshare.herokuapp.com/string"
+          />
+          <div
+                    className="collection-small-top"
+          >
+                    <div
+                              className="collection-small-header"
+                    >
+                              <div>
+                                        <h3
+                                                  className="collection-small-title"
+                                        >
+                                                  string
+                                        </h3>
+                                        <div
+                                                  className="collection-small-category"
+                                        >
+                                                  CATEGORY: 
+                                                  <span
+                                                            className="collection-small-category-span"
+                                                  >
+                                                            string
+                                                  </span>
+                                        </div>
+                              </div>
+                              <div
+                                        className="user-link collection-small-user-display "
+                                        onClick={[Function]}
+                              >
+                                        <div>
+                                                  <p
+                                                            className="user-link collection-small-username"
+                                                  />
+                                                  <p
+                                                            className="user-link collection-small-location"
+                                                  >
+                                                            earth
+                                                  </p>
+                                        </div>
+                                        <span>
+                                                  <img
+                                                            className="user-link collection-small-avatar"
+                                                            src="https://collecshare.herokuapp.com/undefined"
+                                                  />
+                                        </span>
+                              </div>
+                    </div>
+                    <p
+                              className="collection-small-description"
+                    >
+                              string
+                    </p>
+          </div>
+</div>,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              className="collection-small-image"
+              src="https://collecshare.herokuapp.com/string"
+/>,
+            <div
+              className="collection-small-top"
+>
+              <div
+                            className="collection-small-header"
+              >
+                            <div>
+                                          <h3
+                                                        className="collection-small-title"
+                                          >
+                                                        string
+                                          </h3>
+                                          <div
+                                                        className="collection-small-category"
+                                          >
+                                                        CATEGORY: 
+                                                        <span
+                                                                      className="collection-small-category-span"
+                                                        >
+                                                                      string
+                                                        </span>
+                                          </div>
+                            </div>
+                            <div
+                                          className="user-link collection-small-user-display "
+                                          onClick={[Function]}
+                            >
+                                          <div>
+                                                        <p
+                                                                      className="user-link collection-small-username"
+                                                        />
+                                                        <p
+                                                                      className="user-link collection-small-location"
+                                                        >
+                                                                      earth
+                                                        </p>
+                                          </div>
+                                          <span>
+                                                        <img
+                                                                      className="user-link collection-small-avatar"
+                                                                      src="https://collecshare.herokuapp.com/undefined"
+                                                        />
+                                          </span>
+                            </div>
+              </div>
+              <p
+                            className="collection-small-description"
+              >
+                            string
+              </p>
+</div>,
+          ],
+          "className": "collection-small",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "collection-small-image",
+              "src": "https://collecshare.herokuapp.com/string",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="collection-small-header"
+>
+                  <div>
+                                    <h3
+                                                      className="collection-small-title"
+                                    >
+                                                      string
+                                    </h3>
+                                    <div
+                                                      className="collection-small-category"
+                                    >
+                                                      CATEGORY: 
+                                                      <span
+                                                                        className="collection-small-category-span"
+                                                      >
+                                                                        string
+                                                      </span>
+                                    </div>
+                  </div>
+                  <div
+                                    className="user-link collection-small-user-display "
+                                    onClick={[Function]}
+                  >
+                                    <div>
+                                                      <p
+                                                                        className="user-link collection-small-username"
+                                                      />
+                                                      <p
+                                                                        className="user-link collection-small-location"
+                                                      >
+                                                                        earth
+                                                      </p>
+                                    </div>
+                                    <span>
+                                                      <img
+                                                                        className="user-link collection-small-avatar"
+                                                                        src="https://collecshare.herokuapp.com/undefined"
+                                                      />
+                                    </span>
+                  </div>
+</div>,
+                <p
+                  className="collection-small-description"
+>
+                  string
+</p>,
+              ],
+              "className": "collection-small-top",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      <h3
+                                            className="collection-small-title"
+                      >
+                                            string
+                      </h3>
+                      <div
+                                            className="collection-small-category"
+                      >
+                                            CATEGORY: 
+                                            <span
+                                                                  className="collection-small-category-span"
+                                            >
+                                                                  string
+                                            </span>
+                      </div>
+</div>,
+                    <div
+                      className="user-link collection-small-user-display "
+                      onClick={[Function]}
+>
+                      <div>
+                                            <p
+                                                                  className="user-link collection-small-username"
+                                            />
+                                            <p
+                                                                  className="user-link collection-small-location"
+                                            >
+                                                                  earth
+                                            </p>
+                      </div>
+                      <span>
+                                            <img
+                                                                  className="user-link collection-small-avatar"
+                                                                  src="https://collecshare.herokuapp.com/undefined"
+                                            />
+                      </span>
+</div>,
+                  ],
+                  "className": "collection-small-header",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h3
+                          className="collection-small-title"
+>
+                          string
+</h3>,
+                        <div
+                          className="collection-small-category"
+>
+                          CATEGORY: 
+                          <span
+                                                    className="collection-small-category-span"
+                          >
+                                                    string
+                          </span>
+</div>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "string",
+                          "className": "collection-small-title",
+                        },
+                        "ref": null,
+                        "rendered": "string",
+                        "type": "h3",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "CATEGORY: ",
+                            <span
+                              className="collection-small-category-span"
+>
+                              string
+</span>,
+                          ],
+                          "className": "collection-small-category",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "CATEGORY: ",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "string",
+                              "className": "collection-small-category-span",
+                            },
+                            "ref": null,
+                            "rendered": "string",
+                            "type": "span",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div>
+                          <p
+                                                    className="user-link collection-small-username"
+                          />
+                          <p
+                                                    className="user-link collection-small-location"
+                          >
+                                                    earth
+                          </p>
+</div>,
+                        <span>
+                          <img
+                                                    className="user-link collection-small-avatar"
+                                                    src="https://collecshare.herokuapp.com/undefined"
+                          />
+</span>,
+                      ],
+                      "className": "user-link collection-small-user-display ",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p
+                              className="user-link collection-small-username"
+/>,
+                            <p
+                              className="user-link collection-small-location"
+>
+                              earth
+</p>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": undefined,
+                              "className": "user-link collection-small-username",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "earth",
+                              "className": "user-link collection-small-location",
+                            },
+                            "ref": null,
+                            "rendered": "earth",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <img
+                            className="user-link collection-small-avatar"
+                            src="https://collecshare.herokuapp.com/undefined"
+/>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "user-link collection-small-avatar",
+                            "src": "https://collecshare.herokuapp.com/undefined",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
+                        },
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "string",
+                  "className": "collection-small-description",
+                },
+                "ref": null,
+                "rendered": "string",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "a",
     },
   ],
   Symbol(enzyme.__options__): Object {
