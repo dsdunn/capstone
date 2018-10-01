@@ -12,6 +12,11 @@
   margin: 2% 0;
 }
 
+.collection-small:hover {
+  box-shadow: 0px 0px 10px 2px #e9db8a;
+  cursor: pointer;
+}
+
 .collection-small-top {
   margin: 0;
   width: 85%;
