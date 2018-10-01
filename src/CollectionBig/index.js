@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { setProfile } from '../actions';
+import { setProfile, addCollections } from '../actions';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getUserInfo } from '../services/fetch';
+import { getUserInfo, getUserCollections } from '../services/fetch';
 import './styles.css';
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,11 @@ export class CollectionBig extends Component {
   goToProfile = () => {
     getUserInfo(this.props.collection.uid)
       .then(result => this.props.setProfile(result));
-    this.props.history.push('/user');
+    getUserCollections(this.props.collection.uid)
+      .then(results => {
+        this.props.addCollections(results);
+        this.props.history.push('/user');
+      })
   }
 
   makeRows = (items) => {
@@ -93,7 +97,8 @@ export class CollectionBig extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  setProfile: (profile) => dispatch(setProfile(profile))
+  setProfile: (profile) => dispatch(setProfile(profile)),
+  addCollections: (collections) => dispatch(addCollections(collections))
 })
 
 export const mapStateToProps = (state) => ({
