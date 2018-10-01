@@ -2,14 +2,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Dashboard, mapDispatchToProps, mapStateToProps, } from './'
 import { setProfile } from '../actions';
+import { getUserCollections } from '../services/fetch.js';
 
-
+jest.mock('../services/fetch.js')
 describe('Dashboard', () => {
   let wrapper;
   let mockSetProfile;
   let mockUser;
   let mockHistory;
   let mockHandleSignOut;
+  let mockAddCollections;
 
   beforeEach(() => {
     mockHistory = { 
@@ -20,6 +22,7 @@ describe('Dashboard', () => {
 
     mockSetProfile = jest.fn()
     mockHandleSignOut = jest.fn()
+    mockAddCollections = jest.fn()
 
     mockUser = {
                 avatar: '2 comes out in 2020',
@@ -29,6 +32,7 @@ describe('Dashboard', () => {
                }
 
     wrapper = shallow(<Dashboard setProfile={mockSetProfile} 
+                                 addCollections={mockAddCollections}
                                  user={mockUser}
                                  history={mockHistory}
                                  handleSignOut={mockHandleSignOut}

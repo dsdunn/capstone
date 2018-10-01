@@ -4,6 +4,7 @@ exports[`Dashboard should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
+    addCollections={[Function]}
     handleSignOut={[Function]}
     history={
         Object {
@@ -68,15 +69,7 @@ ShallowWrapper {
                     className="dashboard-link"
                     to="/user/addcollection"
           >
-                    Add/Edit Collection
-          </NavLink>
-          <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="dashboard-link"
-                    to="/user/settings"
-          >
-                    Account Settings
+                    Add Collection
           </NavLink>
           <Link
                     className="dashboard-link test4"
@@ -140,15 +133,7 @@ ShallowWrapper {
               className="dashboard-link"
               to="/user/addcollection"
 >
-              Add/Edit Collection
-</NavLink>,
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="dashboard-link"
-              to="/user/settings"
->
-              Account Settings
+              Add Collection
 </NavLink>,
             <Link
               className="dashboard-link test4"
@@ -199,27 +184,12 @@ ShallowWrapper {
             "props": Object {
               "activeClassName": "active",
               "aria-current": "page",
-              "children": "Add/Edit Collection",
+              "children": "Add Collection",
               "className": "dashboard-link",
               "to": "/user/addcollection",
             },
             "ref": null,
-            "rendered": "Add/Edit Collection",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": "Account Settings",
-              "className": "dashboard-link",
-              "to": "/user/settings",
-            },
-            "ref": null,
-            "rendered": "Account Settings",
+            "rendered": "Add Collection",
             "type": [Function],
           },
           Object {
@@ -280,15 +250,7 @@ ShallowWrapper {
                         className="dashboard-link"
                         to="/user/addcollection"
             >
-                        Add/Edit Collection
-            </NavLink>
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="dashboard-link"
-                        to="/user/settings"
-            >
-                        Account Settings
+                        Add Collection
             </NavLink>
             <Link
                         className="dashboard-link test4"
@@ -352,15 +314,7 @@ ShallowWrapper {
                 className="dashboard-link"
                 to="/user/addcollection"
 >
-                Add/Edit Collection
-</NavLink>,
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="dashboard-link"
-                to="/user/settings"
->
-                Account Settings
+                Add Collection
 </NavLink>,
               <Link
                 className="dashboard-link test4"
@@ -411,27 +365,12 @@ ShallowWrapper {
               "props": Object {
                 "activeClassName": "active",
                 "aria-current": "page",
-                "children": "Add/Edit Collection",
+                "children": "Add Collection",
                 "className": "dashboard-link",
                 "to": "/user/addcollection",
               },
               "ref": null,
-              "rendered": "Add/Edit Collection",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": "Account Settings",
-                "className": "dashboard-link",
-                "to": "/user/settings",
-              },
-              "ref": null,
-              "rendered": "Account Settings",
+              "rendered": "Add Collection",
               "type": [Function],
             },
             Object {

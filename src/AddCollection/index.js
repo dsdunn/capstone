@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getUserInfo, postCollection } from '../services/fetch';
+import { getUserInfo, postCollection, getCollections } from '../services/fetch';
 import PropTypes from 'prop-types';
 import UserProfile from '../UserProfile';
 import close from '../images/close.svg';
-import { setCollection } from '../actions';
+import { setCollection, addCollections } from '../actions';
 import './styles.css'
 
 export class AddCollection extends Component {
@@ -38,8 +38,8 @@ export class AddCollection extends Component {
     body.append('uid', this.state.uid)
     
     postCollection(body)
-      .then(result => this.props.setCollection(result))
-      .then(this.props.history.push('/user'))
+      .then(result => this.props.setCollection({...result, ...this.props.user}))
+      .then(this.props.history.push('/collection'))
   }
 
   render() {
@@ -76,7 +76,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  setCollection: (collection) => dispatch(setCollection(collection)) 
+  setCollection: (collection) => dispatch(setCollection(collection)),
+  addCollections: (collections) => dispatch(addCollections(collections)) 
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddCollection));
