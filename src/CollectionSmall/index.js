@@ -51,7 +51,6 @@ export class CollectionSmall extends Component {
             <div className='collection-small-header'>
               <div>
                 <h3 className='collection-small-title'>{title}</h3>
-                
                 <div className='collection-small-category'>CATEGORY: <span className='collection-small-category-span'>{category}</span></div>
               </div>
               <div className={`user-link collection-small-user-display ${this.props.hideuser ? 'hidden' : ''}` } onClick={this.viewProfile}>
