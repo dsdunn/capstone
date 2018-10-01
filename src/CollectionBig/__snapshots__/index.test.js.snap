@@ -1,3 +1,1841 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CollectionBig should match the snapShot 1`] = `undefined`;
+exports[`CollectionBig should match the snapShot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CollectionBig
+    addCollections={[Function]}
+    collection={
+        Object {
+            "avatar": "yo mama",
+            "description": "so fat",
+            "id": 1,
+            "image": "yo mama",
+            "items": Array [
+              "this",
+              "that",
+            ],
+            "location": "yo mama",
+            "title": "yo mama",
+            "uid": 1,
+            "username": "yo mama",
+          }
+    }
+    history={
+        Object {
+            "location": "yo mamas",
+            "push": [Function],
+          }
+    }
+    setProfile={[Function]}
+    user={
+        Object {
+            "uid": "123",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="collection-big-background"
+          style={
+                    Object {
+                              "backgroundImage": "url(https://collecshare.herokuapp.com/yo mama)",
+                            }
+          }
+/>,
+        <h1
+          className="collection-big-title"
+>
+          yo mama
+</h1>,
+        <main
+          className="collection-big-main"
+>
+          <header
+                    className="collection-big-header"
+          >
+                    <img
+                              className="collection-big-image"
+                              src="https://collecshare.herokuapp.com/yo mama"
+                    />
+                    <div
+                              className="collection-big-user-group-wrapper"
+                    >
+                              <div
+                                        className="collection-big-user-group"
+                              >
+                                        <img
+                                                  className="collection-big-avatar"
+                                                  onClick={[Function]}
+                                                  src="https://collecshare.herokuapp.com/yo mama"
+                                        />
+                                        <h4
+                                                  className="collection-big-username"
+                                        >
+                                                  yo mama
+                                        </h4>
+                                        <p
+                                                  className="collection-big-location"
+                                        >
+                                                  yo mama
+                                        </p>
+                              </div>
+                    </div>
+          </header>
+          <hr />
+          <div
+                    className="collection-big-body"
+          >
+                    <div>
+                              <h5>
+                                        Description: 
+                              </h5>
+                              <p
+                                        className="collection-big-description>"
+                              >
+                                        so fat
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                              </p>
+                    </div>
+                    <div
+                              className="collection-big-items"
+                    >
+                              <h5>
+                                        Items:
+                              </h5>
+                              <table>
+                                        <thead>
+                                                  <tr>
+                                                            <th>
+                                                                      Item
+                                                            </th>
+                                                            <th>
+                                                                      Description
+                                                            </th>
+                                                            <th>
+                                                                      Value
+                                                            </th>
+                                                            <th>
+                                                                      Year
+                                                            </th>
+                                                  </tr>
+                                        </thead>
+                                        <tbody>
+                                                  <tr>
+                                                            <td />
+                                                            <td />
+                                                            <td />
+                                                            <td>
+                                                                      unknown
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                            <td />
+                                                            <td />
+                                                            <td />
+                                                            <td>
+                                                                      unknown
+                                                            </td>
+                                                  </tr>
+                                        </tbody>
+                              </table>
+                    </div>
+          </div>
+</main>,
+      ],
+      "className": "collection-big",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "collection-big-background",
+          "style": Object {
+            "backgroundImage": "url(https://collecshare.herokuapp.com/yo mama)",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "yo mama",
+          "className": "collection-big-title",
+        },
+        "ref": null,
+        "rendered": "yo mama",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <header
+              className="collection-big-header"
+>
+              <img
+                            className="collection-big-image"
+                            src="https://collecshare.herokuapp.com/yo mama"
+              />
+              <div
+                            className="collection-big-user-group-wrapper"
+              >
+                            <div
+                                          className="collection-big-user-group"
+                            >
+                                          <img
+                                                        className="collection-big-avatar"
+                                                        onClick={[Function]}
+                                                        src="https://collecshare.herokuapp.com/yo mama"
+                                          />
+                                          <h4
+                                                        className="collection-big-username"
+                                          >
+                                                        yo mama
+                                          </h4>
+                                          <p
+                                                        className="collection-big-location"
+                                          >
+                                                        yo mama
+                                          </p>
+                            </div>
+              </div>
+</header>,
+            false,
+            <hr />,
+            <div
+              className="collection-big-body"
+>
+              <div>
+                            <h5>
+                                          Description: 
+                            </h5>
+                            <p
+                                          className="collection-big-description>"
+                            >
+                                          so fat
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                            </p>
+              </div>
+              <div
+                            className="collection-big-items"
+              >
+                            <h5>
+                                          Items:
+                            </h5>
+                            <table>
+                                          <thead>
+                                                        <tr>
+                                                                      <th>
+                                                                                    Item
+                                                                      </th>
+                                                                      <th>
+                                                                                    Description
+                                                                      </th>
+                                                                      <th>
+                                                                                    Value
+                                                                      </th>
+                                                                      <th>
+                                                                                    Year
+                                                                      </th>
+                                                        </tr>
+                                          </thead>
+                                          <tbody>
+                                                        <tr>
+                                                                      <td />
+                                                                      <td />
+                                                                      <td />
+                                                                      <td>
+                                                                                    unknown
+                                                                      </td>
+                                                        </tr>
+                                                        <tr>
+                                                                      <td />
+                                                                      <td />
+                                                                      <td />
+                                                                      <td>
+                                                                                    unknown
+                                                                      </td>
+                                                        </tr>
+                                          </tbody>
+                            </table>
+              </div>
+</div>,
+          ],
+          "className": "collection-big-main",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  className="collection-big-image"
+                  src="https://collecshare.herokuapp.com/yo mama"
+/>,
+                <div
+                  className="collection-big-user-group-wrapper"
+>
+                  <div
+                                    className="collection-big-user-group"
+                  >
+                                    <img
+                                                      className="collection-big-avatar"
+                                                      onClick={[Function]}
+                                                      src="https://collecshare.herokuapp.com/yo mama"
+                                    />
+                                    <h4
+                                                      className="collection-big-username"
+                                    >
+                                                      yo mama
+                                    </h4>
+                                    <p
+                                                      className="collection-big-location"
+                                    >
+                                                      yo mama
+                                    </p>
+                  </div>
+</div>,
+              ],
+              "className": "collection-big-header",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "collection-big-image",
+                  "src": "https://collecshare.herokuapp.com/yo mama",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="collection-big-user-group"
+>
+                    <img
+                                        className="collection-big-avatar"
+                                        onClick={[Function]}
+                                        src="https://collecshare.herokuapp.com/yo mama"
+                    />
+                    <h4
+                                        className="collection-big-username"
+                    >
+                                        yo mama
+                    </h4>
+                    <p
+                                        className="collection-big-location"
+                    >
+                                        yo mama
+                    </p>
+</div>,
+                  "className": "collection-big-user-group-wrapper",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        className="collection-big-avatar"
+                        onClick={[Function]}
+                        src="https://collecshare.herokuapp.com/yo mama"
+/>,
+                      <h4
+                        className="collection-big-username"
+>
+                        yo mama
+</h4>,
+                      <p
+                        className="collection-big-location"
+>
+                        yo mama
+</p>,
+                    ],
+                    "className": "collection-big-user-group",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "collection-big-avatar",
+                        "onClick": [Function],
+                        "src": "https://collecshare.herokuapp.com/yo mama",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "yo mama",
+                        "className": "collection-big-username",
+                      },
+                      "ref": null,
+                      "rendered": "yo mama",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "yo mama",
+                        "className": "collection-big-location",
+                      },
+                      "ref": null,
+                      "rendered": "yo mama",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "header",
+          },
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <h5>
+                                    Description: 
+                  </h5>
+                  <p
+                                    className="collection-big-description>"
+                  >
+                                    so fat
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                  </p>
+</div>,
+                <div
+                  className="collection-big-items"
+>
+                  <h5>
+                                    Items:
+                  </h5>
+                  <table>
+                                    <thead>
+                                                      <tr>
+                                                                        <th>
+                                                                                          Item
+                                                                        </th>
+                                                                        <th>
+                                                                                          Description
+                                                                        </th>
+                                                                        <th>
+                                                                                          Value
+                                                                        </th>
+                                                                        <th>
+                                                                                          Year
+                                                                        </th>
+                                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                                      <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                          unknown
+                                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                          unknown
+                                                                        </td>
+                                                      </tr>
+                                    </tbody>
+                  </table>
+</div>,
+              ],
+              "className": "collection-big-body",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h5>
+                      Description: 
+</h5>,
+                    <p
+                      className="collection-big-description>"
+>
+                      so fat
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+</p>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Description: ",
+                    },
+                    "ref": null,
+                    "rendered": "Description: ",
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "so fat",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.",
+                      ],
+                      "className": "collection-big-description>",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "so fat",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.",
+                    ],
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h5>
+                      Items:
+</h5>,
+                    <table>
+                      <thead>
+                                            <tr>
+                                                                  <th>
+                                                                                        Item
+                                                                  </th>
+                                                                  <th>
+                                                                                        Description
+                                                                  </th>
+                                                                  <th>
+                                                                                        Value
+                                                                  </th>
+                                                                  <th>
+                                                                                        Year
+                                                                  </th>
+                                            </tr>
+                      </thead>
+                      <tbody>
+                                            <tr>
+                                                                  <td />
+                                                                  <td />
+                                                                  <td />
+                                                                  <td>
+                                                                                        unknown
+                                                                  </td>
+                                            </tr>
+                                            <tr>
+                                                                  <td />
+                                                                  <td />
+                                                                  <td />
+                                                                  <td>
+                                                                                        unknown
+                                                                  </td>
+                                            </tr>
+                      </tbody>
+</table>,
+                  ],
+                  "className": "collection-big-items",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Items:",
+                    },
+                    "ref": null,
+                    "rendered": "Items:",
+                    "type": "h5",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <thead>
+                          <tr>
+                                                    <th>
+                                                                              Item
+                                                    </th>
+                                                    <th>
+                                                                              Description
+                                                    </th>
+                                                    <th>
+                                                                              Value
+                                                    </th>
+                                                    <th>
+                                                                              Year
+                                                    </th>
+                          </tr>
+</thead>,
+                        <tbody>
+                          <tr>
+                                                    <td />
+                                                    <td />
+                                                    <td />
+                                                    <td>
+                                                                              unknown
+                                                    </td>
+                          </tr>
+                          <tr>
+                                                    <td />
+                                                    <td />
+                                                    <td />
+                                                    <td>
+                                                                              unknown
+                                                    </td>
+                          </tr>
+</tbody>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <tr>
+                            <th>
+                                                        Item
+                            </th>
+                            <th>
+                                                        Description
+                            </th>
+                            <th>
+                                                        Value
+                            </th>
+                            <th>
+                                                        Year
+                            </th>
+</tr>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <th>
+                                Item
+</th>,
+                              <th>
+                                Description
+</th>,
+                              <th>
+                                Value
+</th>,
+                              <th>
+                                Year
+</th>,
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Item",
+                              },
+                              "ref": null,
+                              "rendered": "Item",
+                              "type": "th",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Description",
+                              },
+                              "ref": null,
+                              "rendered": "Description",
+                              "type": "th",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Value",
+                              },
+                              "ref": null,
+                              "rendered": "Value",
+                              "type": "th",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Year",
+                              },
+                              "ref": null,
+                              "rendered": "Year",
+                              "type": "th",
+                            },
+                          ],
+                          "type": "tr",
+                        },
+                        "type": "thead",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <tr>
+                              <td />
+                              <td />
+                              <td />
+                              <td>
+                                                            unknown
+                              </td>
+</tr>,
+                            <tr>
+                              <td />
+                              <td />
+                              <td />
+                              <td>
+                                                            unknown
+                              </td>
+</tr>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <td />,
+                                <td />,
+                                <td />,
+                                <td>
+                                  unknown
+</td>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "unknown",
+                                },
+                                "ref": null,
+                                "rendered": "unknown",
+                                "type": "td",
+                              },
+                            ],
+                            "type": "tr",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <td />,
+                                <td />,
+                                <td />,
+                                <td>
+                                  unknown
+</td>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "td",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "unknown",
+                                },
+                                "ref": null,
+                                "rendered": "unknown",
+                                "type": "td",
+                              },
+                            ],
+                            "type": "tr",
+                          },
+                        ],
+                        "type": "tbody",
+                      },
+                    ],
+                    "type": "table",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "main",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="collection-big-background"
+            style={
+                        Object {
+                                    "backgroundImage": "url(https://collecshare.herokuapp.com/yo mama)",
+                                  }
+            }
+/>,
+          <h1
+            className="collection-big-title"
+>
+            yo mama
+</h1>,
+          <main
+            className="collection-big-main"
+>
+            <header
+                        className="collection-big-header"
+            >
+                        <img
+                                    className="collection-big-image"
+                                    src="https://collecshare.herokuapp.com/yo mama"
+                        />
+                        <div
+                                    className="collection-big-user-group-wrapper"
+                        >
+                                    <div
+                                                className="collection-big-user-group"
+                                    >
+                                                <img
+                                                            className="collection-big-avatar"
+                                                            onClick={[Function]}
+                                                            src="https://collecshare.herokuapp.com/yo mama"
+                                                />
+                                                <h4
+                                                            className="collection-big-username"
+                                                >
+                                                            yo mama
+                                                </h4>
+                                                <p
+                                                            className="collection-big-location"
+                                                >
+                                                            yo mama
+                                                </p>
+                                    </div>
+                        </div>
+            </header>
+            <hr />
+            <div
+                        className="collection-big-body"
+            >
+                        <div>
+                                    <h5>
+                                                Description: 
+                                    </h5>
+                                    <p
+                                                className="collection-big-description>"
+                                    >
+                                                so fat
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                                    </p>
+                        </div>
+                        <div
+                                    className="collection-big-items"
+                        >
+                                    <h5>
+                                                Items:
+                                    </h5>
+                                    <table>
+                                                <thead>
+                                                            <tr>
+                                                                        <th>
+                                                                                    Item
+                                                                        </th>
+                                                                        <th>
+                                                                                    Description
+                                                                        </th>
+                                                                        <th>
+                                                                                    Value
+                                                                        </th>
+                                                                        <th>
+                                                                                    Year
+                                                                        </th>
+                                                            </tr>
+                                                </thead>
+                                                <tbody>
+                                                            <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                    unknown
+                                                                        </td>
+                                                            </tr>
+                                                            <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                    unknown
+                                                                        </td>
+                                                            </tr>
+                                                </tbody>
+                                    </table>
+                        </div>
+            </div>
+</main>,
+        ],
+        "className": "collection-big",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "collection-big-background",
+            "style": Object {
+              "backgroundImage": "url(https://collecshare.herokuapp.com/yo mama)",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "yo mama",
+            "className": "collection-big-title",
+          },
+          "ref": null,
+          "rendered": "yo mama",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <header
+                className="collection-big-header"
+>
+                <img
+                                className="collection-big-image"
+                                src="https://collecshare.herokuapp.com/yo mama"
+                />
+                <div
+                                className="collection-big-user-group-wrapper"
+                >
+                                <div
+                                                className="collection-big-user-group"
+                                >
+                                                <img
+                                                                className="collection-big-avatar"
+                                                                onClick={[Function]}
+                                                                src="https://collecshare.herokuapp.com/yo mama"
+                                                />
+                                                <h4
+                                                                className="collection-big-username"
+                                                >
+                                                                yo mama
+                                                </h4>
+                                                <p
+                                                                className="collection-big-location"
+                                                >
+                                                                yo mama
+                                                </p>
+                                </div>
+                </div>
+</header>,
+              false,
+              <hr />,
+              <div
+                className="collection-big-body"
+>
+                <div>
+                                <h5>
+                                                Description: 
+                                </h5>
+                                <p
+                                                className="collection-big-description>"
+                                >
+                                                so fat
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                                </p>
+                </div>
+                <div
+                                className="collection-big-items"
+                >
+                                <h5>
+                                                Items:
+                                </h5>
+                                <table>
+                                                <thead>
+                                                                <tr>
+                                                                                <th>
+                                                                                                Item
+                                                                                </th>
+                                                                                <th>
+                                                                                                Description
+                                                                                </th>
+                                                                                <th>
+                                                                                                Value
+                                                                                </th>
+                                                                                <th>
+                                                                                                Year
+                                                                                </th>
+                                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                <tr>
+                                                                                <td />
+                                                                                <td />
+                                                                                <td />
+                                                                                <td>
+                                                                                                unknown
+                                                                                </td>
+                                                                </tr>
+                                                                <tr>
+                                                                                <td />
+                                                                                <td />
+                                                                                <td />
+                                                                                <td>
+                                                                                                unknown
+                                                                                </td>
+                                                                </tr>
+                                                </tbody>
+                                </table>
+                </div>
+</div>,
+            ],
+            "className": "collection-big-main",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    className="collection-big-image"
+                    src="https://collecshare.herokuapp.com/yo mama"
+/>,
+                  <div
+                    className="collection-big-user-group-wrapper"
+>
+                    <div
+                                        className="collection-big-user-group"
+                    >
+                                        <img
+                                                            className="collection-big-avatar"
+                                                            onClick={[Function]}
+                                                            src="https://collecshare.herokuapp.com/yo mama"
+                                        />
+                                        <h4
+                                                            className="collection-big-username"
+                                        >
+                                                            yo mama
+                                        </h4>
+                                        <p
+                                                            className="collection-big-location"
+                                        >
+                                                            yo mama
+                                        </p>
+                    </div>
+</div>,
+                ],
+                "className": "collection-big-header",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "collection-big-image",
+                    "src": "https://collecshare.herokuapp.com/yo mama",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="collection-big-user-group"
+>
+                      <img
+                                            className="collection-big-avatar"
+                                            onClick={[Function]}
+                                            src="https://collecshare.herokuapp.com/yo mama"
+                      />
+                      <h4
+                                            className="collection-big-username"
+                      >
+                                            yo mama
+                      </h4>
+                      <p
+                                            className="collection-big-location"
+                      >
+                                            yo mama
+                      </p>
+</div>,
+                    "className": "collection-big-user-group-wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          className="collection-big-avatar"
+                          onClick={[Function]}
+                          src="https://collecshare.herokuapp.com/yo mama"
+/>,
+                        <h4
+                          className="collection-big-username"
+>
+                          yo mama
+</h4>,
+                        <p
+                          className="collection-big-location"
+>
+                          yo mama
+</p>,
+                      ],
+                      "className": "collection-big-user-group",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "collection-big-avatar",
+                          "onClick": [Function],
+                          "src": "https://collecshare.herokuapp.com/yo mama",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "yo mama",
+                          "className": "collection-big-username",
+                        },
+                        "ref": null,
+                        "rendered": "yo mama",
+                        "type": "h4",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "yo mama",
+                          "className": "collection-big-location",
+                        },
+                        "ref": null,
+                        "rendered": "yo mama",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "header",
+            },
+            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <h5>
+                                        Description: 
+                    </h5>
+                    <p
+                                        className="collection-big-description>"
+                    >
+                                        so fat
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+                    </p>
+</div>,
+                  <div
+                    className="collection-big-items"
+>
+                    <h5>
+                                        Items:
+                    </h5>
+                    <table>
+                                        <thead>
+                                                            <tr>
+                                                                                <th>
+                                                                                                    Item
+                                                                                </th>
+                                                                                <th>
+                                                                                                    Description
+                                                                                </th>
+                                                                                <th>
+                                                                                                    Value
+                                                                                </th>
+                                                                                <th>
+                                                                                                    Year
+                                                                                </th>
+                                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                            <tr>
+                                                                                <td />
+                                                                                <td />
+                                                                                <td />
+                                                                                <td>
+                                                                                                    unknown
+                                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                                <td />
+                                                                                <td />
+                                                                                <td />
+                                                                                <td>
+                                                                                                    unknown
+                                                                                </td>
+                                                            </tr>
+                                        </tbody>
+                    </table>
+</div>,
+                ],
+                "className": "collection-big-body",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h5>
+                        Description: 
+</h5>,
+                      <p
+                        className="collection-big-description>"
+>
+                        so fat
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.
+</p>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Description: ",
+                      },
+                      "ref": null,
+                      "rendered": "Description: ",
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "so fat",
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.",
+                        ],
+                        "className": "collection-big-description>",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "so fat",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum mauris ut porttitor pellentesque. Proin non ex at augue dictum pulvinar. Pellentesque posuere diam lectus, in sodales turpis dictum malesuada. In suscipit nulla vel arcu aliquet, vitae fringilla lorem vulputate. Suspendisse nec lorem ligula. Nunc ut ipsum in urna venenatis tempus a at augue.",
+                      ],
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h5>
+                        Items:
+</h5>,
+                      <table>
+                        <thead>
+                                                <tr>
+                                                                        <th>
+                                                                                                Item
+                                                                        </th>
+                                                                        <th>
+                                                                                                Description
+                                                                        </th>
+                                                                        <th>
+                                                                                                Value
+                                                                        </th>
+                                                                        <th>
+                                                                                                Year
+                                                                        </th>
+                                                </tr>
+                        </thead>
+                        <tbody>
+                                                <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                                unknown
+                                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                                        <td />
+                                                                        <td />
+                                                                        <td />
+                                                                        <td>
+                                                                                                unknown
+                                                                        </td>
+                                                </tr>
+                        </tbody>
+</table>,
+                    ],
+                    "className": "collection-big-items",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Items:",
+                      },
+                      "ref": null,
+                      "rendered": "Items:",
+                      "type": "h5",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <thead>
+                            <tr>
+                                                        <th>
+                                                                                    Item
+                                                        </th>
+                                                        <th>
+                                                                                    Description
+                                                        </th>
+                                                        <th>
+                                                                                    Value
+                                                        </th>
+                                                        <th>
+                                                                                    Year
+                                                        </th>
+                            </tr>
+</thead>,
+                          <tbody>
+                            <tr>
+                                                        <td />
+                                                        <td />
+                                                        <td />
+                                                        <td>
+                                                                                    unknown
+                                                        </td>
+                            </tr>
+                            <tr>
+                                                        <td />
+                                                        <td />
+                                                        <td />
+                                                        <td>
+                                                                                    unknown
+                                                        </td>
+                            </tr>
+</tbody>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <tr>
+                              <th>
+                                                            Item
+                              </th>
+                              <th>
+                                                            Description
+                              </th>
+                              <th>
+                                                            Value
+                              </th>
+                              <th>
+                                                            Year
+                              </th>
+</tr>,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <th>
+                                  Item
+</th>,
+                                <th>
+                                  Description
+</th>,
+                                <th>
+                                  Value
+</th>,
+                                <th>
+                                  Year
+</th>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Item",
+                                },
+                                "ref": null,
+                                "rendered": "Item",
+                                "type": "th",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Description",
+                                },
+                                "ref": null,
+                                "rendered": "Description",
+                                "type": "th",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Value",
+                                },
+                                "ref": null,
+                                "rendered": "Value",
+                                "type": "th",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Year",
+                                },
+                                "ref": null,
+                                "rendered": "Year",
+                                "type": "th",
+                              },
+                            ],
+                            "type": "tr",
+                          },
+                          "type": "thead",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <tr>
+                                <td />
+                                <td />
+                                <td />
+                                <td>
+                                                                unknown
+                                </td>
+</tr>,
+                              <tr>
+                                <td />
+                                <td />
+                                <td />
+                                <td>
+                                                                unknown
+                                </td>
+</tr>,
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  <td />,
+                                  <td />,
+                                  <td />,
+                                  <td>
+                                    unknown
+</td>,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": "unknown",
+                                  },
+                                  "ref": null,
+                                  "rendered": "unknown",
+                                  "type": "td",
+                                },
+                              ],
+                              "type": "tr",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  <td />,
+                                  <td />,
+                                  <td />,
+                                  <td>
+                                    unknown
+</td>,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": undefined,
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "td",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": "unknown",
+                                  },
+                                  "ref": null,
+                                  "rendered": "unknown",
+                                  "type": "td",
+                                },
+                              ],
+                              "type": "tr",
+                            },
+                          ],
+                          "type": "tbody",
+                        },
+                      ],
+                      "type": "table",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "main",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

@@ -25,7 +25,9 @@ describe('CollectionBig', () => {
     wrapper = shallow(<CollectionBig 
       history={{location: 'yo mamas', push: jest.fn()}} 
       collection={mockCollection } 
-      setProfile={jest.fn()}/>); 
+      setProfile={jest.fn()}
+      user={{uid: '123'}}
+      addCollections={jest.fn()}/>); 
   })
 
   it('should match the snapShot', () => {
