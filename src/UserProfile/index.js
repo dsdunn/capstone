@@ -29,7 +29,7 @@ export class UserProfile extends Component {
               <p className='profile-bio'>ABOUT ME: <span className='profile-bio-span'>{this.props.profile.bio}</span></p>
             </div>
             <div className='profile-avatar-container'>
-            <img className='profile-img' alt='profile' src={`https://collecshare.herokuapp.com/${this.props.profile.avatar}`}/>
+            <img className='profile-img' alt='profile' src={this.props.profile.avatar}/>
             </div>
           </section>
           <section className='profile-collections'>

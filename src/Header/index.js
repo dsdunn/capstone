@@ -45,7 +45,7 @@ export class Header extends Component {
 
 
   render() { 
-    const headerAvatar = `https://collecshare.herokuapp.com/${this.props.user.avatar}` || avatar;
+    const headerAvatar = this.props.user.avatar || avatar;
 
     return (
       <div className='header-container'>
