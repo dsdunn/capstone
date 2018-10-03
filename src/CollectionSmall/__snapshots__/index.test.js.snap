@@ -41,7 +41,7 @@ ShallowWrapper {
 >
         <img
                 className="collection-small-image"
-                src="https://collecshare.herokuapp.com/string"
+                src="string"
         />
         <div
                 className="collection-small-top"
@@ -83,7 +83,7 @@ ShallowWrapper {
                                 <span>
                                         <img
                                                 className="user-link collection-small-avatar"
-                                                src="https://collecshare.herokuapp.com/undefined"
+                                                src={undefined}
                                         />
                                 </span>
                         </div>
@@ -106,7 +106,7 @@ ShallowWrapper {
         "children": Array [
           <img
             className="collection-small-image"
-            src="https://collecshare.herokuapp.com/string"
+            src="string"
 />,
           <div
             className="collection-small-top"
@@ -148,7 +148,7 @@ ShallowWrapper {
                                     <span>
                                                 <img
                                                             className="user-link collection-small-avatar"
-                                                            src="https://collecshare.herokuapp.com/undefined"
+                                                            src={undefined}
                                                 />
                                     </span>
                         </div>
@@ -170,7 +170,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "collection-small-image",
-            "src": "https://collecshare.herokuapp.com/string",
+            "src": "string",
           },
           "ref": null,
           "rendered": null,
@@ -219,7 +219,7 @@ ShallowWrapper {
                                 <span>
                                                 <img
                                                                 className="user-link collection-small-avatar"
-                                                                src="https://collecshare.herokuapp.com/undefined"
+                                                                src={undefined}
                                                 />
                                 </span>
                 </div>
@@ -274,7 +274,7 @@ ShallowWrapper {
                     <span>
                                         <img
                                                             className="user-link collection-small-avatar"
-                                                            src="https://collecshare.herokuapp.com/undefined"
+                                                            src={undefined}
                                         />
                     </span>
 </div>,
@@ -375,7 +375,7 @@ ShallowWrapper {
                       <span>
                         <img
                                                 className="user-link collection-small-avatar"
-                                                src="https://collecshare.herokuapp.com/undefined"
+                                                src={undefined}
                         />
 </span>,
                     ],
@@ -436,7 +436,7 @@ ShallowWrapper {
                       "props": Object {
                         "children": <img
                           className="user-link collection-small-avatar"
-                          src="https://collecshare.herokuapp.com/undefined"
+                          src={undefined}
 />,
                       },
                       "ref": null,
@@ -446,7 +446,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "className": "user-link collection-small-avatar",
-                          "src": "https://collecshare.herokuapp.com/undefined",
+                          "src": undefined,
                         },
                         "ref": null,
                         "rendered": null,
@@ -491,7 +491,7 @@ ShallowWrapper {
 >
           <img
                     className="collection-small-image"
-                    src="https://collecshare.herokuapp.com/string"
+                    src="string"
           />
           <div
                     className="collection-small-top"
@@ -533,7 +533,7 @@ ShallowWrapper {
                                         <span>
                                                   <img
                                                             className="user-link collection-small-avatar"
-                                                            src="https://collecshare.herokuapp.com/undefined"
+                                                            src={undefined}
                                                   />
                                         </span>
                               </div>
@@ -556,7 +556,7 @@ ShallowWrapper {
           "children": Array [
             <img
               className="collection-small-image"
-              src="https://collecshare.herokuapp.com/string"
+              src="string"
 />,
             <div
               className="collection-small-top"
@@ -598,7 +598,7 @@ ShallowWrapper {
                                           <span>
                                                         <img
                                                                       className="user-link collection-small-avatar"
-                                                                      src="https://collecshare.herokuapp.com/undefined"
+                                                                      src={undefined}
                                                         />
                                           </span>
                             </div>
@@ -620,7 +620,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "collection-small-image",
-              "src": "https://collecshare.herokuapp.com/string",
+              "src": "string",
             },
             "ref": null,
             "rendered": null,
@@ -669,7 +669,7 @@ ShallowWrapper {
                                     <span>
                                                       <img
                                                                         className="user-link collection-small-avatar"
-                                                                        src="https://collecshare.herokuapp.com/undefined"
+                                                                        src={undefined}
                                                       />
                                     </span>
                   </div>
@@ -724,7 +724,7 @@ ShallowWrapper {
                       <span>
                                             <img
                                                                   className="user-link collection-small-avatar"
-                                                                  src="https://collecshare.herokuapp.com/undefined"
+                                                                  src={undefined}
                                             />
                       </span>
 </div>,
@@ -825,7 +825,7 @@ ShallowWrapper {
                         <span>
                           <img
                                                     className="user-link collection-small-avatar"
-                                                    src="https://collecshare.herokuapp.com/undefined"
+                                                    src={undefined}
                           />
 </span>,
                       ],
@@ -886,7 +886,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": <img
                             className="user-link collection-small-avatar"
-                            src="https://collecshare.herokuapp.com/undefined"
+                            src={undefined}
 />,
                         },
                         "ref": null,
@@ -896,7 +896,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "className": "user-link collection-small-avatar",
-                            "src": "https://collecshare.herokuapp.com/undefined",
+                            "src": undefined,
                           },
                           "ref": null,
                           "rendered": null,
