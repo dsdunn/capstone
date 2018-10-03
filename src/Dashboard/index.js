@@ -20,8 +20,8 @@ export const Dashboard = (props) => {
 
   const getPath = () => {
     let path = props.history.location.pathname;
-    if (path.includes('/user/editprofile')) {
-      props.history.goBack()
+    if (path.includes('editprofile')) {
+      return
     }
     let destination = path === '/' ? path + 'editprofile' : path + '/editprofile';
     props.history.push(destination)
