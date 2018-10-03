@@ -46,7 +46,7 @@ export class CollectionSmall extends Component {
     return(
       <a onClick={this.viewCollectionBig}>
         <div className='collection-small'>
-            <img className='collection-small-image' src={`https://collecshare.herokuapp.com/${image}`}/>
+            <img className='collection-small-image' src={image}/>
           <div className='collection-small-top'>
             <div className='collection-small-header'>
               <div>
@@ -58,7 +58,7 @@ export class CollectionSmall extends Component {
                   <p className='user-link collection-small-username'>{this.state.user.username}</p>
                   <p className='user-link collection-small-location'>{this.state.user.location || 'earth'}</p>
                 </div>
-                <span><img className='user-link collection-small-avatar' src={`https://collecshare.herokuapp.com/${this.state.user.avatar}`}/></span>
+                <span><img className='user-link collection-small-avatar' src={this.state.user.avatar}/></span>
               </div>
             </div>
             <p className='collection-small-description'>{description}</p>

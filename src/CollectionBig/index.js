@@ -46,7 +46,7 @@ export class CollectionBig extends Component {
 
   render() {    
     const { location, id, uid, username, title, description, avatar, image, items } = this.props.collection;
-    const background = `https://collecshare.herokuapp.com/${image}`;
+    const background = image;
     const tableRows = this.makeRows(items);
 
     return (
@@ -56,10 +56,10 @@ export class CollectionBig extends Component {
         <h1 className='collection-big-title'>{title}</h1>
         <main className='collection-big-main'>
           <header className='collection-big-header'>
-            <img className='collection-big-image' src={`https://collecshare.herokuapp.com/${image}`}/>
+            <img className='collection-big-image' src={image}/>
             <div className='collection-big-user-group-wrapper'>
               <div className='collection-big-user-group'>
-                <img className='collection-big-avatar' src={`https://collecshare.herokuapp.com/${avatar}`} onClick={this.goToProfile}/>
+                <img className='collection-big-avatar' src={avatar} onClick={this.goToProfile}/>
                 <h4 className='collection-big-username'>{username}</h4>
                 <p className='collection-big-location'>{location}</p>
               </div>
