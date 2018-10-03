@@ -18,6 +18,9 @@ export class UserProfile extends Component {
   render() {
     const collections = this.props.profile.collections ? this.mapResults(this.props.profile.collections) :  <p className='message'>No Collections yet!</p>
 
+      const bio = this.props.profile.bio !== 'null' ? this.props.profile.bio : '' ;
+      const location = this.props.profile.location !== 'null' ? this.props.profile.location : '' ;
+
     return (
       <div>
         <div className='user-profile-background'></div>
@@ -25,8 +28,8 @@ export class UserProfile extends Component {
               <h1 className='profile-display-name'>{this.props.profile.username}</h1>
           <section className='profile-top'>
             <div>
-              <p className='profile-location'>LOCATION: <span className='profile-location-span'>{this.props.profile.location}</span></p>
-              <p className='profile-bio'>ABOUT ME: <span className='profile-bio-span'>{this.props.profile.bio}</span></p>
+              <p className='profile-location'>LOCATION: <span className='profile-location-span'>{location}</span></p>
+              <p className='profile-bio'>ABOUT ME: <span className='profile-bio-span'>{bio}</span></p>
             </div>
             <div className='profile-avatar-container'>
             <img className='profile-img' alt='profile' src={this.props.profile.avatar}/>

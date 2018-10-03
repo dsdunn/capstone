@@ -47,6 +47,7 @@ export class EditProfile extends Component {
 
     putUserInfo(body, this.state.uid)
     .then(result => {
+      console.log(result)
       this.props.updateUser(result)
       this.props.setProfile(result)
       this.props.history.push('/user');
