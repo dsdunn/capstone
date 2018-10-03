@@ -15,7 +15,9 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
-  background-color: white; }
+  background-color: white;
+  max-width: 75em;
+  margin: auto; }
 
 .user-profile-background {
   background-image: url("https://collecshare.herokuapp.com/backgrounds/highresrecords5.jpg");

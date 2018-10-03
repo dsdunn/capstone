@@ -69,7 +69,7 @@ ShallowWrapper {
                               <img
                                         alt="profile"
                                         className="profile-img"
-                                        src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                        src="2 comes out in 2020"
                               />
                     </div>
           </section>
@@ -140,7 +140,7 @@ ShallowWrapper {
                             <img
                                           alt="profile"
                                           className="profile-img"
-                                          src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                          src="2 comes out in 2020"
                             />
               </div>
 </section>,
@@ -204,7 +204,7 @@ ShallowWrapper {
                   <img
                                     alt="profile"
                                     className="profile-img"
-                                    src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                    src="2 comes out in 2020"
                   />
 </div>,
               ],
@@ -319,7 +319,7 @@ ShallowWrapper {
                   "children": <img
                     alt="profile"
                     className="profile-img"
-                    src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                    src="2 comes out in 2020"
 />,
                   "className": "profile-avatar-container",
                 },
@@ -331,7 +331,7 @@ ShallowWrapper {
                   "props": Object {
                     "alt": "profile",
                     "className": "profile-img",
-                    "src": "https://collecshare.herokuapp.com/2 comes out in 2020",
+                    "src": "2 comes out in 2020",
                   },
                   "ref": null,
                   "rendered": null,
@@ -424,7 +424,7 @@ ShallowWrapper {
                                     <img
                                                 alt="profile"
                                                 className="profile-img"
-                                                src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                                src="2 comes out in 2020"
                                     />
                         </div>
             </section>
@@ -495,7 +495,7 @@ ShallowWrapper {
                                 <img
                                                 alt="profile"
                                                 className="profile-img"
-                                                src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                                src="2 comes out in 2020"
                                 />
                 </div>
 </section>,
@@ -559,7 +559,7 @@ ShallowWrapper {
                     <img
                                         alt="profile"
                                         className="profile-img"
-                                        src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                                        src="2 comes out in 2020"
                     />
 </div>,
                 ],
@@ -674,7 +674,7 @@ ShallowWrapper {
                     "children": <img
                       alt="profile"
                       className="profile-img"
-                      src="https://collecshare.herokuapp.com/2 comes out in 2020"
+                      src="2 comes out in 2020"
 />,
                     "className": "profile-avatar-container",
                   },
@@ -686,7 +686,7 @@ ShallowWrapper {
                     "props": Object {
                       "alt": "profile",
                       "className": "profile-img",
-                      "src": "https://collecshare.herokuapp.com/2 comes out in 2020",
+                      "src": "2 comes out in 2020",
                     },
                     "ref": null,
                     "rendered": null,
