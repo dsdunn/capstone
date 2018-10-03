@@ -7,7 +7,6 @@ import close from '../images/close.svg';
 import AvatarEditor from 'react-avatar-editor';
 import MyEditor from '../AvatarEditor';
 import PropTypes from 'prop-types';
-
 import './styles.css'
 
 export class EditProfile extends Component {
