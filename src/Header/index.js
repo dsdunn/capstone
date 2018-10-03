@@ -31,11 +31,17 @@ export class Header extends Component {
 
   loginLocation = () => {
     let path = this.props.history.location.pathname;
+    if (path.includes('login')) {
+      this.props.history.goBack()
+    }
     this.props.history.push( path === '/' ? path + 'login': path + '/login');
   }
 
   signupLocation = () => {
     let path = this.props.history.location.pathname;
+    if (path.includes('signup') || path.includes('login')) {
+      this.props.history.goBack()
+    }
     this.props.history.push( path === '/' ? path + 'signup': path + '/signup');
   }
 
