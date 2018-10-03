@@ -34,7 +34,7 @@ npm test
 
 * **David Starr Dunn** - *Initial work* - [@dsdunn](https://github.com/dsdunn)
 * **Spenser Leighton** - *Initial work* - [@spenserleighton1](https://github.com/spenserleighton1)
-* **Adam Lusk** - *Initial work* - [@Valusk](https://github.com/valusk)
+* **Adam Lusk** - *Initial work* - [@Vadlusk](https://github.com/vadlusk)
 
 ![landingpage](./collecshare_landing.png)
 ![collection](./collecshare_collection.png)
