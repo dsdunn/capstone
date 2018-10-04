@@ -10,12 +10,13 @@
   position: relative; }
 
 form {
-  max-width: 720px; }
+  max-width: 720px;
+  padding: 2%; }
 
 a:hover {
   cursor: pointer; }
 
 @media screen and (max-width: 720px) {
   form {
-    width: 98%;
+    padding: 0;
     margin: auto; } }
