@@ -81,3 +81,18 @@
   font-weight: 300;
   color: #262425;
   margin-left: 0.5rem; }
+
+@media screen and (max-width: 740px) {
+  .collection-small {
+    font-size: 80%;
+    flex-direction: column;
+    margin: 0 -5% auto -5%; }
+  .collection-small-image {
+    margin: auto; }
+  .collection-small-header {
+    font-size: 95%;
+    padding: 1%; }
+  .collection-small-top {
+    width: 100%;
+    margin: auto;
+    padding: 1%; } }
