@@ -41,3 +41,7 @@
   font-weight: 300;
   color: #262425;
   margin-left: 0.5rem; }
+
+@media screen and (max-width: 725px) {
+  .profile-top .profile-img {
+    flex-order: -1; } }

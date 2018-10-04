@@ -103,7 +103,7 @@ export class Signup extends Component {
         <input id='password1' type='password' value={this.state.password1} onChange={this.handleChange}/>
         <label htmlFor='password2'>confirm password</label>
         <input id='password2' type='password' value={this.state.password2} onChange={this.handleChange}/>
-        <input type='submit'/>
+        <button>Save</button>
         <p className={errorMessage}>{this.state.error}</p>
       </form>
     )

@@ -79,7 +79,7 @@ export class EditProfile extends Component {
   render() {
     let editor = this.state.showEditor ?
       <div>
-        <button className='close-avatar-editor' onClick={this.closeEditor}>close editor</button>
+        <button className='close-avatar-editor avatar-control' onClick={this.closeEditor}>close editor</button>
         <MyEditor avatar={this.state.avatar} 
          save={this.handleSaveAvatar}
          test={this.setEditorRef} /> 

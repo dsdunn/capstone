@@ -63,3 +63,7 @@
     margin-top: -0.5rem; }
   .collections-container-cat-btn:focus {
     margin-top: -1.5rem; }
+
+@media screen and (max-width: 740px) {
+  .collections-container-cat-btn {
+    font-size: 95%; } }

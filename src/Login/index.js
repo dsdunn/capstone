@@ -69,7 +69,7 @@ export class Login extends Component {
         <input id='email' value={this.state.email} onChange={this.handleChange}/>
         <label for='password'>password</label>
         <input id='password' type='password' value={this.state.password} onChange={this.handleChange}/>
-        <input type='submit'/>
+        <button>Submit</button>
         <p className={errorMessage}>{this.state.error}</p>
       </form>
     )

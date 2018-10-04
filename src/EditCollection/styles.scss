@@ -1,0 +1,26 @@
+.edit-profile-form {
+  border: 1px solid #262425;
+  border-radius: 0.2rem;
+  background-color: rgb(255,255,255);
+  margin: auto;
+  position: absolute;
+  top: 12rem;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 0 100vh rgba(25,6,6, 0.8)
+
+  .edit-profile-submit-btn {
+    margin-left: 37%;
+  }
+}
+
+.edit-collection-input,
+.edit-profile-form textarea {
+  float: right;
+  width: 38rem;
+  margin: 0.5%;
+}
+
+.edit-collection-form label {
+  margin-right: 1rem;
+}

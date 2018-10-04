@@ -88,7 +88,30 @@ a {
   color: #fafafa;
 }
 
+@media screen and (max-width: 720px) {
 
+  .header-search-bar {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header-app-name {
+    display: none;
+  }
+
+  .header-nav {
+    width: 100%;
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
 
 
 

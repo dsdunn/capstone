@@ -93,3 +93,27 @@ h1 {
 .s3 {
   background-color: #2e74aa;
 }
+
+@media screen and (max-width: 720px) {
+
+  .parallax::after {
+    width: 150%;
+  }
+
+  .section {
+    height: 40%;
+  }
+
+  .static {
+    height: 30vh;
+  }
+
+  .project-name {
+    font-size: 7vh;
+  }
+
+  h1 {
+    font-size: 6vh;
+  }
+
+}

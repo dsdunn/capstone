@@ -82,9 +82,9 @@ ShallowWrapper {
           type="password"
           value=""
 />,
-        <input
-          type="submit"
-/>,
+        <button>
+          Save
+</button>,
         <p
           className="signup-err-message"
 />,
@@ -241,11 +241,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "type": "submit",
+          "children": "Save",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
+        "rendered": "Save",
+        "type": "button",
       },
       Object {
         "instance": null,
@@ -325,9 +325,9 @@ ShallowWrapper {
             type="password"
             value=""
 />,
-          <input
-            type="submit"
-/>,
+          <button>
+            Save
+</button>,
           <p
             className="signup-err-message"
 />,
@@ -484,11 +484,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "type": "submit",
+            "children": "Save",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": "Save",
+          "type": "button",
         },
         Object {
           "instance": null,

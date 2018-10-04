@@ -6,18 +6,11 @@
   background-color: white;
   height: 50vh;
   margin: auto;
-  width: 70%;
   position: absolute;
   top: 10rem;
   left: 0;
   right: 0;
-  padding: 1%;
   box-shadow: 0 0 0 100vh rgba(25, 6, 6, 0.8); }
-  .add-collection-form textarea {
-    height: 50%; }
-  .add-collection-form button {
-    height: 10%;
-    width: 40%; }
   .add-collection-form select {
     margin: 3%; }
 
