@@ -48,3 +48,17 @@
   color: #262425;
   margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 725px) {
+  .profile-top {
+    // flex-direction: column;
+
+    .profile-img {
+      flex-order: -1;
+    }
+  }
+}
+
+
+
+
