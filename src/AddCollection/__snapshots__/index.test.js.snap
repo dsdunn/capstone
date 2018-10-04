@@ -72,9 +72,7 @@ ShallowWrapper {
 />,
         <label
           htmlFor="collection-form-category"
->
-          Select a Category
-</label>,
+/>,
         <div
           className="collection-form-bottom"
 >
@@ -232,11 +230,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Select a Category",
           "htmlFor": "collection-form-category",
         },
         "ref": null,
-        "rendered": "Select a Category",
+        "rendered": null,
         "type": "label",
       },
       Object {
@@ -473,9 +470,7 @@ ShallowWrapper {
 />,
           <label
             htmlFor="collection-form-category"
->
-            Select a Category
-</label>,
+/>,
           <div
             className="collection-form-bottom"
 >
@@ -633,11 +628,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Select a Category",
             "htmlFor": "collection-form-category",
           },
           "ref": null,
-          "rendered": "Select a Category",
+          "rendered": null,
           "type": "label",
         },
         Object {
