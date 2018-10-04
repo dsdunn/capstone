@@ -54,7 +54,19 @@ h5 {
 }
 
 
+@media screen and (max-width: 720px) {
 
+  .dashboard-username {
+    display: none;
+  }
+
+  .dashboard-link-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+}
 
 
 

@@ -8,3 +8,46 @@
 .App {
   height: 100vh;
   position: relative; }
+
+form {
+  max-width: 720px;
+  padding: 3%; }
+  form textarea {
+    height: 40%; }
+  form input, form textarea {
+    margin-bottom: 3%; }
+  form button:not(.avatar-control) {
+    -moz-box-shadow: inset 0px 1px 0px 0px #e0d598;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #e0d598;
+    box-shadow: inset 0px 1px 0px 0px #e0d598;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fffae5), color-stop(1, #fff7d1));
+    background: -moz-linear-gradient(top, #fffae5 5%, #fff7d1 100%);
+    background: -webkit-linear-gradient(top, #fffae5 5%, #fff7d1 100%);
+    background: -o-linear-gradient(top, #fffae5 5%, #fff7d1 100%);
+    background: -ms-linear-gradient(top, #fffae5 5%, #fff7d1 100%);
+    background: linear-gradient(to bottom, #fffae5 5%, #fff7d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffae5', endColorstr='#fff7d1',GradientType=0);
+    background-color: #fffae5;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: .5% 9% .5% 9%; }
+  form button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fff7d1), color-stop(1, #fffae5));
+    background: -moz-linear-gradient(top, #fff7d1 5%, #fffae5 100%);
+    background: -webkit-linear-gradient(top, #fff7d1 5%, #fffae5 100%);
+    background: -o-linear-gradient(top, #fff7d1 5%, #fffae5 100%);
+    background: -ms-linear-gradient(top, #fff7d1 5%, #fffae5 100%);
+    background: linear-gradient(to bottom, #fff7d1 5%, #fffae5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7d1', endColorstr='#fffae5',GradientType=0);
+    background-color: #fff7d1; }
+  form button:active {
+    position: relative;
+    top: 1px; }
+
+a:hover {
+  cursor: pointer; }
+
+@media screen and (max-width: 720px) {
+  form {
+    margin: auto; } }
