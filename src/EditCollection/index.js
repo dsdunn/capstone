@@ -6,7 +6,7 @@ import { updateUser, setProfile, setCollection } from '../actions';
 import close from '../images/close.svg';
 import PropTypes from 'prop-types';
 
-// import './styles.css'
+import './styles.css'
 
 export class EditCollection extends Component {
   constructor(props) {
@@ -78,25 +78,24 @@ export class EditCollection extends Component {
         </div>
         <div className='edit-collection-input-container'>
           <label htmlFor='title'>title:</label>
-          <input className='edit-profile-input' name='title' onChange={this.handleChange} value={this.state.title}/> 
+          <input className='edit-collection-input' name='title' onChange={this.handleChange} value={this.state.title}/> 
         </div>
         <div className='edit-collection-input-container'>
           <label htmlFor='description'>description:</label>
           <textarea name='description' onChange={this.handleChange} value={this.state.description}/>
         </div>
-        <div className='edit-profile-input-container'>
-          add items placeholder div
+        <div className='edit-collection-bottom'>
+          <select name='category' required={true} onChange={this.handleChange} value={this.state.category}>
+            <option value=''>choose a category</option>
+            <option value='coins'>Coins</option>
+            <option value='comics'>Comics</option>
+            <option value='cards'>Cards</option>
+            <option value='vinyl'>Vinyl</option>
+            <option value='other'>Other</option>
+          </select>
+          <button className='edit-collection-submit-btn'>submit</button>
+          <button className='edit-collection-delete-btn' onClick={this.deleteCollection}>delete collection</button>
         </div>
-        <select name='category' required={true} onChange={this.handleChange} value={this.state.category}>
-          <option value=''>choose a category</option>
-          <option value='coins'>Coins</option>
-          <option value='comics'>Comics</option>
-          <option value='cards'>Cards</option>
-          <option value='vinyl'>Vinyl</option>
-          <option value='other'>Other</option>
-        </select>
-        <button className='edit-collection-submit-btn'>submit</button>
-        <button className='edit-collection-delete-btn' onClick={this.deleteCollection}>delete collection</button>
       </form>
     )
   }
