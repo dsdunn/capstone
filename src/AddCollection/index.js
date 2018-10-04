@@ -54,7 +54,7 @@ export class AddCollection extends Component {
         <input name='title' placeholder='my collection' value={this.state.title} onChange={this.handleChange}/>
         <label htmlFor='description'>Describe your Collection:</label>
         <textarea name='description' value={this.state.description} onChange={this.handleChange}/>
-        <label htmlFor='collection-form-category'>Select a Category</label>
+        <label htmlFor='collection-form-category'></label>
         <div className='collection-form-bottom'>
           <select name='category' required={true} onChange={this.handleChange}>
             <option value=''>choose a category</option>

@@ -15,9 +15,11 @@
     margin: 3%; }
 
 .collection-form-bottom {
+  color: green;
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding: 2%; }
 
 input {
   height: 3vh;
