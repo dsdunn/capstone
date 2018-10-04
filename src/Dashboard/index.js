@@ -30,7 +30,7 @@ export const Dashboard = (props) => {
   return (
     <div className={props.active ? 'dashboardShow dashboard' : 'dashboardHide dashboard'}>
       <p className='dashboard-username'>Hello, {props.user.username}.</p>
-      <div>
+      <div className='dashboard-link-container'>
       <NavLink className='dashboard-link dashboard-view-profile' onClick={() => {handleViewProfile()}} exact to={'/user'} >View Profile</NavLink>
       <a className='dashboard-link test3' onClick={getPath}>Edit Profile</a>
       <NavLink className='dashboard-link' to={'/user/addcollection'}>Add Collection
