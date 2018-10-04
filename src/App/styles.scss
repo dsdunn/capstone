@@ -19,3 +19,10 @@ form {
 a:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 720px) {
+  form {
+    width: 98%;
+    margin: auto;
+  }
+}
