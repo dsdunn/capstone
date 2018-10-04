@@ -46,7 +46,9 @@ ShallowWrapper {
           username? username for what?
           .
 </p>,
-        <div>
+        <div
+          className="dashboard-link-container"
+>
           <NavLink
                     activeClassName="active"
                     aria-current="page"
@@ -144,6 +146,7 @@ ShallowWrapper {
               Sign Out
 </Link>,
           ],
+          "className": "dashboard-link-container",
         },
         "ref": null,
         "rendered": Array [
@@ -227,7 +230,9 @@ ShallowWrapper {
             username? username for what?
             .
 </p>,
-          <div>
+          <div
+            className="dashboard-link-container"
+>
             <NavLink
                         activeClassName="active"
                         aria-current="page"
@@ -325,6 +330,7 @@ ShallowWrapper {
                 Sign Out
 </Link>,
             ],
+            "className": "dashboard-link-container",
           },
           "ref": null,
           "rendered": Array [
