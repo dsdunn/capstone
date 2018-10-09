@@ -8,7 +8,7 @@ const rootReducer =  combineReducers({
   user: userReducer,
   profile: profileReducer,
   collection: collectionReducer,
-  collectionList: collectionsListReducer
+  collectionsList: collectionsListReducer
 })
 
 export default rootReducer;

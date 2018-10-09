@@ -48,3 +48,14 @@ export const getCollectionsByCategory = (cat) => {
   return apiFetch(`/collections?category=${cat}`)
   .then(response => response.json())
 }
+
+export const getSearchResults = (terms) => {
+  return apiFetch(`/search?keyword=${terms}`)
+  .then(response => response.json())
+}
+
+
+
+
+
+

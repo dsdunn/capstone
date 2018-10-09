@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllCollections, getCollectionsByCategory } from '../services/fetch';
+import { updateCollectionsList } from '../actions';
 import CollectionSmall from '../CollectionSmall';
 import './styles.css';
 
@@ -15,7 +16,7 @@ export class CollectionsContainer extends Component {
 
   componentDidMount() {
     getAllCollections()
-      .then(response => this.setState({ collections: response }))
+      .then(response => this.props.updateCollectionsList(response))
   }
 
   handleClick = (event) => {
@@ -30,8 +31,12 @@ export class CollectionsContainer extends Component {
       .then(response => this.setState({ collections: response }))
   }
 
+  buildCollectionsList = () => {
+    return this.props.collectionsList && this.props.collectionsList.map(collection => <CollectionSmall collection={collection} key={collection.id}/>)
+  }
+
   render() {
-    const list = this.state.collections.map(collection => <CollectionSmall collection={collection} key={collection.id}/>)
+    const list = this.buildCollectionsList();
     let selectedBg = `collections-container-bg ${this.state.category}`
     let selectedTxt = `collections-category-name ${this.state.category}-txt`
 

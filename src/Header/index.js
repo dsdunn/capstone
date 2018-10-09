@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
-import { signOut } from '../actions';
+import { signOut, updateCollectionsList } from '../actions';
+import { getSearchResults } from '../services/fetch.js';
 import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
 import PropTypes from 'prop-types';
@@ -46,9 +47,18 @@ export class Header extends Component {
   }
 
   handleSearchChange = (event) => {
-    this.setState({ searchInput: event.target.value })
+    this.setState({ searchInput: event.target.value });
+    getSearchResults(this.state.searchInput)
+      .then(results => {
+        this.props.updateCollectionsList(this.extractCollections(results))
+    })
   }
 
+  extractCollections = (users) => {
+    return users.reduce((collections, user) => {
+      return [...collections, ...user.collections];
+    }, []);
+  }
 
   render() { 
     const headerAvatar = this.props.user.avatar || avatar;
@@ -87,7 +97,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(signOut())
+  signOut: () => dispatch(signOut()),
+  updateCollectionsList: (list) => dispatch(updateCollectionsList(list))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
