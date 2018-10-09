@@ -8,9 +8,6 @@ import './styles.css';
 export class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      category: 'all' 
-    }
   }
 
   componentDidMount() {
