@@ -9,6 +9,8 @@
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 3px; }
+  .wrapper a {
+    color: #fff; }
 
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
@@ -18,8 +20,7 @@
   /* For text formatting. */
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white; }
+  justify-content: center; }
 
 h1 {
   font-size: 80px; }

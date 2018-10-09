@@ -1,13 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Header, mapDispatchToProps, mapStateToProps } from './'
-import { signOut } from '../actions';
+import { signOut, updateCollectionsList, setCategory } from '../actions';
+import { getAllCollections, getSearchResults } from '../services/fetch';
+
+jest.mock('../services/fetch');
 
 describe('Header', () => {
   let wrapper;
   let mockProfile;
   let mockSignOut = jest.fn()
   let mockHistory;
+  let mockupDateCollectionsList = jest.fn();
+  let mockSetCategory = jest.fn();
 
   beforeEach(() => {
     mockProfile = {
@@ -23,7 +28,10 @@ describe('Header', () => {
                   }
     wrapper = shallow(<Header user={mockProfile}
                               signOut={mockSignOut}
-                              history={mockHistory}/>);
+                              history={mockHistory}
+                              updateCollectionsList={mockupDateCollectionsList}
+                              setCategory={mockSetCategory}
+                              />);
   })
 
   it('should match the snapshot', () => {

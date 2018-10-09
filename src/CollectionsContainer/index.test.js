@@ -5,14 +5,17 @@ import { getAllCollections, getCollectionsByCategory } from '../services/fetch'
 
 jest.mock('../services/fetch');
 
-describe('CollectionsContainer', () => {
+describe.only('CollectionsContainer', () => {
   let wrapper;
   let mockEvent;
+  let mockCollectionsList = [{}, {}];
+  let mockUpdateCollectionsList = jest.fn();
+  let mockSetCategory = jest.fn();
 
   beforeEach(() => {
     mockEvent = { preventDefault: jest.fn(),
                   target: { name: 'some cool name' } }
-    wrapper = shallow(<CollectionsContainer />)
+    wrapper = shallow(<CollectionsContainer collectionsList={mockCollectionsList} updateCollectionsList={mockUpdateCollectionsList} setCategory={mockSetCategory}/>)
 
   })
 
@@ -22,22 +25,19 @@ describe('CollectionsContainer', () => {
 
   it('should handle a dang click', () => {
     wrapper.instance().handleClick(mockEvent)
-    const actual = wrapper.state('category')
-    const expected = 'some cool name'
-
-    expect(actual).toEqual(expected)
+    expect(mockSetCategory).toHaveBeenCalled()
   })
 
   it('should fetch a collection by category', () => {
     wrapper.instance().fetchByCategory('vinyl')
-    const actual = wrapper.state('collections')
-    const expected = [{ id: 666,
+    const mockResponse = [{ id: 666,
              uid: 'string',
              category: 'string',
              title: 'string',
              description: 'string',
              image: 'string' }]
-    expect(actual).toEqual(expected)
+
+    expect(mockUpdateCollectionsList).toHaveBeenCalledWith(mockResponse)
   })
 
   it('should match the snapShot', () => {

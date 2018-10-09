@@ -44,6 +44,12 @@ export const getUserInfo = jest.fn().mockImplementation(() => {
     }])
   })
 
+export const getSearchResults = jest.fn().mockImplementation(() => {
+  return Promise.resolve([{  
+      collections:[]
+    }])
+  })
+
 export const postCollection = jest.fn().mockImplementation(() => {
   return Promise.resolve([{  
       id: 666,

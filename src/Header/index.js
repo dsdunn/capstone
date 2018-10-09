@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
-import { signOut } from '../actions';
+import { signOut, updateCollectionsList, setCategory } from '../actions';
+import { getSearchResults, getAllCollections } from '../services/fetch.js';
 import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
 import PropTypes from 'prop-types';
@@ -46,9 +47,24 @@ export class Header extends Component {
   }
 
   handleSearchChange = (event) => {
-    this.setState({ searchInput: event.target.value })
+    this.setState({ searchInput: event.target.value });
+    getSearchResults(this.state.searchInput)
+      .then(results => {
+        this.props.updateCollectionsList(this.extractCollections(results))
+    })
   }
 
+  extractCollections = (users) => {
+    return users.reduce((collections, user) => {
+      return [...collections, ...user.collections];
+    }, []);
+  }
+
+  getAll = () => {
+    this.props.setCategory('all');
+    getAllCollections()
+      .then(response => this.props.updateCollectionsList(response))
+  }
 
   render() { 
     const headerAvatar = this.props.user.avatar || avatar;
@@ -56,7 +72,7 @@ export class Header extends Component {
     return (
       <div className='header-container'>
         <div className='header'>
-          <Link to={'/home'}>
+          <Link to={'/home'} onClick={this.getAll}>
             <h1 className='header-app-name'>Collec<span>share</span></h1>
           </Link>
           <input className='header-search-bar' type='text' placeholder='Search' value={this.state.searchInput} onChange={this.handleSearchChange} />
@@ -87,7 +103,9 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(signOut())
+  signOut: () => dispatch(signOut()),
+  updateCollectionsList: (list) => dispatch(updateCollectionsList(list)),
+  setCategory: (category) => dispatch(setCategory(category))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

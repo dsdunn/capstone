@@ -3,7 +3,16 @@
 exports[`CollectionsContainer should match the snapShot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CollectionsContainer />,
+  Symbol(enzyme.__unrendered__): <CollectionsContainer
+    collectionsList={
+        Array [
+            Object {},
+            Object {},
+          ]
+    }
+    setCategory={[Function]}
+    updateCollectionsList={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,16 +28,14 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="collections-container-bg all"
+          className="collections-container-bg undefined"
 />,
         <div
           className="collections-container"
 >
           <h1
-                    className="collections-category-name all-txt"
-          >
-                    all
-          </h1>
+                    className="collections-category-name undefined-txt"
+          />
           <div
                     className="collections-cat-btn-container"
           >
@@ -69,16 +76,10 @@ ShallowWrapper {
                     </button>
           </div>
           <withRouter(Connect(CollectionSmall))
-                    collection={
-                              Object {
-                                        "category": "string",
-                                        "description": "string",
-                                        "id": 666,
-                                        "image": "string",
-                                        "title": "string",
-                                        "uid": "string",
-                                      }
-                    }
+                    collection={Object {}}
+          />
+          <withRouter(Connect(CollectionSmall))
+                    collection={Object {}}
           />
 </div>,
       ],
@@ -90,7 +91,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "collections-container-bg all",
+          "className": "collections-container-bg undefined",
         },
         "ref": null,
         "rendered": null,
@@ -103,10 +104,8 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h1
-              className="collections-category-name all-txt"
->
-              all
-</h1>,
+              className="collections-category-name undefined-txt"
+/>,
             <div
               className="collections-cat-btn-container"
 >
@@ -148,16 +147,10 @@ ShallowWrapper {
 </div>,
             Array [
               <withRouter(Connect(CollectionSmall))
-                collection={
-                                Object {
-                                                "category": "string",
-                                                "description": "string",
-                                                "id": 666,
-                                                "image": "string",
-                                                "title": "string",
-                                                "uid": "string",
-                                              }
-                }
+                collection={Object {}}
+/>,
+              <withRouter(Connect(CollectionSmall))
+                collection={Object {}}
 />,
             ],
           ],
@@ -170,11 +163,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "all",
-              "className": "collections-category-name all-txt",
+              "children": undefined,
+              "className": "collections-category-name undefined-txt",
             },
             "ref": null,
-            "rendered": "all",
+            "rendered": null,
             "type": "h1",
           },
           Object {
@@ -298,17 +291,21 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "666",
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "collection": Object {
-                "category": "string",
-                "description": "string",
-                "id": 666,
-                "image": "string",
-                "title": "string",
-                "uid": "string",
-              },
+              "collection": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "collection": Object {},
             },
             "ref": null,
             "rendered": null,
@@ -328,16 +325,14 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="collections-container-bg all"
+            className="collections-container-bg undefined"
 />,
           <div
             className="collections-container"
 >
             <h1
-                        className="collections-category-name all-txt"
-            >
-                        all
-            </h1>
+                        className="collections-category-name undefined-txt"
+            />
             <div
                         className="collections-cat-btn-container"
             >
@@ -378,16 +373,10 @@ ShallowWrapper {
                         </button>
             </div>
             <withRouter(Connect(CollectionSmall))
-                        collection={
-                                    Object {
-                                                "category": "string",
-                                                "description": "string",
-                                                "id": 666,
-                                                "image": "string",
-                                                "title": "string",
-                                                "uid": "string",
-                                              }
-                        }
+                        collection={Object {}}
+            />
+            <withRouter(Connect(CollectionSmall))
+                        collection={Object {}}
             />
 </div>,
         ],
@@ -399,7 +388,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "collections-container-bg all",
+            "className": "collections-container-bg undefined",
           },
           "ref": null,
           "rendered": null,
@@ -412,10 +401,8 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h1
-                className="collections-category-name all-txt"
->
-                all
-</h1>,
+                className="collections-category-name undefined-txt"
+/>,
               <div
                 className="collections-cat-btn-container"
 >
@@ -457,16 +444,10 @@ ShallowWrapper {
 </div>,
               Array [
                 <withRouter(Connect(CollectionSmall))
-                  collection={
-                                    Object {
-                                                      "category": "string",
-                                                      "description": "string",
-                                                      "id": 666,
-                                                      "image": "string",
-                                                      "title": "string",
-                                                      "uid": "string",
-                                                    }
-                  }
+                  collection={Object {}}
+/>,
+                <withRouter(Connect(CollectionSmall))
+                  collection={Object {}}
 />,
               ],
             ],
@@ -479,11 +460,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "all",
-                "className": "collections-category-name all-txt",
+                "children": undefined,
+                "className": "collections-category-name undefined-txt",
               },
               "ref": null,
-              "rendered": "all",
+              "rendered": null,
               "type": "h1",
             },
             Object {
@@ -607,17 +588,21 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "666",
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "collection": Object {
-                  "category": "string",
-                  "description": "string",
-                  "id": 666,
-                  "image": "string",
-                  "title": "string",
-                  "uid": "string",
-                },
+                "collection": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "collection": Object {},
               },
               "ref": null,
               "rendered": null,
