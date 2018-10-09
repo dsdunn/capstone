@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { getAllCollections, getCollectionsByCategory } from '../services/fetch';
 import CollectionSmall from '../CollectionSmall';
 import './styles.css';
@@ -54,4 +55,19 @@ export class CollectionsContainer extends Component {
   }
 }
 
-export default CollectionsContainer;
+export const mapStateToProps = (state) => ({
+  collectionsList: state.collectionsList
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  updateCollectionsList: (list) => dispatch(updateCollectionsList(list))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CollectionsContainer);
+
+
+
+
+
+
+
