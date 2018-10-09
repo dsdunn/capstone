@@ -3,8 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { auth } from '../firebase';
 import { connect } from 'react-redux';
 import './styles.css';
-import { signOut, updateCollectionsList } from '../actions';
-import { getSearchResults } from '../services/fetch.js';
+import { signOut, updateCollectionsList, setCategory } from '../actions';
+import { getSearchResults, getAllCollections } from '../services/fetch.js';
 import avatar from '../images/avatar.png';
 import Dashboard from '../Dashboard';
 import PropTypes from 'prop-types';
@@ -60,13 +60,19 @@ export class Header extends Component {
     }, []);
   }
 
+  getAll = () => {
+    this.props.setCategory('all');
+    getAllCollections()
+      .then(response => this.props.updateCollectionsList(response))
+  }
+
   render() { 
     const headerAvatar = this.props.user.avatar || avatar;
 
     return (
       <div className='header-container'>
         <div className='header'>
-          <Link to={'/home'}>
+          <Link to={'/home'} onClick={this.getAll}>
             <h1 className='header-app-name'>Collec<span>share</span></h1>
           </Link>
           <input className='header-search-bar' type='text' placeholder='Search' value={this.state.searchInput} onChange={this.handleSearchChange} />
@@ -98,7 +104,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   signOut: () => dispatch(signOut()),
-  updateCollectionsList: (list) => dispatch(updateCollectionsList(list))
+  updateCollectionsList: (list) => dispatch(updateCollectionsList(list)),
+  setCategory: (category) => dispatch(setCategory(category))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
