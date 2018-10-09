@@ -13,7 +13,9 @@ ShallowWrapper {
             "push": [Function],
           }
     }
+    setCategory={[Function]}
     signOut={[Function]}
+    updateCollectionsList={[Function]}
     user={
         Object {
             "avatar": "2 comes out in 2020",
@@ -41,6 +43,7 @@ ShallowWrapper {
           className="header"
 >
           <Link
+                    onClick={[Function]}
                     replace={false}
                     to="/home"
           >
@@ -102,6 +105,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Link
+              onClick={[Function]}
               replace={false}
               to="/home"
 >
@@ -164,6 +168,7 @@ ShallowWrapper {
                                 share
                 </span>
 </h1>,
+              "onClick": [Function],
               "replace": false,
               "to": "/home",
             },
@@ -347,6 +352,7 @@ ShallowWrapper {
             className="header"
 >
             <Link
+                        onClick={[Function]}
                         replace={false}
                         to="/home"
             >
@@ -408,6 +414,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Link
+                onClick={[Function]}
                 replace={false}
                 to="/home"
 >
@@ -470,6 +477,7 @@ ShallowWrapper {
                                     share
                   </span>
 </h1>,
+                "onClick": [Function],
                 "replace": false,
                 "to": "/home",
               },
