@@ -26,3 +26,8 @@ export const setCollection = collection => ({
   type: 'SET_COLLECTION',
   collection
 })
+
+export const updateCollectionsList = (collectionsList) => {
+  type: 'UPDATE_COLLECTIONS_LIST',
+  collectionsList
+}

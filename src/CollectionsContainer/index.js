@@ -8,7 +8,7 @@ export class CollectionsContainer extends Component {
     super(props);
     this.state = {
       collections: [],
-      category: 'all'
+      category: 'all' 
     }
   }
 
