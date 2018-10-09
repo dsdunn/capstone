@@ -10,6 +10,10 @@
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 3px;
+
+  a {
+    color: #fff;
+  }
 }
 
 .section {
@@ -22,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  // color: white;
 }
 
 
