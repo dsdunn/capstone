@@ -9,7 +9,6 @@ export class CollectionsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collections: [],
       category: 'all' 
     }
   }
@@ -28,7 +27,7 @@ export class CollectionsContainer extends Component {
 
   fetchByCategory = (category) => {
     getCollectionsByCategory(category)
-      .then(response => this.setState({ collections: response }))
+      .then(response => this.props.updateCollectionsList(response))
   }
 
   buildCollectionsList = () => {
