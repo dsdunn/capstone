@@ -2,6 +2,8 @@
 
 This app allows users to sign up for and/ or sign in to account, customize a profile, and upload images and information about their collections. Users can also browse collections by category and view other user's profiles and collection details.
 
+Live [here](https://collecshareapp.herokuapp.com)
+
 ## Getting Started
 
 To get the app up and running, enter the following commands in the terminal:
